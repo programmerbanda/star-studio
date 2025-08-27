@@ -139,7 +139,7 @@ bookingForm.addEventListener('submit', (e) => {
     setTimeout(() => {
         formMessage.textContent = 'Thank you for your booking request! We will contact you shortly.';
         formMessage.classList.add('success');
-        bookingForm.reset();
+    bookingForm.reset();
     }, 1000);
 });
 
@@ -169,10 +169,6 @@ function initEnhancedCounter(container) {
     const statsContainer = container; // Use the passed container
     if (!statsContainer) return; // Exit if stats container is not found
 
-    // Ensure animation starts only once for this specific container
-    if (statsContainer.dataset.animationStarted) return;
-    statsContainer.dataset.animationStarted = 'true';
-
     // Create progress bars for each stat item
     const statItems = statsContainer.querySelectorAll('.stat-item');
     statItems.forEach(item => {
@@ -182,7 +178,6 @@ function initEnhancedCounter(container) {
         item.appendChild(progressBar);
     });
 
-    // Move animateCounter inside initEnhancedCounter to bind to specific container
     function animateCounter() {
         const counters = statsContainer.querySelectorAll('.stat-number');
         const progressBars = statsContainer.querySelectorAll('.stat-progress-bar');
@@ -191,7 +186,6 @@ function initEnhancedCounter(container) {
             const target = +counter.getAttribute('data-count');
             const duration = 3000;
             const startTime = performance.now();
-            const startValue = 0;
 
             function updateCounter(currentTime) {
                 const elapsedTime = currentTime - startTime;
@@ -199,23 +193,19 @@ function initEnhancedCounter(container) {
                     const progress = elapsedTime / duration;
                     const currentValue = Math.floor(progress * target);
 
-                    // Update counter
                     counter.textContent = currentValue.toLocaleString();
 
-                    // Update progress bar
                     if (progressBars[index]) {
                         progressBars[index].style.width = `${progress * 100}%`;
                     }
 
                     requestAnimationFrame(updateCounter);
                 } else {
-                    // Final values
                     counter.textContent = target.toLocaleString();
                     if (progressBars[index]) {
                         progressBars[index].style.width = '100%';
                     }
 
-                    // Celebration effect
                     counter.classList.add('celebrate');
                 }
             }
@@ -224,21 +214,22 @@ function initEnhancedCounter(container) {
         });
     }
 
-    // Use Intersection Observer
-    // The .why-choose section also contains stats-container, so we observe that section.
     const sectionToObserve = statsContainer.closest('section');
-    if (!sectionToObserve) return; // Exit if parent section is not found
+    if (!sectionToObserve) return;
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounter(); // Call the now-scoped animateCounter
+            if (entry.isIntersecting && !statsContainer.dataset.animationStarted) {
+                statsContainer.dataset.animationStarted = 'true';
+                animateCounter();
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.1 });
 
     observer.observe(sectionToObserve);
+
+    return animateCounter;
 }
 
 // Add CSS for progress bars
@@ -275,10 +266,46 @@ document.head.appendChild(progressStyle);
 
 // Initialize enhanced counter
 document.addEventListener('DOMContentLoaded', function () {
-    // Select all stats containers and initialize counter for each
+    const animateCounterFunctions = [];
+
     document.querySelectorAll('.stats-container').forEach(container => {
-        initEnhancedCounter(container);
+        const animateFn = initEnhancedCounter(container);
+        if (animateFn) {
+            animateCounterFunctions.push({
+                container: container,
+                animate: animateFn
+            });
+        }
     });
+
+    // Manually trigger animations for elements already in view on load
+    animateCounterFunctions.forEach(item => {
+        const container = item.container;
+        const animateFn = item.animate;
+
+        const sectionToObserve = container.closest('section');
+        if (sectionToObserve) {
+            const rect = sectionToObserve.getBoundingClientRect();
+            const isVisible = (rect.top < window.innerHeight && rect.bottom >= 0);
+            if (isVisible && !container.dataset.animationStarted) {
+                container.dataset.animationStarted = 'true';
+                animateFn();
+            }
+        }
+    });
+});
+
+// Set minimum date for booking calendar to today's date
+document.addEventListener('DOMContentLoaded', function() {
+    const bookingDateInput = document.getElementById('booking-date');
+    if (bookingDateInput) {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = (today.getMonth() + 1).toString().padStart(2, '0');
+        const day = today.getDate().toString().padStart(2, '0');
+        const minDate = `${year}-${month}-${day}`;
+        bookingDateInput.setAttribute('min', minDate);
+    }
 });
 
 // Performance variables
@@ -514,10 +541,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     } else {
         // Fallback if video or spinner not found, ensure animations still run
-        if (document.querySelector('.hero')) {
-            createOptimizedNightSky();
-        } else {
-            setTimeout(createOptimizedNightSky, 500);
+    if (document.querySelector('.hero')) {
+        createOptimizedNightSky();
+    } else {
+        setTimeout(createOptimizedNightSky, 500);
         }
     }
 });
