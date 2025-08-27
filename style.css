@@ -1,12 +1,12 @@
 :root {
-    --primary: #2c3e50;
+    --primary: #1e293b; /* Changed from #2c3e50 to a darker shade to match bg-slate-800 */
     --accent: #F43F5E;
-    --accent-dark: #d35400;
-    --light: #f8f9fa;
-    --dark: #2c3e50;
-    --text: #333;
-    --text-light: #777;
-    --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    --accent-dark: #c0392b; /* Adjusted for a slightly deeper tone on dark background */
+    --light: #f8f9fa; /* Kept for other light elements if needed, but not for body bg */
+    --dark: #1e293b;  /* Changed from #2c3e50 to match new body background */
+    --text: #f8f9fa;  /* Changed from #333 to light for readability on dark background */
+    --text-light: #ced4da; /* Changed from #777 to a lighter shade for readability */
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Increased opacity for visibility on dark bg */
     --transition: all 0.3s ease;
 }
 
@@ -25,7 +25,7 @@ body {
     color: var(--text);
     line-height: 1.6;
     overflow-x: hidden;
-    background-color: var(--light);
+    background-color: #1e293b; /* Changed to bg-slate-800 equivalent */
 }
 
 .sr-only {
@@ -49,6 +49,7 @@ h5 {
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.3;
+    color: var(--text); /* Set all headings to use the general text color */
 }
 
 .container {
@@ -60,7 +61,7 @@ h5 {
 
 /* Header & Navigation - Fixed */
 header {
-    background-color: rgba(255, 255, 255, 0.98);
+    background-color: var(--dark); /* Use --dark for consistency with new dark theme */
     position: fixed;
     width: 100%;
     top: 0;
@@ -84,7 +85,7 @@ header.scrolled {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
     font-weight: 700;
-    color: var(--primary);
+    color: white; /* Changed from var(--primary) for visibility on dark header */
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -107,7 +108,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--dark);
+    color: white; /* Changed from var(--dark) for visibility on dark nav */
     font-weight: 500;
     transition: var(--transition);
     font-size: 16px;
@@ -157,19 +158,19 @@ nav ul li a:hover:after {
     font-size: 24px;
     background: none;
     border: none;
-    color: var(--primary);
+    color: var(--text-light); /* Changed from white for better contrast on dark header */
     cursor: pointer;
     z-index: 1001;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: var(--light);
+    background: rgba(255, 255, 255, 0.1); /* Adjusted for dark background */
     transition: var(--transition);
 }
 
 .mobile-menu-btn:hover {
     background: var(--accent);
-    color: white;
+    color: white; /* Ensure text is white on accent hover */
 }
 
 /* Hero Section - Fixed */
@@ -316,7 +317,7 @@ section {
 
 .section-title h2 {
     font-size: 2.8rem;
-    color: var(--primary);
+    color: var(--text); /* Changed from var(--primary) for visibility on dark background */
     position: relative;
     display: inline-block;
     margin-bottom: 20px;
@@ -386,7 +387,7 @@ section {
 .about-text h3 {
     font-size: 2.2rem;
     margin-bottom: 25px;
-    color: var(--primary);
+    color: var(--text); /* Changed from var(--primary) for visibility on dark background */
 }
 
 .about-text p {
@@ -405,15 +406,15 @@ section {
 .stat-item {
     text-align: center;
     padding: 25px 15px;
-    background: white;
+    background: #2d3a4b; /* Changed from white for dark theme */
     border-radius: 10px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow); /* Use updated shadow variable */
     transition: var(--transition);
 }
 
 .stat-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); /* Adjusted for dark theme */
 }
 
 .stat-number {
@@ -431,7 +432,7 @@ section {
 
 /* Services Section */
 .services {
-    background-color: white;
+    background-color: #2d3a4b; /* Adjusted for new dark background */
 }
 
 .services-grid {
@@ -441,7 +442,7 @@ section {
 }
 
 .service-card {
-    background: white;
+    background: #2d3a4b; /* Changed from white for dark theme */
     border-radius: 12px;
     padding: 40px 30px;
     text-align: center;
@@ -452,14 +453,14 @@ section {
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Adjusted for dark theme */
     border-top: 4px solid var(--accent);
 }
 
 .service-icon {
     width: 70px;
     height: 70px;
-    background: rgba(230, 126, 34, 0.1);
+    background: rgba(244, 63, 94, 0.1); /* Adjusted to match accent color */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -598,7 +599,7 @@ section {
 
 /* Why Choose Us Section */
 .why-choose {
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    background: var(--dark); /* Changed from linear-gradient to solid dark for consistency */
     padding: 100px 0;
     position: relative;
     overflow: hidden;
@@ -626,11 +627,11 @@ section {
 }
 
 .feature-card {
-    background: white;
+    background: #2d3a4b; /* Changed from white for dark theme */
     padding: 40px 30px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow); /* Use updated shadow variable */
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
@@ -649,7 +650,7 @@ section {
 
 .feature-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6); /* Adjusted for dark theme */
 }
 
 .feature-card:hover::before {
@@ -659,7 +660,7 @@ section {
 .feature-icon {
     width: 80px;
     height: 80px;
-    background: rgba(230, 126, 34, 0.1);
+    background: rgba(244, 63, 94, 0.1); /* Adjusted to match accent color */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -680,7 +681,7 @@ section {
 .feature-card h3 {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    color: var(--primary);
+    color: var(--text); /* Changed from var(--primary) for visibility on dark background */
     position: relative;
 }
 
@@ -694,10 +695,10 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
-    background: white;
+    background: #2d3a4b; /* Changed from white for dark theme */
     padding: 50px 30px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow); /* Use updated shadow variable */
     position: relative;
     z-index: 1;
 }
@@ -889,9 +890,9 @@ section {
     align-items: center;
     width: 45px;
     height: 45px;
-    background: var(--light);
+    background: rgba(255, 255, 255, 0.1); /* Adjusted for dark background */
     border-radius: 50%;
-    color: var(--primary);
+    color: var(--text); /* Use var(--text) for consistency */
     transition: var(--transition);
     text-decoration: none;
 }
@@ -903,7 +904,7 @@ section {
 }
 
 .contact-form {
-    background: white;
+    background: #2d3a4b; /* Changed from white for dark theme */
     padding: 40px;
     border-radius: 12px;
     box-shadow: var(--shadow);
@@ -916,17 +917,23 @@ section {
 .form-control {
     width: 100%;
     padding: 15px 20px;
-    border: 1px solid #e6e6e6;
+    border: 1px solid #4a5568; /* Adjusted for dark theme */
     border-radius: 8px;
     font-family: inherit;
     font-size: 16px;
     transition: var(--transition);
+    color: var(--text); /* Ensure input text is readable */
+    background-color: #1e293b; /* Set background for input */
+}
+
+.form-control::placeholder {
+    color: var(--text-light); /* Adjust placeholder color */
 }
 
 .form-control:focus {
     border-color: var(--accent);
     outline: none;
-    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
+    box-shadow: 0 0 0 3px rgba(244, 63, 94, 0.3); /* Adjusted accent color for shadow */
 }
 
 textarea.form-control {
@@ -1099,7 +1106,7 @@ footer {
     height: 45px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    color: white;
+    color: var(--text); /* Use var(--text) for consistency */
     transition: var(--transition);
     text-decoration: none;
 }
@@ -1205,7 +1212,7 @@ footer {
         right: -100%;
         width: 280px;
         height: 100vh;
-        background: white;
+        background: var(--dark); /* Use --dark for consistency with new dark theme */
         transition: var(--transition);
         box-shadow: var(--shadow);
         padding-top: 80px; /* Adjust if header height changes */
@@ -1214,6 +1221,7 @@ footer {
 
     nav.active {
         right: 0;
+        background: var(--dark); /* Use --dark for consistency with new dark theme */
     }
 
     nav ul {
