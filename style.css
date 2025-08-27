@@ -28,6 +28,18 @@ body {
     background-color: var(--light);
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 h1,
 h2,
 h3,
@@ -292,7 +304,7 @@ nav ul li a:hover:after {
     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
 }
 
-/* Section Styling - Fixed */
+/* General Section Styling */
 section {
     padding: 100px 0;
 }
@@ -329,7 +341,7 @@ section {
     font-size: 1.1rem;
 }
 
-/* About Section - Fixed */
+/* About Section */
 .about-content {
     display: flex;
     align-items: center;
@@ -417,7 +429,7 @@ section {
     font-weight: 500;
 }
 
-/* Services Section - Fixed */
+/* Services Section */
 .services {
     background-color: white;
 }
@@ -496,7 +508,7 @@ section {
     transform: translateX(5px);
 }
 
-/* Portfolio Section - Fixed */
+/* Portfolio Section */
 .portfolio-filters {
     display: flex;
     justify-content: center;
@@ -724,6 +736,11 @@ section {
         grid-template-columns: repeat(2, 1fr);
         padding: 40px 20px;
     }
+
+    /* Add for stats-grid */
+    .about .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 576px) {
@@ -738,6 +755,11 @@ section {
 
     .stat-number {
         font-size: 2.5rem;
+    }
+
+    /* Add for stats-grid */
+    .about .stats-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -916,6 +938,39 @@ textarea.form-control {
     width: 100%;
     padding: 16px;
     font-size: 17px;
+}
+
+.form-message {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    display: none; /* Hidden by default */
+}
+
+.form-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
+}
+
+.form-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block;
+}
+
+/* Honeypot Field Styling */
+.honeypot-field {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
 }
 
 .whatsapp-btn {
@@ -1153,7 +1208,7 @@ footer {
         background: white;
         transition: var(--transition);
         box-shadow: var(--shadow);
-        padding-top: 80px;
+        padding-top: 80px; /* Adjust if header height changes */
         z-index: 999;
     }
 
@@ -1350,6 +1405,7 @@ footer {
     }
 }
 
+/* Animations and Utility Classes */
 /* Additional Animations */
 .fade-in {
     opacity: 0;
@@ -1614,4 +1670,24 @@ footer {
     .star-night-sky {
         transform: scale(0.9);
     }
+}
+
+/* Loading Spinner for Hero Section */
+.hero-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 3;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
 }

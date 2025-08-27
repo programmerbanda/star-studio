@@ -87,11 +87,60 @@ filterButtons.forEach(button => {
 
 // Form Submission
 const bookingForm = document.getElementById('bookingForm');
+const formMessage = document.getElementById('formMessage'); // Get the message div
 
 bookingForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('Thank you for your booking request! We will contact you shortly.');
-    bookingForm.reset();
+
+    // Clear previous messages
+    formMessage.textContent = '';
+    formMessage.classList.remove('success', 'error');
+
+    // Basic Form Validation
+    const name = bookingForm.querySelector('#booking-name').value;
+    const email = bookingForm.querySelector('#booking-email').value;
+    const phone = bookingForm.querySelector('#booking-phone').value;
+    const service = bookingForm.querySelector('#booking-service').value;
+    const date = bookingForm.querySelector('#booking-date').value;
+    const message = bookingForm.querySelector('#booking-message').value;
+    const honeypot = bookingForm.querySelector('#website-url').value; // Get honeypot field value
+
+    // Check honeypot field - if filled, it's likely a bot
+    if (honeypot) {
+        formMessage.textContent = 'Spam detected. Your request could not be submitted.';
+        formMessage.classList.add('error');
+        bookingForm.reset();
+        return;
+    }
+
+    if (!name || !email || !phone || service === '' || !date || !message) {
+        formMessage.textContent = 'Please fill in all required fields.';
+        formMessage.classList.add('error');
+        return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        formMessage.textContent = 'Please enter a valid email address.';
+        formMessage.classList.add('error');
+        return;
+    }
+
+    // Phone number validation (basic, for 10 digits)
+    const phoneRegex = /^\\d{10}$/;
+    if (!phoneRegex.test(phone)) {
+        formMessage.textContent = 'Please enter a valid 10-digit phone number.';
+        formMessage.classList.add('error');
+        return;
+    }
+
+    // Simulate form submission
+    setTimeout(() => {
+        formMessage.textContent = 'Thank you for your booking request! We will contact you shortly.';
+        formMessage.classList.add('success');
+        bookingForm.reset();
+    }, 1000);
 });
 
 // Smooth Scrolling for Navigation Links
@@ -112,15 +161,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Initialize with header class and animations
+// Initialize with header class and animations on scroll
 window.dispatchEvent(new Event('scroll'));
 
-// Enhanced version with progress animation
-function initEnhancedCounter() {
-    const statsContainer = document.querySelector('.stats-container');
-    if (!statsContainer) return;
+// Enhanced counter animation for stats section
+function initEnhancedCounter(container) {
+    const statsContainer = container; // Use the passed container
+    if (!statsContainer) return; // Exit if stats container is not found
 
-    // Create progress bars
+    // Ensure animation starts only once for this specific container
+    if (statsContainer.dataset.animationStarted) return;
+    statsContainer.dataset.animationStarted = 'true';
+
+    // Create progress bars for each stat item
     const statItems = statsContainer.querySelectorAll('.stat-item');
     statItems.forEach(item => {
         const progressBar = document.createElement('div');
@@ -129,14 +182,10 @@ function initEnhancedCounter() {
         item.appendChild(progressBar);
     });
 
-    let animationStarted = false;
-
+    // Move animateCounter inside initEnhancedCounter to bind to specific container
     function animateCounter() {
-        if (animationStarted) return;
-        animationStarted = true;
-
-        const counters = document.querySelectorAll('.stat-number');
-        const progressBars = document.querySelectorAll('.stat-progress-bar');
+        const counters = statsContainer.querySelectorAll('.stat-number');
+        const progressBars = statsContainer.querySelectorAll('.stat-progress-bar');
 
         counters.forEach((counter, index) => {
             const target = +counter.getAttribute('data-count');
@@ -176,19 +225,20 @@ function initEnhancedCounter() {
     }
 
     // Use Intersection Observer
-    const section = document.querySelector('.why-choose');
-    if (!section) return;
+    // The .why-choose section also contains stats-container, so we observe that section.
+    const sectionToObserve = statsContainer.closest('section');
+    if (!sectionToObserve) return; // Exit if parent section is not found
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                animateCounter();
+                animateCounter(); // Call the now-scoped animateCounter
                 observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.3 });
 
-    observer.observe(section);
+    observer.observe(sectionToObserve);
 }
 
 // Add CSS for progress bars
@@ -225,23 +275,28 @@ document.head.appendChild(progressStyle);
 
 // Initialize enhanced counter
 document.addEventListener('DOMContentLoaded', function () {
-    initEnhancedCounter();
+    // Select all stats containers and initialize counter for each
+    document.querySelectorAll('.stats-container').forEach(container => {
+        initEnhancedCounter(container);
+    });
 });
 
 // Performance variables
 let animationFrameId = null;
 let lastRenderTime = 0;
-const renderInterval = 1000 / 30; // 30 FPS
+const renderInterval = 1000 / 30; // 30 FPS for optimized animations
 
-// Create optimized night sky
+// Function to create and manage the optimized night sky background
 function createOptimizedNightSky() {
     const hero = document.querySelector('.hero');
+    if (!hero) return; // Exit if hero section is not found
+
     const sky = document.createElement('div');
     sky.className = 'star-night-sky';
     hero.appendChild(sky);
 
     // Create optimized stars
-    createOptimizedStars(sky, 120); // Reduced from 250 to 120
+    createOptimizedStars(sky, 80); // Reduced from 120 to 80
 
     // Create shooting stars
     createOptimizedShootingStars(sky);
@@ -254,7 +309,7 @@ function createOptimizedNightSky() {
 }
 
 // Create optimized stars
-function createOptimizedStars(sky, count = 120) {
+function createOptimizedStars(sky, count = 80) { // Reduced from 120 to 80
     const fragment = document.createDocumentFragment();
 
     for (let i = 0; i < count; i++) {
@@ -282,8 +337,8 @@ function createOptimizedStars(sky, count = 120) {
         }
 
         // Random properties
-        const duration = Math.random() * 6 + 3; // Reduced duration
-        const delay = Math.random() * 8;
+        const duration = Math.random() * 4 + 2; // Reduced duration from 6+3 to 4+2
+        const delay = Math.random() * 6; // Reduced delay from 8 to 6
 
         star.style.top = `${Math.random() * 100}%`;
         star.style.left = `${Math.random() * 100}%`;
@@ -305,7 +360,7 @@ function createOptimizedStars(sky, count = 120) {
     sky.appendChild(fragment);
 }
 
-// Add single star (better performance than adding multiple)
+// Adds a single star to the night sky, optimized for performance
 function addSingleStar(sky) {
     const star = document.createElement('div');
     star.className = 'star';
@@ -331,8 +386,8 @@ function addSingleStar(sky) {
     }
 
     // Random properties
-    const duration = Math.random() * 6 + 3;
-    const delay = Math.random() * 8;
+    const duration = Math.random() * 4 + 2; // Reduced duration
+    const delay = Math.random() * 6; // Reduced delay
 
     star.style.top = `${Math.random() * 100}%`;
     star.style.left = `${Math.random() * 100}%`;
@@ -350,16 +405,16 @@ function addSingleStar(sky) {
     sky.appendChild(star);
 }
 
-// Create optimized shooting stars
+// Manages the creation and periodic addition of shooting stars
 function createOptimizedShootingStars(sky) {
-    for (let i = 0; i < 2; i++) { // Reduced from 4 to 2
+    for (let i = 0; i < 1; i++) { // Create initial shooting star
         createOptimizedShootingStar(sky);
     }
 
     // Create new shooting stars periodically with longer interval
-    setInterval(() => {
+    let shootingStarInterval = setInterval(() => {
         createOptimizedShootingStar(sky);
-    }, Math.random() * 5000 + 3000); // Increased interval
+    }, Math.random() * 6000 + 4000); // Increased interval from 5000+3000 to 6000+4000
 }
 
 function createOptimizedShootingStar(sky) {
@@ -368,9 +423,9 @@ function createOptimizedShootingStar(sky) {
 
     const startX = Math.random() * 100;
     const startY = Math.random() * 35;
-    const length = Math.random() * 150 + 100; // Reduced length
-    const angle = Math.random() * 30 - 15;
-    const duration = Math.random() * 1.5 + 1;
+    const length = Math.random() * 100 + 80; // Reduced length from 150+100 to 100+80
+    const angle = Math.random() * 20 - 10; // Reduced angle from 30-15 to 20-10
+    const duration = Math.random() * 1 + 0.8; // Reduced duration from 1.5+1 to 1+0.8
     const delay = Math.random() * 15;
 
     shootingStar.style.top = `${startY}%`;
@@ -391,9 +446,9 @@ function createOptimizedShootingStar(sky) {
     sky.appendChild(shootingStar);
 }
 
-// Create simple background (reduced complexity)
+// Creates simple background elements (nebula, milky way) for the night sky
 function createSimpleBackground(sky) {
-    // Add nebula
+    // Add nebula effect
     const nebula = document.createElement('div');
     nebula.className = 'nebula';
     sky.appendChild(nebula);
@@ -404,7 +459,7 @@ function createSimpleBackground(sky) {
     sky.appendChild(milkyWay);
 }
 
-// Optimized animation loop
+// Starts the main animation loop using requestAnimationFrame for smooth animations
 function startAnimationLoop(sky) {
     let lastTime = 0;
 
@@ -422,10 +477,17 @@ function startAnimationLoop(sky) {
     animationFrameId = requestAnimationFrame(animate);
 }
 
-// Clean up function
+// Cleans up all night sky animations and elements to prevent memory leaks
 function cleanupNightSky() {
     if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
+    }
+
+    // Clear shooting star interval
+    if (shootingStarInterval) {
+        clearInterval(shootingStarInterval);
+        shootingStarInterval = null;
     }
 
     const sky = document.querySelector('.star-night-sky');
@@ -437,10 +499,26 @@ function cleanupNightSky() {
 // Initialize the optimized night sky
 document.addEventListener('DOMContentLoaded', function () {
     // Wait for the hero section to be fully loaded
-    if (document.querySelector('.hero')) {
-        createOptimizedNightSky();
+    const heroVideo = document.querySelector('.hero-video');
+    const heroSpinner = document.querySelector('.hero-spinner');
+
+    if (heroVideo && heroSpinner) {
+        heroVideo.addEventListener('loadeddata', () => {
+            heroSpinner.style.display = 'none'; // Hide spinner once video loads
+            heroVideo.style.opacity = '1'; // Show video
+        });
+        // In case video is cached and loaded instantly
+        if (heroVideo.readyState >= 3) { // HAVE_FUTURE_DATA or HAVE_ENOUGH_DATA
+            heroSpinner.style.display = 'none';
+            heroVideo.style.opacity = '1';
+        }
     } else {
-        setTimeout(createOptimizedNightSky, 500);
+        // Fallback if video or spinner not found, ensure animations still run
+        if (document.querySelector('.hero')) {
+            createOptimizedNightSky();
+        } else {
+            setTimeout(createOptimizedNightSky, 500);
+        }
     }
 });
 
