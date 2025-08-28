@@ -8,10 +8,10 @@
     <meta name="keywords" content="photography, wedding photography, event photography, portrait photography, pre-wedding shoot, drone shoots, videography, Mumbai, Star Studio">
     <meta property="og:title" content="Star Studio - Premium Photography Services">
     <meta property="og:description" content="Professional photography services for weddings, events, and special occasions. Let us tell your story through our lens.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"> <!-- Replace with your actual image URL -->
-    <meta property="og:url" content="YOUR_WEBSITE_URL"> <!-- Replace with your actual website URL -->
+    <meta property="og:image" content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80">
+    <meta property="og:url" content="YOUR_WEBSITE_URL">
     <meta property="og:type" content="website">
-    <title>Star Studio - Premium Photography Services</title>
+    <title>Terms & Conditions | Star Studio - Premium Photography Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -21,7 +21,6 @@
         /* ===== Terms & Conditions Section Styles ===== */
         .terms-section {
             padding: 100px 0;
-            background: linear-gradient(135deg, rgba(20, 20, 30, 0.95) 0%, rgba(30, 30, 50, 0.95) 100%);
             position: relative;
             overflow: hidden;
         }
@@ -34,11 +33,12 @@
             width: 100%;
             height: 100%;
             background: url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80') center/cover no-repeat;
-            opacity: 0.15;
+            opacity: 0.12;
             z-index: 0;
         }
 
         .terms-section .container {
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
             position: relative;
@@ -55,6 +55,7 @@
             display: inline-block;
             text-align: center;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            width: 100%;
         }
 
         .terms-section .title::after {
@@ -75,6 +76,7 @@
             margin-bottom: 40px;
             font-style: italic;
             font-size: 1.1rem;
+            letter-spacing: 0.5px;
         }
 
         .terms-section .content {
@@ -82,11 +84,12 @@
             font-size: 1.15rem;
             line-height: 1.8;
             color: #f3f4f6;
-            background: rgba(15, 15, 25, 0.7);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
+            background: rgba(15, 15, 25, 0.8);
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .terms-section .content h2 {
@@ -132,6 +135,7 @@
             display: flex;
             align-items: flex-start;
             padding-left: 10px;
+            position: relative;
         }
 
         .terms-section .content ul li::before {
@@ -141,6 +145,7 @@
             margin-right: 12px;
             font-size: 1.5rem;
             line-height: 1;
+            flex-shrink: 0;
         }
 
         .terms-section .content ol {
@@ -180,9 +185,68 @@
         .terms-section .content .note {
             background: rgba(244, 63, 94, 0.1);
             border-left: 4px solid #F43F5E;
-            padding: 15px 20px;
-            margin: 25px 0;
-            border-radius: 4px;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 6px;
+            font-style: italic;
+        }
+
+        /* Table of Contents */
+        .toc-container {
+            background: rgba(20, 20, 30, 0.7);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .toc-title {
+            font-family: 'Playfair Display', serif;
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            column-count: 2;
+            column-gap: 30px;
+        }
+
+        .toc-list li {
+            margin-bottom: 12px;
+            break-inside: avoid;
+        }
+
+        .toc-list a {
+            color: #e5e7eb;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 5px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .toc-list a::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #d6336c;
+            transition: transform 0.3s ease;
+        }
+
+        .toc-list a:hover {
+            color: #d6336c;
+            padding-left: 25px;
+        }
+
+        .toc-list a:hover::before {
+            transform: translateX(5px);
         }
 
         /* Enhanced fade-in animations */
@@ -199,8 +263,47 @@
         
         .delay-1 { transition-delay: 0.2s; }
         .delay-2 { transition-delay: 0.4s; }
+        .delay-3 { transition-delay: 0.6s; }
+
+        /* Print Styles */
+        @media print {
+            .terms-section {
+                background: white !important;
+                color: black !important;
+                padding: 50px 0 !important;
+            }
+            
+            .terms-section::before {
+                display: none;
+            }
+            
+            .terms-section .content {
+                background: white !important;
+                color: black !important;
+                box-shadow: none !important;
+            }
+            
+            .terms-section .content h2 {
+                color: #000 !important;
+            }
+            
+            .terms-section .content p,
+            .terms-section .content li {
+                color: #333 !important;
+            }
+            
+            header, footer, .whatsapp-float, .back-to-top {
+                display: none !important;
+            }
+        }
 
         /* Responsive */
+        @media (max-width: 1024px) {
+            .toc-list {
+                column-count: 1;
+            }
+        }
+
         @media (max-width: 900px) {
             .terms-section {
                 padding: 80px 0;
@@ -208,6 +311,10 @@
             
             .terms-section .content {
                 padding: 30px;
+            }
+            
+            .toc-container {
+                padding: 20px;
             }
         }
 
@@ -246,6 +353,14 @@
             
             .terms-section .last-updated {
                 font-size: 1rem;
+            }
+            
+            .toc-container {
+                padding: 15px;
+            }
+            
+            .toc-title {
+                font-size: 1.3rem;
             }
         }
     </style>
@@ -289,13 +404,35 @@
             <div class="container">
                 <h1 class="title fade-in">Terms & Conditions</h1>
                 <p class="last-updated fade-in">Last Updated: August 28, 2025</p>
-                <div class="content fade-in delay-1">
+                
+                <!-- Table of Contents -->
+                <div class="toc-container fade-in delay-1">
+                    <h3 class="toc-title">Table of Contents</h3>
+                    <ul class="toc-list">
+                        <li><a href="#agreement">1. Agreement to Terms</a></li>
+                        <li><a href="#services-provided">2. Services Provided</a></li>
+                        <li><a href="#booking">3. Booking and Reservations</a></li>
+                        <li><a href="#cancellation">4. Cancellation and Rescheduling Policy</a></li>
+                        <li><a href="#copyright">5. Copyright and Usage Rights</a></li>
+                        <li><a href="#responsibilities">6. Client Responsibilities</a></li>
+                        <li><a href="#delivery">7. Image Delivery and Processing</a></li>
+                        <li><a href="#liability">8. Limitations of Liability</a></li>
+                        <li><a href="#model-release">9. Model Release</a></li>
+                        <li><a href="#pricing">10. Pricing and Payment Terms</a></li>
+                        <li><a href="#force-majeure">11. Force Majeure</a></li>
+                        <li><a href="#governing-law">12. Governing Law</a></li>
+                        <li><a href="#changes">13. Changes to Terms</a></li>
+                        <li><a href="#contact-info">14. Contact Information</a></li>
+                    </ul>
+                </div>
+                
+                <div class="content fade-in delay-2">
                     <p>Welcome to Star Studio! These Terms and Conditions govern your use of our photography services and website. By booking our services or using our website, you agree to comply with and be bound by these terms.</p>
                     
-                    <h2>1. Agreement to Terms</h2>
+                    <h2 id="agreement">1. Agreement to Terms</h2>
                     <p>By accessing or using Star Studio's services, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you may not access our services or website.</p>
 
-                    <h2>2. Services Provided</h2>
+                    <h2 id="services-provided">2. Services Provided</h2>
                     <p>Star Studio provides professional photography services including but not limited to:</p>
                     <ul>
                         <li>Wedding photography and videography</li>
@@ -306,7 +443,7 @@
                         <li>Photo editing and retouching services</li>
                     </ul>
 
-                    <h2>3. Booking and Reservations</h2>
+                    <h2 id="booking">3. Booking and Reservations</h2>
                     <p>All bookings require a signed agreement and a non-refundable deposit to secure your date. The deposit amount varies based on the service and is typically 30-50% of the total package price.</p>
                     <ul>
                         <li>Dates are only secured upon receipt of deposit and signed contract</li>
@@ -314,7 +451,7 @@
                         <li>Clients must provide accurate information regarding event times and locations</li>
                     </ul>
 
-                    <h2>4. Cancellation and Rescheduling Policy</h2>
+                    <h2 id="cancellation">4. Cancellation and Rescheduling Policy</h2>
                     <p>We understand that circumstances may require changes to your booking:</p>
                     <ul>
                         <li><strong>Cancellations:</strong> The initial deposit is non-refundable. Cancellations made within 30 days of the scheduled date may incur additional charges.</li>
@@ -322,7 +459,7 @@
                         <li><strong>Photographer Cancellation:</strong> In the unlikely event that Star Studio must cancel your booking, we will provide a full refund or offer to reschedule at your convenience.</li>
                     </ul>
 
-                    <h2>5. Copyright and Usage Rights</h2>
+                    <h2 id="copyright">5. Copyright and Usage Rights</h2>
                     <p>All photographs taken by Star Studio are protected by copyright law. Upon full payment, clients receive:</p>
                     <ul>
                         <li>Personal use license for the images</li>
@@ -331,7 +468,7 @@
                     </ul>
                     <p>Star Studio retains the copyright to all images and the right to use them for promotional purposes unless otherwise agreed in writing.</p>
 
-                    <h2>6. Client Responsibilities</h2>
+                    <h2 id="responsibilities">6. Client Responsibilities</h2>
                     <p>Clients agree to:</p>
                     <ul>
                         <li>Provide accurate information regarding shoot requirements</li>
@@ -340,7 +477,7 @@
                         <li>Provide a safe working environment for the photographer</li>
                     </ul>
 
-                    <h2>7. Image Delivery and Processing</h2>
+                    <h2 id="delivery">7. Image Delivery and Processing</h2>
                     <p>Star Studio will deliver images within the timeframe specified in your contract:</p>
                     <ul>
                         <li>Typical delivery is 4-8 weeks for weddings and 2-3 weeks for other sessions</li>
@@ -349,7 +486,7 @@
                         <li>Extended gallery hosting may be available for an additional fee</li>
                     </ul>
 
-                    <h2>8. Limitations of Liability</h2>
+                    <h2 id="liability">8. Limitations of Liability</h2>
                     <p>While Star Studio takes utmost care in providing services, we are not liable for:</p>
                     <ul>
                         <li>Circumstances beyond our control (weather, venue restrictions, etc.)</li>
@@ -358,7 +495,7 @@
                     </ul>
                     <p>In any case, liability is limited to the amount paid for services.</p>
 
-                    <h2>9. Model Release</h2>
+                    <h2 id="model-release">9. Model Release</h2>
                     <p>By using our services, clients grant Star Studio permission to use photographs for promotional purposes including:</p>
                     <ul>
                         <li>Website portfolio and social media</li>
@@ -367,7 +504,7 @@
                     </ul>
                     <p>Clients who wish to opt out of this model release must do so in writing before the shoot date.</p>
 
-                    <h2>10. Pricing and Payment Terms</h2>
+                    <h2 id="pricing">10. Pricing and Payment Terms</h2>
                     <p>All prices are as quoted at the time of booking and are subject to change for future bookings.</p>
                     <ul>
                         <li>Additional services not included in the original package will be billed separately</li>
@@ -376,16 +513,16 @@
                         <li>Late payments may incur additional fees</li>
                     </ul>
 
-                    <h2>11. Force Majeure</h2>
+                    <h2 id="force-majeure">11. Force Majeure</h2>
                     <p>Star Studio is not liable for failure to perform services due to circumstances beyond our reasonable control, including but not limited to acts of God, natural disasters, war, terrorism, government regulations, pandemics, or other emergencies.</p>
 
-                    <h2>12. Governing Law</h2>
+                    <h2 id="governing-law">12. Governing Law</h2>
                     <p>These Terms and Conditions are governed by and construed in accordance with the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts in Mumbai.</p>
 
-                    <h2>13. Changes to Terms</h2>
+                    <h2 id="changes">13. Changes to Terms</h2>
                     <p>Star Studio reserves the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting to our website. Continued use of our services constitutes acceptance of the modified terms.</p>
 
-                    <h2>14. Contact Information</h2>
+                    <h2 id="contact-info">14. Contact Information</h2>
                     <p>For questions about these Terms and Conditions, please contact us:</p>
                     <ul>
                         <li><strong>Email:</strong> <a href="mailto:info@starstudio.com">info@starstudio.com</a></li>
@@ -401,110 +538,126 @@
         </section>
     </main>
 
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-about fade-in">
-                <h3>Star Studio</h3>
-                <p>Capturing life's most precious moments with creativity and passion. Professional photography
-                    services for all your special occasions.</p>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/your-channel" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.pinterest.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about fade-in">
+                    <h3>Star Studio</h3>
+                    <p>Capturing life's most precious moments with creativity and passion. Professional photography
+                        services for all your special occasions.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/your-channel" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.pinterest.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links fade-in delay-1">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links fade-in delay-1">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/wedding-photography.html"><i class="fas fa-chevron-right"></i> Wedding Photography</a></li>
+                        <li><a href="/pre-weddingshoot.html"><i class="fas fa-chevron-right"></i> Pre-Wedding Shoots</a></li>
+                        <li><a href="/videography.html"><i class="fas fa-chevron-right"></i> Videography</a></li>
+                        <li><a href="/drone.html"><i class="fas fa-chevron-right"></i> Drone Shoots</a></li>
+                        <li><a href="baby-maternity.html"><i class="fas fa-chevron-right"></i> Baby & Maternity</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links fade-in delay-1">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> Blogs</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li><a href="#portfolio"><i class="fas fa-chevron-right"></i>Terms & Conditions</a></li>
+                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact fade-in delay-2">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Photography Lane, Mumbai, India</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@starstudio.com</p>
+                </div>
+                <div class="footer-newsletter fade-in delay-3">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for updates and offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your Email">
+                        <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                    </form>
                 </div>
             </div>
-            <div class="footer-links fade-in delay-1">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
-                    <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
-                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
-                    <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
-                    <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
-                </ul>
-            </div>
-            <div class="footer-links fade-in delay-1">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="/wedding-photography.html"><i class="fas fa-chevron-right"></i> Wedding Photography</a></li>
-                    <li><a href="/pre-weddingshoot.html"><i class="fas fa-chevron-right"></i> Pre-Wedding Shoots</a></li>
-                    <li><a href="/videography.html"><i class="fas fa-chevron-right"></i> Videography</a></li>
-                    <li><a href="/drone.html"><i class="fas fa-chevron-right"></i> Drone Shoots</a></li>
-                    <li><a href="baby-maternity.html"><i class="fas fa-chevron-right"></i> Baby & Maternity</a></li>
-                </ul>
-            </div>
-            <div class="footer-links fade-in delay-1">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="#home"><i class="fas fa-chevron-right"></i> FAQ</a></li>
-                    <li><a href="#about"><i class="fas fa-chevron-right"></i> Blogs</a></li>
-                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                    <li><a href="#portfolio"><i class="fas fa-chevron-right"></i>Terms & Conditions</a></li>
-                    <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact fade-in delay-2">
-                <h4>Contact Info</h4>
-                <p><i class="fas fa-map-marker-alt"></i> 123 Photography Lane, Mumbai, India</p>
-                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
-                <p><i class="fas fa-envelope"></i> info@starstudio.com</p>
-            </div>
-            <div class="footer-newsletter fade-in delay-3">
-                <h4>Newsletter</h4>
-                <p>Subscribe to our newsletter for updates and offers</p>
-                <form class="newsletter-form">
-                    <input type="email" class="newsletter-input" placeholder="Your Email">
-                    <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
-                </form>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Star Studio. All Rights Reserved. | Designed with <i class="fas fa-heart"
+                        style="color: #e67e22;"></i></p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 Star Studio. All Rights Reserved. | Designed with <i class="fas fa-heart"
-                    style="color: #e67e22;"></i></p>
-        </div>
-    </div>
-</footer>
-<script src="script.js"></script>
-<script>
-    // Enhanced fade-in animation
-    document.addEventListener('DOMContentLoaded', function() {
-        const fadeElements = document.querySelectorAll('.fade-in');
-        
-        const fadeInObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, 100);
-                    fadeInObserver.unobserve(entry.target);
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        // Enhanced fade-in animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, 100);
+                        fadeInObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(element => {
+                fadeInObserver.observe(element);
+            });
+            
+            // Back to top button functionality
+            const backToTopButton = document.querySelector('.back-to-top');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('active');
+                } else {
+                    backToTopButton.classList.remove('active');
                 }
             });
-        }, { threshold: 0.1 });
-        
-        fadeElements.forEach(element => {
-            fadeInObserver.observe(element);
+            
+            backToTopButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // Smooth scrolling for table of contents
+            document.querySelectorAll('.toc-list a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
         });
-        
-        // Back to top button functionality
-        const backToTopButton = document.querySelector('.back-to-top');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('active');
-            } else {
-                backToTopButton.classList.remove('active');
-            }
-        });
-        
-        backToTopButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    });
-</script>
+    </script>
 </body>
 
 </html>
