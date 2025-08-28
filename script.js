@@ -36,10 +36,25 @@ window.addEventListener('scroll', () => {
     } else {
         backToTop.classList.remove('active');
     }
+});
 
-    // Animation on scroll
+// Performance optimization: Debounce scroll events
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Optimize scroll animations with debouncing
+const debouncedScrollHandler = debounce(() => {
     const fadeElems = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .zoom-in');
-
+    
     fadeElems.forEach(elem => {
         const elemTop = elem.getBoundingClientRect().top;
         const elemBottom = elem.getBoundingClientRect().bottom;
@@ -49,13 +64,17 @@ window.addEventListener('scroll', () => {
             elem.classList.add('appear');
         }
     });
-});
+}, 16); // 60fps optimization
+
+// Add the debounced scroll handler for animations
+window.addEventListener('scroll', debouncedScrollHandler);
 
 // Portfolio Filtering
 const filterButtons = document.querySelectorAll('.filter-btn');
 const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-filterButtons.forEach(button => {
+if (filterButtons.length > 0 && portfolioItems.length > 0) {
+    filterButtons.forEach(button => {
     button.addEventListener('click', () => {
         // Remove active class from all buttons
         filterButtons.forEach(btn => btn.classList.remove('active'));
@@ -83,13 +102,15 @@ filterButtons.forEach(button => {
             }
         });
     });
-});
+    });
+}
 
 // Form Submission
 const bookingForm = document.getElementById('bookingForm');
 const formMessage = document.getElementById('formMessage'); // Get the message div
 
-bookingForm.addEventListener('submit', (e) => {
+if (bookingForm && formMessage) {
+    bookingForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     // Clear previous messages
@@ -97,13 +118,13 @@ bookingForm.addEventListener('submit', (e) => {
     formMessage.classList.remove('success', 'error');
 
     // Basic Form Validation
-    const name = bookingForm.querySelector('#booking-name').value;
-    const email = bookingForm.querySelector('#booking-email').value;
-    const phone = bookingForm.querySelector('#booking-phone').value;
-    const service = bookingForm.querySelector('#booking-service').value;
-    const date = bookingForm.querySelector('#booking-date').value;
-    const message = bookingForm.querySelector('#booking-message').value;
-    const honeypot = bookingForm.querySelector('#website-url').value; // Get honeypot field value
+    const name = document.getElementById('contact-name').value;
+    const email = document.getElementById('contact-email').value;
+    const phone = document.getElementById('contact-phone').value;
+    const service = document.getElementById('contact-service').value;
+    const date = document.getElementById('booking-date').value;
+    const message = document.getElementById('contact-message').value;
+    const honeypot = document.getElementById('website-url').value; // Get honeypot field value
 
     // Check honeypot field - if filled, it's likely a bot
     if (honeypot) {
@@ -135,13 +156,24 @@ bookingForm.addEventListener('submit', (e) => {
         return;
     }
 
+    // Show loading state
+    const submitBtn = bookingForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Submitting...';
+    submitBtn.disabled = true;
+
     // Simulate form submission
     setTimeout(() => {
         formMessage.textContent = 'Thank you for your booking request! We will contact you shortly.';
         formMessage.classList.add('success');
-    bookingForm.reset();
+        bookingForm.reset();
+        
+        // Reset button
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
     }, 1000);
-});
+    });
+}
 
 // Smooth Scrolling for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -163,6 +195,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Initialize with header class and animations on scroll
 window.dispatchEvent(new Event('scroll'));
+
+
 
 // Enhanced counter animation for stats section
 function initEnhancedCounter(container) {

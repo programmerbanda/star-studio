@@ -32,6 +32,7 @@
 
     <!-- Header & Navigation -->
     <header>
+        <!-- <a href="#main-content" class="skip-link">Skip to main content</a> -->
         <div class="container header-content">
             <a href="#home" class="logo">
                 <span>★</span> Star <span>Studio</span>
@@ -56,6 +57,7 @@
 
     <!-- Hero Section with Video Background -->
     <section id="home" class="hero" role="region" aria-label="Hero Section">
+        <div id="main-content" class="sr-only">Main content starts here</div>
         <picture>
             <source media="(max-width: 768px)" srcset="https://videos.pexels.com/video-files/15157499/15157499-sd_640_360_25fps.mp4">
             <source media="(min-width: 769px)" srcset="https://videos.pexels.com/video-files/15157499/15157499-hd_1920_1080_25fps.mp4">
@@ -484,16 +486,20 @@
                     <div id="formMessage" class="form-message"></div> <!-- Added for form feedback -->
                     <form id="bookingForm">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
+                            <label for="contact-name" class="sr-only">Your Name</label>
+                            <input type="text" id="contact-name" class="form-control" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <label for="contact-email" class="sr-only">Your Email</label>
+                            <input type="email" id="contact-email" class="form-control" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" class="form-control" placeholder="Your Phone" required>
+                            <label for="contact-phone" class="sr-only">Your Phone</label>
+                            <input type="tel" id="contact-phone" class="form-control" placeholder="Your Phone" required>
                         </div>
                         <div class="form-group">
-                            <select class="form-control" required>
+                            <label for="contact-service" class="sr-only">Select Service</label>
+                            <select id="contact-service" class="form-control" required>
                                 <option value="" disabled selected>Select Service</option>
                                 <option value="wedding">Wedding Photography</option>
                                 <option value="pre-wedding">Pre-Wedding Shoot</option>
@@ -504,10 +510,12 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <input type="date" class="form-control" placeholder="Event Date" required id="booking-date">
+                            <label for="booking-date" class="sr-only">Event Date</label>
+                            <input type="date" id="booking-date" class="form-control" placeholder="Event Date" required>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" id="booking-message" placeholder="Tell us about your event" required tabindex="15"></textarea>
+                            <label for="contact-message" class="sr-only">Event Details</label>
+                            <textarea id="contact-message" class="form-control" placeholder="Tell us about your event" required></textarea>
                         </div>
                         <div class="form-group honeypot-field">
                             <label for="website-url" class="sr-only">Website URL</label>
