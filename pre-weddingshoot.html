@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Star Studio offers premium photography services for weddings, events, portraits, and more. Capturing moments, creating memories.">
+    <meta name="keywords" content="photography, wedding photography, event photography, portrait photography, pre-wedding shoot, drone shoots, videography, Mumbai, Star Studio">
+    <meta property="og:title" content="Star Studio - Premium Photography Services">
+    <meta property="og:description" content="Professional photography services for weddings, events, and special occasions. Let us tell your story through our lens.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80">
+    <meta property="og:url" content="YOUR_WEBSITE_URL">
+    <meta property="og:type" content="website">
+    <title>Star Studio - Premium Photography Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== Pre-Wedding Section ===== */
+        .prewedding-section {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .prewedding-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e5e5e5' fill-opacity='0.3' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.5;
+            z-index: 0;
+        }
+
+        .prewedding-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .prewedding-section .content {
+            flex: 1 1 500px;
+        }
+
+        .prewedding-section .title {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            color: #222;
+            font-weight: 700;
+            font-family: "Playfair Display", serif;
+            position: relative;
+            display: inline-block;
+        }
+
+        .prewedding-section .title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #d6336c, #9d174d);
+            border-radius: 2px;
+        }
+
+        .prewedding-section .description {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: #555;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .prewedding-section .features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .prewedding-section .features li {
+            font-size: 1.05rem;
+            margin-bottom: 12px;
+            color: #444;
+            display: flex;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            transition: transform 0.3s ease;
+        }
+
+        .prewedding-section .features li:hover {
+            transform: translateX(5px);
+        }
+
+        .prewedding-section .features li::before {
+            content: '✔';
+            color: #d6336c;
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 1.1rem;
+        }
+
+        .prewedding-section .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: linear-gradient(135deg, #d6336c, #9d174d);
+            color: #fff;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: 0 6px 20px rgba(214, 51, 108, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.95rem;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .prewedding-section .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #9d174d, #6d0933);
+            transition: all 0.4s ease;
+            z-index: -1;
+        }
+
+        .prewedding-section .btn:hover {
+            box-shadow: 0 8px 25px rgba(214, 51, 108, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .prewedding-section .btn:hover::before {
+            left: 0;
+        }
+
+        /* ===== Fixed Image Slider ===== */
+        .image-slider-container {
+            flex: 1 1 500px;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+            transition: all 0.5s ease;
+            height: 450px;
+        }
+
+        .image-slider-container:hover {
+            transform: perspective(1000px) rotateY(0) rotateX(0);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-slider {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            width: 300%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            width: 33.333%;
+            height: 100%;
+            flex-shrink: 0;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Slider Controls */
+        .slider-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .slider-dot.active {
+            background: #fff;
+            transform: scale(1.2);
+        }
+
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+            color: #d6336c;
+            font-size: 20px;
+        }
+
+        .slider-nav:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slider-nav.prev {
+            left: 20px;
+        }
+
+        .slider-nav.next {
+            right: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .prewedding-section .container {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+            
+            .prewedding-section .title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .image-slider-container {
+                margin-top: 30px;
+                transform: none;
+                height: 400px;
+            }
+            
+            .image-slider-container:hover {
+                transform: none;
+            }
+            
+            .slider-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 768px) {                        
+            .prewedding-section {
+                padding: 80px 15px;
+            }
+            
+            .prewedding-section .title {
+                font-size: 2.5rem;
+            }
+            
+            .prewedding-section .description {
+                font-size: 1rem;
+            }
+            
+            .image-slider-container {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 576px) {            
+            .prewedding-section .title {
+                font-size: 2.2rem;
+            }
+            
+            .image-slider-container {
+                height: 300px;
+            }
+            
+            .slider-nav {
+                width: 35px;
+                height: 35px;
+                font-size: 14px;
+            }
+            
+            .slider-nav.prev {
+                left: 10px;
+            }
+            
+            .slider-nav.next {
+                right: 10px;
+            }
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-content">
+            <a href="#home" class="logo">
+                <span>★</span> Star <span>Studio</span>
+            </a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact" class="nav-btn">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <!-- ===== Pre-Wedding Shoot Section ===== -->
+        <section class="prewedding-section">
+          <div class="container">
+            
+            <!-- Left Side Text -->
+            <div class="content">
+              <h2 class="title">Pre-Wedding Shoot</h2>
+              <p class="description">
+                Capture your love story with our cinematic pre-wedding shoots.  
+                From dreamy outdoor locations to creative themes, we create timeless 
+                memories with a perfect blend of photography & videography.
+              </p>
+              <ul class="features">
+                <li>Romantic Outdoor & Indoor Locations</li>
+                <li>Cinematic Videography & Drone Shots</li>
+                <li>Premium Editing & Retouching</li>
+                <li>Customized Themes & Concepts</li>
+              </ul>
+              <a href="#contact" class="btn">Book Your Shoot</a>
+            </div>
+      
+            <!-- Right Side Slider - Fixed Version -->
+            <div class="image-slider-container">
+                <div class="image-slider">
+                    <div class="slides">
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1000&q=80" alt="Pre Wedding Couple in Romantic Setting">
+                        </div>
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80" alt="Pre Wedding Couple in Natural Environment">
+                        </div>
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1603052875700-8b6a1b36f6c3?auto=format&fit=crop&w=1000&q=80" alt="Creative Pre Wedding Photography">
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation Arrows -->
+                    <div class="slider-nav prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="slider-nav next">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    
+                    <!-- Dots Indicator -->
+                    <div class="slider-controls">
+                        <div class="slider-dot active"></div>
+                        <div class="slider-dot"></div>
+                        <div class="slider-dot"></div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </section>
+      </main>    
+      
+     <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about fade-in">
+                    <h3>Star Studio</h3>
+                    <p>Capturing life's most precious moments with creativity and passion. Professional photography
+                        services for all your special occasions.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/your-channel" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.pinterest.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links fade-in delay-1">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links fade-in delay-1">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/wedding-photography.html"><i class="fas fa-chevron-right"></i> Wedding Photography</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> Pre-Wedding Shoots</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Videography</a></li>
+                        <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Drone Shoots</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Baby & Maternity</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links fade-in delay-1">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> Blogs</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li><a href="#portfolio"><i class="fas fa-chevron-right"></i>Terms & Conditions</a></li>
+                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact fade-in delay-2">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Photography Lane, Mumbai, India</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@starstudio.com</p>
+                </div>
+                <div class="footer-newsletter fade-in delay-3">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for updates and offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your Email">
+                        <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Star Studio. All Rights Reserved. | Designed with <i class="fas fa-heart"
+                        style="color: #e67e22;"></i></p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        // JavaScript for the image slider functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelector('.slides');
+            const slide = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.slider-dot');
+            const prevBtn = document.querySelector('.slider-nav.prev');
+            const nextBtn = document.querySelector('.slider-nav.next');
+            
+            let currentSlide = 0;
+            const slideCount = slide.length;
+            
+            // Function to update slider position
+            function updateSlider() {
+                slides.style.transform = `translateX(-${currentSlide * 100 / slideCount}%)`;
+                
+                // Update active dot
+                dots.forEach((dot, index) => {
+                    if (index === currentSlide) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Next slide function
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slideCount;
+                updateSlider();
+            }
+            
+            // Previous slide function
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+                updateSlider();
+            }
+            
+            // Add event listeners to navigation buttons
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            // Add event listeners to dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    updateSlider();
+                });
+            });
+            
+            // Auto slide every 2 seconds
+            setInterval(nextSlide, 3000);
+        });
+    </script>
+</body>
+
+</html>
