@@ -4,29 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Star Studio offers premium photography services for weddings, events, portraits, and more. Capturing moments, creating memories.">
-    <meta name="keywords" content="photography, wedding photography, event photography, portrait photography, pre-wedding shoot, drone shoots, videography, Mumbai, Star Studio">
-    <meta property="og:title" content="Star Studio - Premium Photography Services">
-    <meta property="og:description" content="Professional photography services for weddings, events, and special occasions. Let us tell your story through our lens.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80">
+    <meta name="description" content="Star Studio offers premium baby and maternity photography services in Mumbai. Capture the joy of parenthood with our heartfelt sessions.">
+    <meta name="keywords" content="baby photography, maternity photography, newborn photos, pregnancy photos, family photography, Mumbai, Star Studio">
+    <meta property="og:title" content="Star Studio - Baby & Maternity Photography Services">
+    <meta property="og:description" content="Celebrate the journey of parenthood with our professional baby and maternity photography. Timeless, heartfelt memories for your family.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1501746877-14782df58970?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80">
     <meta property="og:url" content="YOUR_WEBSITE_URL">
     <meta property="og:type" content="website">
-    <title>Star Studio - Premium Photography Services</title>
+    <title>Star Studio - Baby & Maternity Photography Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* ===== Pre-Wedding Section ===== */
-        .prewedding-section {
+        /* ===== Baby & Maternity Section ===== */
+        .maternity-section {
             padding: 100px 20px;
-            /* background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%); */
             position: relative;
             overflow: hidden;
         }
 
-        .prewedding-section::before {
+        .maternity-section::before {
             content: '';
             position: absolute;
             top: 0;
@@ -38,7 +35,7 @@
             z-index: 0;
         }
 
-        .prewedding-section .container {
+        .maternity-section .container {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
@@ -50,11 +47,11 @@
             z-index: 1;
         }
 
-        .prewedding-section .content {
+        .maternity-section .content {
             flex: 1 1 500px;
         }
 
-        .prewedding-section .title {
+        .maternity-section .title {
             font-size: 3.2rem;
             margin-bottom: 20px;
             color: #F43F5E;
@@ -64,7 +61,7 @@
             display: inline-block;
         }
 
-        .prewedding-section .title::after {
+        .maternity-section .title::after {
             content: '';
             position: absolute;
             bottom: -10px;
@@ -75,35 +72,35 @@
             border-radius: 2px;
         }
 
-        .prewedding-section .description {
+        .maternity-section .description {
             font-size: 1.15rem;
             line-height: 1.8;
             margin-bottom: 25px;
-            color: #fff;
+            color: #ffffff;
             font-family: 'Poppins', sans-serif;
         }
 
-        .prewedding-section .features {
+        .maternity-section .features {
             list-style: none;
             padding: 0;
             margin-bottom: 30px;
         }
 
-        .prewedding-section .features li {
+        .maternity-section .features li {
             font-size: 1.05rem;
             margin-bottom: 12px;
-            color: #fff;
+            color: #ffffff;
             display: flex;
             align-items: center;
             font-family: 'Poppins', sans-serif;
             transition: transform 0.3s ease;
         }
 
-        .prewedding-section .features li:hover {
+        .maternity-section .features li:hover {
             transform: translateX(5px);
         }
 
-        .prewedding-section .features li::before {
+        .maternity-section .features li::before {
             content: '✔';
             color: #d6336c;
             font-weight: bold;
@@ -111,7 +108,7 @@
             font-size: 1.1rem;
         }
 
-        .prewedding-section .btn {
+        .maternity-section .btn {
             display: inline-block;
             padding: 15px 35px;
             background: linear-gradient(135deg, #d6336c, #9d174d);
@@ -129,7 +126,7 @@
             z-index: 1;
         }
 
-        .prewedding-section .btn::before {
+        .maternity-section .btn::before {
             content: '';
             position: absolute;
             top: 0;
@@ -141,12 +138,12 @@
             z-index: -1;
         }
 
-        .prewedding-section .btn:hover {
+        .maternity-section .btn:hover {
             box-shadow: 0 8px 25px rgba(214, 51, 108, 0.5);
             transform: translateY(-3px);
         }
 
-        .prewedding-section .btn:hover::before {
+        .maternity-section .btn:hover::before {
             left: 0;
         }
 
@@ -252,13 +249,13 @@
 
         /* Responsive */
         @media (max-width: 992px) {
-            .prewedding-section .container {
+            .maternity-section .container {
                 flex-direction: column;
                 text-align: center;
                 gap: 40px;
             }
             
-            .prewedding-section .title::after {
+            .maternity-section .title::after {
                 left: 50%;
                 transform: translateX(-50%);
             }
@@ -281,15 +278,15 @@
         }
 
         @media (max-width: 768px) {                        
-            .prewedding-section {
+            .maternity-section {
                 padding: 80px 15px;
             }
             
-            .prewedding-section .title {
+            .maternity-section .title {
                 font-size: 2.5rem;
             }
             
-            .prewedding-section .description {
+            .maternity-section .description {
                 font-size: 1rem;
             }
             
@@ -299,7 +296,7 @@
         }
 
         @media (max-width: 576px) {            
-            .prewedding-section .title {
+            .maternity-section .title {
                 font-size: 2.2rem;
             }
             
@@ -384,63 +381,60 @@
     </header>
     
     <main>
-        <!-- ===== Pre-Wedding Shoot Section ===== -->
-        <section class="prewedding-section">
-          <div class="container">
-            
-            <!-- Left Side Text -->
-            <div class="content">
-              <h2 class="title">Pre-Wedding Shoot</h2>
-              <p class="description">
-                Capture your love story with our cinematic pre-wedding shoots.  
-                From dreamy outdoor locations to creative themes, we create timeless 
-                memories with a perfect blend of photography & videography.
-              </p>
-              <ul class="features">
-                <li>Romantic Outdoor & Indoor Locations</li>
-                <li>Cinematic Videography & Drone Shots</li>
-                <li>Premium Editing & Retouching</li>
-                <li>Customized Themes & Concepts</li>
-              </ul>
-              <a href="#contact" class="btn">Book Your Shoot</a>
-            </div>
+        <!-- ===== Baby & Maternity Section ===== -->
+        <section class="maternity-section">
+            <div class="container">
+                <!-- Left Side Text -->
+                <div class="content">
+                    <h2 class="title fade-in">Baby & Maternity Photography</h2>
+                    <p class="description fade-in delay-1">
+                        Celebrate the joy of parenthood with our heartfelt baby and maternity photography. We capture the tender moments of pregnancy and early childhood with warmth and artistry.
+                    </p>
+                    <ul class="features fade-in delay-2">
+                        <li>Maternity Portrait Sessions</li>
+                        <li>Newborn & Baby Photography</li>
+                        <li>Family Bonding Moments</li>
+                        <li>Customized Studio & Outdoor Shoots</li>
+                    </ul>
+                    <a href="#contact" class="btn fade-in delay-3">Book Your Shoot</a>
+                </div>
       
-            <!-- Right Side Slider - Fixed Version -->
-            <div class="image-slider-container">
-                <div class="image-slider">
-                    <div class="slides">
-                        <div class="slide">
-                            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1000&q=80" alt="Pre Wedding Couple in Romantic Setting">
+                <!-- Right Side Slider -->
+                <div class="image-slider-container fade-in delay-2">
+                    <div class="image-slider">
+                        <div class="slides">
+                            <div class="slide">
+                                <img src="https://images.unsplash.com/photo-1501746877-14782df58970?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Maternity Photography">
+                            </div>
+                            <div class="slide">
+                                <img src="https://images.unsplash.com/photo-1512413318392-9b9a6f1b5185?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Newborn Photography">
+                            </div>
+                            <div class="slide">
+                                <img src="https://images.unsplash.com/photo-1503453362843-4d1b6c3b5cb2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Family Bonding Photography">
+                            </div>
                         </div>
-                        <div class="slide">
-                            <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80" alt="Pre Wedding Couple in Natural Environment">
+                        
+                        <!-- Navigation Arrows -->
+                        <div class="slider-nav prev">
+                            <i class="fas fa-chevron-left"></i>
                         </div>
-                        <div class="slide">
-                            <img src="https://images.unsplash.com/photo-1603052875700-8b6a1b36f6c3?auto=format&fit=crop&w=1000&q=80" alt="Creative Pre Wedding Photography">
+                        <div class="slider-nav next">
+                            <i class="fas fa-chevron-right"></i>
                         </div>
-                    </div>
-                    
-                    <!-- Navigation Arrows -->
-                    <div class="slider-nav prev">
-                        <i class="fas fa-chevron-left"></i>
-                    </div>
-                    <div class="slider-nav next">
-                        <i class="fas fa-chevron-right"></i>
-                    </div>
-                    
-                    <!-- Dots Indicator -->
-                    <div class="slider-controls">
-                        <div class="slider-dot active"></div>
-                        <div class="slider-dot"></div>
-                        <div class="slider-dot"></div>
+                        
+                        <!-- Dots Indicator -->
+                        <div class="slider-controls">
+                            <div class="slider-dot active"></div>
+                            <div class="slider-dot"></div>
+                            <div class="slider-dot"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-          </div>
         </section>
-      </main>    
+    </main>    
       
-     <!-- Footer -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -506,15 +500,16 @@
             </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
     <script>
         // JavaScript for the image slider functionality
         document.addEventListener('DOMContentLoaded', function() {
-            const slides = document.querySelector('.slides');
-            const slide = document.querySelectorAll('.slide');
-            const dots = document.querySelectorAll('.slider-dot');
-            const prevBtn = document.querySelector('.slider-nav.prev');
-            const nextBtn = document.querySelector('.slider-nav.next');
+            const slides = document.querySelector('.maternity-section .slides');
+            const slide = document.querySelectorAll('.maternity-section .slide');
+            const dots = document.querySelectorAll('.maternity-section .slider-dot');
+            const prevBtn = document.querySelector('.maternity-section .slider-nav.prev');
+            const nextBtn = document.querySelector('.maternity-section .slider-nav.next');
             
             let currentSlide = 0;
             const slideCount = slide.length;
@@ -557,7 +552,7 @@
                 });
             });
             
-            // Auto slide every 2 seconds
+            // Auto slide every 3 seconds
             setInterval(nextSlide, 3000);
         });
     </script>
