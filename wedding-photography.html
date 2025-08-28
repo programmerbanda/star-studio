@@ -343,6 +343,16 @@
             galleryTrack.addEventListener('mouseleave', function() {
                 this.style.animationPlayState = 'running';
             });
+
+            galleryTrack.addEventListener('touchstart', function() {
+                this.style.animationPlayState = 'paused';
+            });
+            
+            galleryTrack.addEventListener('touchend', function() {
+                this.style.animationPlayState = 'running';
+            });
+
+
             
             // Footer fade-in animation
             const footerElements = document.querySelectorAll('.fade-in');
