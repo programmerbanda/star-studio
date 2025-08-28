@@ -33,13 +33,6 @@
             overflow-x: hidden;
         }
         
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
         h1, h2, h3, h4 {
             font-family: 'Playfair Display', serif;
             font-weight: 700;
@@ -70,33 +63,6 @@
             box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
         }
         
-        .section {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .section-title h2 {
-            font-size: 36px;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 15px;
-        }
-        
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: #e67e22;
-        }
-        
         /* Wedding Hero Section */
         .wedding-hero {
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80') no-repeat center center/cover;
@@ -123,65 +89,6 @@
             font-size: 18px;
             margin-bottom: 30px;
             animation: fadeIn 2s ease-out;
-        }
-        
-        /* Services Section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .service-card {
-            background: #2D3A4B;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .service-img {
-            height: 250px;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .service-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .service-card:hover .service-img img {
-            transform: scale(1.1);
-        }
-        
-        .service-content {
-            padding: 25px;
-        }
-        
-        .service-content h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: #F43F5E;
-        }
-        
-        .service-link {
-            color: #e67e22;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-            margin-top: 15px;
-        }
-        
-        .service-link:hover {
-            color: #d35400;
         }
         
         /* Animated Gallery */
@@ -224,30 +131,6 @@
             object-fit: cover;
         }
         
-        /* Footer Styles */
-        .footer-about,
-        .footer-links,
-        .footer-contact,
-        .footer-newsletter {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        
-        .footer-about.fade-in,
-        .footer-links.fade-in,
-        .footer-contact.fade-in,
-        .footer-newsletter.fade-in {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .footer-links.delay-1,
-        .footer-contact.delay-2,
-        .footer-newsletter.delay-3 {
-            transition-delay: 0.3s;
-        }
-        
         /* Animations */
         @keyframes scroll {
             0% {
@@ -282,14 +165,6 @@
             
             .wedding-hero h1 {
                 font-size: 36px;
-            }
-            
-            .section {
-                padding: 60px 0;
-            }
-            
-            .section-title h2 {
-                font-size: 28px;
             }
             
             .gallery-track {
@@ -369,48 +244,6 @@
                         </div>
                         <div class="gallery-item">
                             <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wedding Photo 6">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Wedding Services Section -->
-        <section id="wedding-services" class="section">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Wedding Photography Services</h2>
-                    <p>Preserving your precious moments with artistry and emotion</p>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-img">
-                            <img src="https://images.unsplash.com/photo-1554306297-0c3e0a75e2d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Pre-Wedding Shoot">
-                        </div>
-                        <div class="service-content">
-                            <h3>Pre-Wedding Shoots</h3>
-                            <p>Romantic and creative sessions that tell your unique love story before the big day.</p>
-                            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-img">
-                            <img src="https://images.unsplash.com/photo-1532710093739-9480a53eed20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wedding Day Coverage">
-                        </div>
-                        <div class="service-content">
-                            <h3>Wedding Day Coverage</h3>
-                            <p>Complete documentation from preparations to reception, capturing all emotions and moments.</p>
-                            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-img">
-                            <img src="https://images.unsplash.com/photo-1620055252199-138a4f32d559?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Candid Photography">
-                        </div>
-                        <div class="service-content">
-                            <h3>Candid Photography</h3>
-                            <p>Natural, unposed moments that capture the true emotions and atmosphere of your special day.</p>
-                            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
