@@ -71,14 +71,14 @@ h5 {
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
 /* Header & Navigation - Fixed */
 header {
-    background-color: var(--dark); /* Use --dark for consistency with new dark theme */
+    background-color: var(--dark);
     position: fixed;
     width: 100%;
     top: 0;
@@ -117,6 +117,7 @@ nav ul {
     display: flex;
     list-style: none;
     align-items: center;
+    gap: 20px;
 }
 
 nav ul li {
@@ -128,7 +129,7 @@ nav ul li a {
     color: white; /* Changed from var(--dark) for visibility on dark nav */
     font-weight: 500;
     transition: var(--transition);
-    font-size: 16px;
+    font-size: 14px;
     position: relative;
 }
 
@@ -234,15 +235,15 @@ nav ul li a:hover:after {
     padding: 0 20px;
 }
 
-.hero h1 {
-    font-size: 3.8rem;
+.hero-title {
+    font-size: 2.8rem;
     margin-bottom: 1.5rem;
     animation: fadeInDown 1s ease;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.hero p {
-    font-size: 1.3rem;
+.hero-description {
+    font-size: 1rem;
     margin-bottom: 2.5rem;
     animation: fadeInUp 1s ease;
     font-weight: 300;
@@ -333,8 +334,8 @@ section {
 }
 
 .section-title h2 {
-    font-size: 2.8rem;
-    color: var(--text); /* Changed from var(--primary) for visibility on dark background */
+    font-size: 2.6rem;
+    color: var(--text);
     position: relative;
     display: inline-block;
     margin-bottom: 20px;
@@ -356,7 +357,7 @@ section {
     color: var(--text-light);
     max-width: 600px;
     margin: 0 auto;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 /* About Section */
@@ -402,7 +403,7 @@ section {
 }
 
 .about-text h3 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 25px;
     color: var(--text); /* Changed from var(--primary) for visibility on dark background */
 }
@@ -435,7 +436,7 @@ section {
 }
 
 .stat-number {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--accent);
     margin-bottom: 10px;
@@ -818,7 +819,7 @@ section {
     }
 
     .blog-cta h3 {
-        font-size: 1.6rem;
+        font-size: 1rem;
     }
 
     /* Map mobile responsive */
@@ -1293,7 +1294,7 @@ footer {
 /* Responsive Design - Fixed */
 @media (max-width: 1100px) {
     .hero h1 {
-        font-size: 3.2rem;
+        font-size: 2.4rem;
     }
 
     .about-content {
@@ -1356,7 +1357,7 @@ footer {
     }
 
     .hero h1 {
-        font-size: 2.8rem;
+        font-size: 2.2rem;
     }
 
     .btn-ghost {
@@ -1383,7 +1384,7 @@ footer {
     }
 
     .hero p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .section-title h2 {
@@ -1813,7 +1814,7 @@ footer {
 
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-bottom: 60px;
 }
@@ -1925,7 +1926,7 @@ footer {
 }
 
 .blog-cta h3 {
-    font-size: 2rem;
+    font-size: 1.4rem;
     margin-bottom: 20px;
     color: var(--text);
 }
@@ -1933,7 +1934,7 @@ footer {
 .blog-cta p {
     color: var(--text-light);
     margin-bottom: 30px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
