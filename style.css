@@ -334,7 +334,7 @@ section {
 }
 
 .section-title h2 {
-    font-size: 2.6rem;
+    font-size: 2rem;
     color: var(--text);
     position: relative;
     display: inline-block;
@@ -405,13 +405,13 @@ section {
 .about-text h3 {
     font-size: 2rem;
     margin-bottom: 25px;
-    color: var(--text); /* Changed from var(--primary) for visibility on dark background */
+    color: var(--text);
 }
 
 .about-text p {
     margin-bottom: 20px;
     color: var(--text-light);
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
 .stats-grid {
@@ -424,15 +424,15 @@ section {
 .stat-item {
     text-align: center;
     padding: 25px 15px;
-    background: #2d3a4b; /* Changed from white for dark theme */
+    background: #2d3a4b;
     border-radius: 10px;
-    box-shadow: var(--shadow); /* Use updated shadow variable */
+    box-shadow: var(--shadow);
     transition: var(--transition);
 }
 
 .stat-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); /* Adjusted for dark theme */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
 }
 
 .stat-number {
@@ -450,7 +450,7 @@ section {
 
 /* Services Section */
 .services {
-    background-color: #2d3a4b; /* Adjusted for new dark background */
+    background-color: #2d3a4b;
 }
 
 .services-grid {
@@ -724,14 +724,6 @@ section {
 .stat-item {
     text-align: center;
     padding: 20px;
-}
-
-.stat-number {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--accent);
-    margin-bottom: 10px;
-    font-family: 'Poppins', sans-serif;
 }
 
 .stat-label {
@@ -1388,7 +1380,7 @@ footer {
     }
 
     .section-title h2 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
 
     
@@ -1450,7 +1442,7 @@ footer {
     }
 
     .section-title h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .portfolio-grid {
