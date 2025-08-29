@@ -17,16 +17,23 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        :focus-visible { outline: 3px solid #d6336c; outline-offset: 2px; }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation: none !important; transition: none !important; }
+            html { scroll-behavior: auto !important; }
+        }
+    </style>
 </head>
 
 <body>
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Back to Top Button -->
-    <a href="#home" class="back-to-top">
+    <a href="#home" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </a>
 
@@ -36,10 +43,10 @@
             <a href="#home" class="logo">
                 <span>★</span> Star <span>Studio</span>
             </a>
-            <button class="mobile-menu-btn">
+            <button class="mobile-menu-btn" aria-label="Open menu" aria-controls="nav" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
-            <nav id="nav">
+            <nav id="nav" role="navigation" aria-label="Primary">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -58,7 +65,7 @@
         <picture>
             <source media="(max-width: 768px)" srcset="https://videos.pexels.com/video-files/15157499/15157499-sd_640_360_25fps.mp4">
             <source media="(min-width: 769px)" srcset="https://videos.pexels.com/video-files/15157499/15157499-hd_1920_1080_25fps.mp4">
-            <video autoplay muted loop playsinline preload="auto" poster="https://images.pexels.com/photos/15157499/pexels-photo-15157499.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="hero-video">
+            <video autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/photos/15157499/pexels-photo-15157499.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="hero-video">
                 <source src="https://videos.pexels.com/video-files/15157499/15157499-hd_1920_1080_25fps.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -84,7 +91,7 @@
             </div>
             <div class="about-content">
                 <div class="about-img zoom-in">
-                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1300&q=80"
+                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1300&q=80"
                         alt="Our Studio">
                 </div>
                 <div class="about-text fade-in">
@@ -192,7 +199,7 @@
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item zoom-in" data-category="wedding">
-                    <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
                         alt="Wedding Photo">
                     <div class="portfolio-overlay">
                         <div class="portfolio-category">Wedding</div>
@@ -201,7 +208,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item zoom-in delay-1" data-category="pre-wedding">
-                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80"
+                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80"
                         alt="Pre-Wedding">
                     <div class="portfolio-overlay">
                         <div class="portfolio-category">Pre-Wedding</div>
@@ -210,7 +217,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item zoom-in delay-2" data-category="event">
-                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1655&q=80"
+                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1655&q=80"
                         alt="Corporate Event">
                     <div class="portfolio-overlay">
                         <div class="portfolio-category">Corporate Event</div>
@@ -219,7 +226,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item zoom-in delay-1" data-category="portrait">
-                    <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80"
+                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80"
                         alt="Portrait">
                     <div class="portfolio-overlay">
                         <div class="portfolio-category">Portrait</div>
@@ -228,7 +235,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item zoom-in delay-2" data-category="wedding">
-                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
                         alt="Wedding Ceremony">
                     <div class="portfolio-overlay">
                         <div class="portfolio-category">Wedding</div>
@@ -237,7 +244,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item zoom-in delay-3" data-category="event">
-                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80"
+                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80"
                         alt="Birthday Party">
                     <div class="portfolio-overlay">
                         <div class="portfolio-category">Event</div>
@@ -340,7 +347,7 @@
             <div class="testimonial-slider">
                 <div class="testimonial fade-in">
                     <div class="testimonial-avatar">
-                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client">
+                        <img loading="lazy" decoding="async" src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client">
                     </div>
                     <p class="testimonial-text">"Star Studio captured our wedding day perfectly! The photos are stunning
                         and truly reflect the emotions of the day. We couldn't be happier with their professional
@@ -362,7 +369,7 @@
             <div class="blog-grid">
                 <article class="blog-card fade-in">
                     <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Wedding Photography Tips">
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Wedding Photography Tips">
                         <div class="blog-category">Wedding Photography</div>
                     </div>
                     <div class="blog-content">
@@ -378,7 +385,7 @@
 
                 <article class="blog-card fade-in delay-1">
                     <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Portrait Photography">
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Portrait Photography">
                         <div class="blog-category">Portrait Photography</div>
                     </div>
                     <div class="blog-content">
@@ -394,7 +401,7 @@
 
                 <article class="blog-card fade-in delay-2">
                     <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1655&q=80" alt="Event Photography">
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1655&q=80" alt="Event Photography">
                         <div class="blog-category">Event Photography</div>
                     </div>
                     <div class="blog-content">
@@ -410,7 +417,7 @@
 
                 <article class="blog-card fade-in delay-3">
                     <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Photography Equipment">
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Photography Equipment">
                         <div class="blog-category">Equipment Guide</div>
                     </div>
                     <div class="blog-content">

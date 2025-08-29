@@ -18,6 +18,11 @@
         rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     <style>
+        :focus-visible { outline: 3px solid #d6336c; outline-offset: 2px; }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation: none !important; transition: none !important; }
+            html { scroll-behavior: auto !important; }
+        }
         /* ===== Pre-Wedding Section ===== */
         .prewedding-section {
             padding: 100px 20px;
@@ -223,7 +228,7 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.85);
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -235,6 +240,7 @@
             transition: all 0.3s ease;
             color: #d6336c;
             font-size: 20px;
+            border: none;
         }
 
         .slider-nav:hover {
@@ -352,12 +358,12 @@
 
 <body>
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Back to Top Button -->
-    <a style="display: none;" href="#home" class="back-to-top">
+    <a style="display: none;" href="#home" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </a>
 
@@ -367,10 +373,10 @@
             <a href="#home" class="logo">
                 <span>★</span> Star <span>Studio</span>
             </a>
-            <button class="mobile-menu-btn">
+            <button class="mobile-menu-btn" aria-label="Open menu" aria-controls="nav" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
-            <nav id="nav">
+            <nav id="nav" role="navigation" aria-label="Primary">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -406,33 +412,33 @@
             </div>
       
             <!-- Right Side Slider - Fixed Version -->
-            <div class="image-slider-container">
+            <div class="image-slider-container" role="region" aria-label="Pre-wedding photo slider">
                 <div class="image-slider">
-                    <div class="slides">
+                    <div class="slides" aria-live="polite">
                         <div class="slide">
-                            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1000&q=80" alt="Pre Wedding Couple in Romantic Setting">
+                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1000&q=80" alt="Pre Wedding Couple in Romantic Setting">
                         </div>
                         <div class="slide">
-                            <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80" alt="Pre Wedding Couple in Natural Environment">
+                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1000&q=80" alt="Pre Wedding Couple in Natural Environment">
                         </div>
                         <div class="slide">
-                            <img src="https://images.unsplash.com/photo-1603052875700-8b6a1b36f6c3?auto=format&fit=crop&w=1000&q=80" alt="Creative Pre Wedding Photography">
+                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1603052875700-8b6a1b36f6c3?auto=format&fit=crop&w=1000&q=80" alt="Creative Pre Wedding Photography">
                         </div>
                     </div>
                     
                     <!-- Navigation Arrows -->
-                    <div class="slider-nav prev">
-                        <i class="fas fa-chevron-left"></i>
-                    </div>
-                    <div class="slider-nav next">
-                        <i class="fas fa-chevron-right"></i>
-                    </div>
+                    <button class="slider-nav prev" type="button" aria-label="Previous slide">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <button class="slider-nav next" type="button" aria-label="Next slide">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </button>
                     
                     <!-- Dots Indicator -->
-                    <div class="slider-controls">
-                        <div class="slider-dot active"></div>
-                        <div class="slider-dot"></div>
-                        <div class="slider-dot"></div>
+                    <div class="slider-controls" role="tablist" aria-label="Slide selector">
+                        <button class="slider-dot active" role="tab" aria-selected="true" aria-label="Go to slide 1" tabindex="0"></button>
+                        <button class="slider-dot" role="tab" aria-selected="false" aria-label="Go to slide 2" tabindex="-1"></button>
+                        <button class="slider-dot" role="tab" aria-selected="false" aria-label="Go to slide 3" tabindex="-1"></button>
                     </div>
                 </div>
             </div>

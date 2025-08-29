@@ -1,13 +1,23 @@
 :root {
-    --primary: #1e293b; /* Changed from #2c3e50 to a darker shade to match bg-slate-800 */
+    --primary: #1e293b; /* base surface */
     --accent: #F43F5E;
-    --accent-dark: #c0392b; /* Adjusted for a slightly deeper tone on dark background */
-    --light: #f8f9fa; /* Kept for other light elements if needed, but not for body bg */
-    --dark: #1e293b;  /* Changed from #2c3e50 to match new body background */
-    --text: #f8f9fa;  /* Changed from #333 to light for readability on dark background */
-    --text-light: #ced4da; /* Changed from #777 to a lighter shade for readability */
-    --shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Increased opacity for visibility on dark bg */
+    --accent-dark: #c0392b;
+    --light: #f8f9fa;
+    --dark: #1e293b;
+    --text: #f8f9fa;
+    --text-light: #ced4da;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     --transition: all 0.3s ease;
+    /* Spacing scale */
+    --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px; --space-12: 48px;
+    /* Radii */
+    --radius-2: 4px; --radius-3: 6px; --radius-4: 8px; --radius-6: 12px; --radius-10: 20px; --radius-pill: 999px;
+    /* Elevation */
+    --elevation-1: 0 4px 12px rgba(0,0,0,.25);
+    --elevation-2: 0 10px 25px rgba(0,0,0,.35);
+    --elevation-3: 0 18px 40px rgba(0,0,0,.45);
+    /* Typography scale */
+    --fs-xs: 12px; --fs-sm: 14px; --fs-md: 16px; --fs-lg: 18px; --fs-xl: 24px; --fs-2xl: 32px; --fs-3xl: 40px;
 }
 
 * {
@@ -27,6 +37,13 @@ body {
     overflow-x: hidden;
     background-color: #1e293b; /* Changed to bg-slate-800 equivalent */
 }
+
+/* Utilities */
+body.no-scroll { overflow: hidden; }
+img { max-width: 100%; display: block; }
+
+/* Focus visibility */
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 
 .sr-only {
     position: absolute;
@@ -139,7 +156,7 @@ nav ul li a:hover:after {
     background: var(--accent);
     color: white;
     padding: 8px 16px;
-    border-radius: 8px;
+    border-radius: var(--radius-4);
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition);
@@ -246,11 +263,11 @@ nav ul li a:hover:after {
     background: var(--accent);
     color: white;
     padding: 14px 40px;
-    border-radius: 50px;
+    border-radius: var(--radius-pill);
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition);
-    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+    box-shadow: var(--elevation-1);
     border: none;
     cursor: pointer;
     font-size: 16px;
@@ -443,17 +460,17 @@ section {
 
 .service-card {
     background: #2d3a4b; /* Changed from white for dark theme */
-    border-radius: 12px;
+    border-radius: var(--radius-6);
     padding: 40px 30px;
     text-align: center;
-    box-shadow: var(--shadow);
+    box-shadow: var(--elevation-1);
     transition: var(--transition);
     border-top: 4px solid transparent;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Adjusted for dark theme */
+    box-shadow: var(--elevation-2);
     border-top: 4px solid var(--accent);
 }
 
@@ -543,10 +560,10 @@ section {
 
 .portfolio-item {
     position: relative;
-    border-radius: 12px;
+    border-radius: var(--radius-6);
     overflow: hidden;
     height: 280px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--elevation-1);
 }
 
 .portfolio-item img {
@@ -629,9 +646,9 @@ section {
 .feature-card {
     background: #2d3a4b; /* Changed from white for dark theme */
     padding: 40px 30px;
-    border-radius: 12px;
+    border-radius: var(--radius-6);
     text-align: center;
-    box-shadow: var(--shadow); /* Use updated shadow variable */
+    box-shadow: var(--elevation-1); /* Use updated shadow variable */
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
@@ -697,8 +714,8 @@ section {
     gap: 30px;
     background: #2d3a4b; /* Changed from white for dark theme */
     padding: 50px 30px;
-    border-radius: 12px;
-    box-shadow: var(--shadow); /* Use updated shadow variable */
+    border-radius: var(--radius-6);
+    box-shadow: var(--elevation-1); /* Use updated shadow variable */
     position: relative;
     z-index: 1;
 }
@@ -956,8 +973,8 @@ section {
 .contact-form {
     background: #2d3a4b; /* Changed from white for dark theme */
     padding: 40px;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
+    border-radius: var(--radius-6);
+    box-shadow: var(--elevation-1);
 }
 
 .form-group {

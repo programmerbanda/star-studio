@@ -16,6 +16,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
+        /* ===== Base a11y improvements ===== */
+        :focus-visible {
+            outline: 3px solid #d6336c;
+            outline-offset: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation: none !important;
+                transition: none !important;
+                scroll-behavior: auto !important;
+            }
+        }
         /* ===== Drone Shoot Section ===== */
         .drone-section {
             padding: 100px 20px;
@@ -191,6 +204,13 @@
             display: block;
         }
 
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
         /* Slider Controls */
         .slider-controls {
             position: absolute;
@@ -220,7 +240,7 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.85);
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -232,6 +252,7 @@
             transition: all 0.3s ease;
             color: #d6336c;
             font-size: 20px;
+            border: none;
         }
 
         .slider-nav:hover {
@@ -344,17 +365,24 @@
                 transform: translateY(0);
             }
         }
+
+        /* Reduced motion: soften slider movement */
+        @media (prefers-reduced-motion: reduce) {
+            .slides { transition: none; }
+            .drone-section .btn,
+            .slider-nav { transition: none; }
+        }
     </style>
 </head>
 
 <body>
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Back to Top Button -->
-    <a style="display: none;" href="#home" class="back-to-top">
+    <a style="display: none;" href="#home" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </a>
 
@@ -364,10 +392,10 @@
             <a href="#home" class="logo">
                 <span>★</span> Star <span>Studio</span>
             </a>
-            <button class="mobile-menu-btn">
+            <button class="mobile-menu-btn" aria-label="Open menu" aria-controls="nav" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
-            <nav id="nav">
+            <nav id="nav" role="navigation" aria-label="Primary">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -400,33 +428,40 @@
                 </div>
       
                 <!-- Right Side Slider -->
-                <div class="image-slider-container fade-in delay-2">
+                <div class="image-slider-container fade-in delay-2" role="region" aria-label="Drone media slider">
                     <div class="image-slider">
-                        <div class="slides">
+                        <div class="slides" aria-live="polite">
                             <div class="slide">
-                                <video autoplay muted loop playsinline src="https://www.pexels.com/download/video/8435724/"></video>
+                                <video autoplay muted loop playsinline preload="metadata"
+                                    src="https://videos.pexels.com/video-files/8435724/8435724-uhd_2560_1440_24fps.mp4"
+                                    poster="https://images.unsplash.com/photo-1506947411487-9fdce98c7e2d?auto=format&fit=crop&w=1200&q=60"
+                                ></video>
                             </div>
                             <div class="slide">
-                                <img src="https://images.unsplash.com/photo-1517331156700-3c241d2b4d83?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Event Drone Coverage">
+                                <img loading="lazy" decoding="async"
+                                     src="https://images.unsplash.com/photo-1517331156700-3c241d2b4d83?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                                     alt="Event drone coverage from above">
                             </div>
                             <div class="slide">
-                                <img src="https://images.unsplash.com/photo-1502136969935-8d8eef26dd2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Real Estate Drone Footage">
+                                <img loading="lazy" decoding="async"
+                                     src="https://images.unsplash.com/photo-1502136969935-8d8eef26dd2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                                     alt="Real estate property captured by drone">
                             </div>
                         </div>
                         
                         <!-- Navigation Arrows -->
-                        <div class="slider-nav prev">
-                            <i class="fas fa-chevron-left"></i>
-                        </div>
-                        <div class="slider-nav next">
-                            <i class="fas fa-chevron-right"></i>
-                        </div>
+                        <button class="slider-nav prev" type="button" aria-label="Previous slide">
+                            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+                        <button class="slider-nav next" type="button" aria-label="Next slide">
+                            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                        </button>
                         
                         <!-- Dots Indicator -->
-                        <div class="slider-controls">
-                            <div class="slider-dot active"></div>
-                            <div class="slider-dot"></div>
-                            <div class="slider-dot"></div>
+                        <div class="slider-controls" role="tablist" aria-label="Slide selector">
+                            <button class="slider-dot active" role="tab" aria-selected="true" aria-label="Go to slide 1" tabindex="0"></button>
+                            <button class="slider-dot" role="tab" aria-selected="false" aria-label="Go to slide 2" tabindex="-1"></button>
+                            <button class="slider-dot" role="tab" aria-selected="false" aria-label="Go to slide 3" tabindex="-1"></button>
                         </div>
                     </div>
                 </div>
@@ -503,57 +538,101 @@
 
     <script src="script.js"></script>
     <script>
-        // JavaScript for the image slider functionality
+        // Image slider functionality with a11y and reduced motion support
         document.addEventListener('DOMContentLoaded', function() {
-            const slides = document.querySelector('.drone-section .slides');
-            const slide = document.querySelectorAll('.drone-section .slide');
-            const dots = document.querySelectorAll('.drone-section .slider-dot');
-            const prevBtn = document.querySelector('.drone-section .slider-nav.prev');
-            const nextBtn = document.querySelector('.drone-section .slider-nav.next');
-            
+            const sliderRoot = document.querySelector('.drone-section .image-slider');
+            if (!sliderRoot) return;
+
+            const slides = sliderRoot.querySelector('.slides');
+            const slide = sliderRoot.querySelectorAll('.slide');
+            const dots = sliderRoot.querySelectorAll('.slider-dot');
+            const prevBtn = sliderRoot.querySelector('.slider-nav.prev');
+            const nextBtn = sliderRoot.querySelector('.slider-nav.next');
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
             let currentSlide = 0;
             const slideCount = slide.length;
-            
+            let autoTimer = null;
+            const autoIntervalMs = prefersReducedMotion ? 8000 : 5000;
+
+            function updateDotsAria() {
+                dots.forEach((dot, index) => {
+                    const isActive = index === currentSlide;
+                    dot.classList.toggle('active', isActive);
+                    dot.setAttribute('aria-selected', String(isActive));
+                    dot.tabIndex = isActive ? 0 : -1;
+                });
+            }
+
             // Function to update slider position
             function updateSlider() {
                 slides.style.transform = `translateX(-${currentSlide * 100 / slideCount}%)`;
-                
-                // Update active dot
-                dots.forEach((dot, index) => {
-                    if (index === currentSlide) {
-                        dot.classList.add('active');
-                    } else {
-                        dot.classList.remove('active');
-                    }
-                });
+                updateDotsAria();
             }
-            
+
             // Next slide function
             function nextSlide() {
                 currentSlide = (currentSlide + 1) % slideCount;
                 updateSlider();
             }
-            
+
             // Previous slide function
             function prevSlide() {
                 currentSlide = (currentSlide - 1 + slideCount) % slideCount;
                 updateSlider();
             }
-            
+
             // Add event listeners to navigation buttons
-            nextBtn.addEventListener('click', nextSlide);
-            prevBtn.addEventListener('click', prevSlide);
-            
+            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
             // Add event listeners to dots
             dots.forEach((dot, index) => {
                 dot.addEventListener('click', () => {
                     currentSlide = index;
                     updateSlider();
                 });
+                dot.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        currentSlide = index;
+                        updateSlider();
+                    }
+                });
             });
-            
-            // Auto slide every 3 seconds
-            setInterval(nextSlide, 5000);
+
+            // Keyboard navigation for the slider region
+            sliderRoot.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') { nextSlide(); }
+                if (e.key === 'ArrowLeft') { prevSlide(); }
+            });
+
+            function startAuto() {
+                if (prefersReducedMotion) return; // respect reduced motion
+                stopAuto();
+                autoTimer = setInterval(nextSlide, autoIntervalMs);
+            }
+
+            function stopAuto() {
+                if (autoTimer) {
+                    clearInterval(autoTimer);
+                    autoTimer = null;
+                }
+            }
+
+            // Pause on hover/focus
+            sliderRoot.addEventListener('mouseenter', stopAuto);
+            sliderRoot.addEventListener('mouseleave', startAuto);
+            sliderRoot.addEventListener('focusin', stopAuto);
+            sliderRoot.addEventListener('focusout', startAuto);
+
+            // Pause when tab hidden
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) stopAuto(); else startAuto();
+            });
+
+            updateSlider();
+            startAuto();
         });
     </script>
 </body>
