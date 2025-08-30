@@ -373,6 +373,7 @@ section {
     overflow: hidden;
     box-shadow: var(--shadow);
     position: relative;
+    border: 2px solid #F43F5E;
 }
 
 .about-img:before {
@@ -618,7 +619,7 @@ section {
 /* Why Choose Us Section */
 .why-choose {
     background: var(--dark); /* Changed from linear-gradient to solid dark for consistency */
-    padding: 100px 0;
+    padding: 20px 0;
     position: relative;
     overflow: hidden;
 }
@@ -860,7 +861,7 @@ section {
 .testimonial-text {
     font-style: italic;
     margin-bottom: 25px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.8;
     position: relative;
     padding: 0 40px;
