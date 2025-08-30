@@ -8,8 +8,8 @@
     <meta name="keywords" content="photography, wedding photography, event photography, portrait photography, pre-wedding shoot, drone shoots, videography, Mumbai, Star Studio">
     <meta property="og:title" content="Star Studio - Premium Photography Services">
     <meta property="og:description" content="Professional photography services for weddings, events, and special occasions. Let us tell your story through our lens.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"> <!-- Replace with your actual image URL -->
-    <meta property="og:url" content="YOUR_WEBSITE_URL"> <!-- Replace with your actual website URL -->
+    <meta property="og:image" content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80">
+    <meta property="og:url" content="YOUR_WEBSITE_URL">
     <meta property="og:type" content="website">
     <title>Star Studio - Premium Photography Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -22,6 +22,237 @@
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after { animation: none !important; transition: none !important; }
             html { scroll-behavior: auto !important; }
+        }
+        
+        /* New styles for home page */
+        .featured-section {
+            padding: 80px 0;
+        }
+        
+        .section-cta {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .mini-portfolio {
+            padding: 80px 0;
+            background-color: #1e293b;
+        }
+        
+        .mini-portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .mini-portfolio-item {
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            height: 300px;
+        }
+        
+        .mini-portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .mini-portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .mini-portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 20px;
+            color: #ffffff;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .mini-portfolio-item:hover .mini-portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .about-preview {
+            padding: 80px 0;
+            background: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05));
+        }
+        
+        .about-preview-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .testimonial-highlights {
+            padding: 80px 0;
+        }
+        
+        .testimonial-highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-highlight-card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .testimonial-highlight-card::before {
+            content: '"';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 50px;
+            color: #ffffff;
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+        
+        .testimonial-text {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #ffffff;
+        }
+        
+        .testimonial-role {
+            color: #ffffff;
+            font-size: 14px;
+        }
+        
+        .blog-preview {
+            padding: 80px 0;
+            background-color: #1e293b;
+        }
+        
+        .blog-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .blog-preview-card {
+            background: #1e293b;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .blog-preview-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .blog-preview-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .blog-preview-card:hover .blog-preview-image img {
+            transform: scale(1.1);
+        }
+        
+        .blog-preview-content {
+            padding: 20px;
+        }
+        
+        .blog-preview-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        
+        .blog-preview-meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 12px;
+            color: #ffffff;
+        }
+        
+        .blog-preview-meta span {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+        
+        .blog-preview-meta i {
+            margin-right: 5px;
+            color: #d6336c;
+        }
+        
+        .newsletter-section {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1554048612-b6a482bc67e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80') no-repeat center/cover;
+            color: #ffffff;
+        }
+        
+        .newsletter-form {
+            max-width: 500px;
+            margin: 30px auto 0;
+            display: flex;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .newsletter-btn {
+            background: #d6336c;
+            color: #ffffff;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .about-preview-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-input {
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            
+            .newsletter-btn {
+                border-radius: 5px;
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -40,7 +271,7 @@
     <!-- Header & Navigation -->
     <header>
         <div class="container header-content">
-            <a href="#home" class="logo">
+            <a href="index.html" class="logo">
                 <span>★</span> Star <span>Studio</span>
             </a>
             <button class="mobile-menu-btn" aria-label="Open menu" aria-controls="nav" aria-expanded="false">
@@ -48,12 +279,12 @@
             </button>
             <nav id="nav" role="navigation" aria-label="Primary">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#contact" class="nav-btn">Book Now</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="nav-btn">Book Now</a></li>
                 </ul>
             </nav>
         </div>
@@ -76,33 +307,98 @@
             <p class="hero-description">Professional photography services for weddings, events, and special occasions. Let us tell your story
                 through our lens.</p>
             <div class="btn-group">
-                <a href="#contact" class="btn">Book Your Session</a>
-                <a href="#portfolio" class="btn btn-ghost">View Portfolio</a>
+                <a href="contact.html" class="btn">Book Your Session</a>
+                <a href="portfolio.html" class="btn btn-ghost">View Portfolio</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Featured Services Section -->
+    <section class="featured-section">
         <div class="container">
             <div class="section-title">
-                <h2>About Us</h2>
-                <p>Learn about our journey and passion for photography</p>
+                <h2>Our Photography Services</h2>
+                <p>Comprehensive photography solutions for all your special moments</p>
             </div>
-            <div class="about-content">
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-ring"></i>
+                    </div>
+                    <h3>Wedding Photography</h3>
+                    <p>Capture your special day with beautiful, timeless photographs that tell the story of your wedding.</p>
+                    <a href="services.html" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card fade-in delay-1">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Pre-Wedding Shoots</h3>
+                    <p>Romantic engagement sessions that celebrate your love story before the big day.</p>
+                    <a href="services.html" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card fade-in delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3>Event Coverage</h3>
+                    <p>Birthdays, corporate events, anniversaries - we capture all your special occasions.</p>
+                    <a href="services.html" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="section-cta fade-in delay-3">
+                <a href="services.html" class="btn btn-ghost">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Highlights -->
+    <section class="mini-portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Work</h2>
+                <p>A glimpse of our recent photography projects</p>
+            </div>
+            <div class="mini-portfolio-grid">
+                <div class="mini-portfolio-item zoom-in">
+                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Wedding Photo">
+                    <div class="mini-portfolio-overlay">
+                        <h3>Traditional Wedding</h3>
+                        <p>Cultural ceremony photography</p>
+                    </div>
+                </div>
+                <div class="mini-portfolio-item zoom-in delay-1">
+                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Pre-Wedding">
+                    <div class="mini-portfolio-overlay">
+                        <h3>Beach Pre-Wedding</h3>
+                        <p>Sunset shoot at Malibu Beach</p>
+                    </div>
+                </div>
+                <div class="mini-portfolio-item zoom-in delay-2">
+                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Portrait">
+                    <div class="mini-portfolio-overlay">
+                        <h3>Model Portfolio</h3>
+                        <p>Professional portfolio shoot</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta fade-in delay-3">
+                <a href="portfolio.html" class="btn">View Full Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-preview-content">
                 <div class="about-img zoom-in">
-                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1300&q=80"
-                        alt="Our Studio">
+                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1300&q=80" alt="Our Studio">
                 </div>
                 <div class="about-text fade-in">
-                    <h3>Our Journey</h3>
-                    <p>Founded in 2010, Star Studio has been capturing life's most precious moments for over a decade.
-                        What started as a small passion project has grown into a full-service photography studio
-                        specializing in wedding, portrait, and event photography.</p>
-                    <p>Our team of experienced photographers is dedicated to creating stunning visual stories that
-                        you'll cherish for a lifetime. We believe in the power of photography to freeze time and
-                        preserve emotions.</p>
-
+                    <h2>About Star Studio</h2>
+                    <p>Founded in 2010, Star Studio has been capturing life's most precious moments for over a decade. What started as a small passion project has grown into a full-service photography studio specializing in wedding, portrait, and event photography.</p>
+                    <p>Our team of experienced photographers is dedicated to creating stunning visual stories that you'll cherish for a lifetime.</p>
                     <div class="stats-grid">
                         <div class="stat-item fade-in delay-1">
                             <div class="stat-number">500+</div>
@@ -117,139 +413,8 @@
                             <div class="stat-text">Photosessions</div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Services</h2>
-                <p>Comprehensive photography services for all your special moments</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-ring"></i>
-                    </div>
-                    <h3>Wedding Photography</h3>
-                    <p>Capture your special day with beautiful, timeless photographs that tell the story of your
-                        wedding.</p>
-                    <a href="#contact" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card fade-in delay-1">
-                    <div class="service-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Pre-Wedding Shoots</h3>
-                    <p>Romantic engagement sessions that celebrate your love story before the big day.</p>
-                    <a href="#contact" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card fade-in delay-2">
-                    <div class="service-icon">
-                        <i class="fas fa-birthday-cake"></i>
-                    </div>
-                    <h3>Event Coverage</h3>
-                    <p>Birthdays, corporate events, anniversaries - we capture all your special occasions.</p>
-                    <a href="#contact" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card fade-in delay-1">
-                    <div class="service-icon">
-                        <i class="fas fa-drone"></i>
-                    </div>
-                    <h3>Drone Shoots</h3>
-                    <p>Aerial photography that adds a breathtaking perspective to your special events.</p>
-                    <a href="#contact" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card fade-in delay-2">
-                    <div class="service-icon">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3>Videography</h3>
-                    <p>Cinematic video services to complement your photography package.</p>
-                    <a href="#contact" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card fade-in delay-3">
-                    <div class="service-icon">
-                        <i class="fas fa-baby"></i>
-                    </div>
-                    <h3>Baby & Family Portraits</h3>
-                    <p>Beautifully captured family moments that you'll treasure as the years go by.</p>
-                    <a href="#contact" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Portfolio</h2>
-                <p>Explore our latest work and creative projects</p>
-            </div>
-            <div class="portfolio-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="wedding">Wedding</button>
-                <button class="filter-btn" data-filter="pre-wedding">Pre-Wedding</button>
-                <button class="filter-btn" data-filter="event">Event</button>
-                <button class="filter-btn" data-filter="portrait">Portrait</button>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item zoom-in" data-category="wedding">
-                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
-                        alt="Wedding Photo">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-category">Wedding</div>
-                        <h3 class="portfolio-title">Traditional Indian Wedding</h3>
-                        <p class="portfolio-desc">Grand wedding at The Palace Hotel</p>
-                    </div>
-                </div>
-                <div class="portfolio-item zoom-in delay-1" data-category="pre-wedding">
-                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80"
-                        alt="Pre-Wedding">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-category">Pre-Wedding</div>
-                        <h3 class="portfolio-title">Beach Pre-Wedding</h3>
-                        <p class="portfolio-desc">Sunset shoot at Malibu Beach</p>
-                    </div>
-                </div>
-                <div class="portfolio-item zoom-in delay-2" data-category="event">
-                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1655&q=80"
-                        alt="Corporate Event">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-category">Corporate Event</div>
-                        <h3 class="portfolio-title">Tech Conference</h3>
-                        <p class="portfolio-desc">Annual conference for TechSolutions Inc.</p>
-                    </div>
-                </div>
-                <div class="portfolio-item zoom-in delay-1" data-category="portrait">
-                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80"
-                        alt="Portrait">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-category">Portrait</div>
-                        <h3 class="portfolio-title">Model Portfolio</h3>
-                        <p class="portfolio-desc">Professional portfolio shoot</p>
-                    </div>
-                </div>
-                <div class="portfolio-item zoom-in delay-2" data-category="wedding">
-                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
-                        alt="Wedding Ceremony">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-category">Wedding</div>
-                        <h3 class="portfolio-title">Traditional Wedding</h3>
-                        <p class="portfolio-desc">Cultural ceremony photography</p>
-                    </div>
-                </div>
-                <div class="portfolio-item zoom-in delay-3" data-category="event">
-                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80"
-                        alt="Birthday Party">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-category">Event</div>
-                        <h3 class="portfolio-title">Birthday Celebration</h3>
-                        <p class="portfolio-desc">Sweet sixteen party coverage</p>
+                    <div class="section-cta">
+                        <a href="about.html" class="btn btn-ghost">Our Story</a>
                     </div>
                 </div>
             </div>
@@ -270,8 +435,7 @@
                         <i class="fas fa-award"></i>
                     </div>
                     <h3>Award-Winning Team</h3>
-                    <p>Our photographers have won multiple national and international awards for excellence in
-                        photography.</p>
+                    <p>Our photographers have won multiple national and international awards for excellence in photography.</p>
                 </div>
 
                 <div class="feature-card fade-in delay-1">
@@ -279,8 +443,7 @@
                         <i class="fas fa-camera"></i>
                     </div>
                     <h3>State-of-the-Art Equipment</h3>
-                    <p>We use only the latest professional-grade cameras, lenses, and lighting equipment for exceptional
-                        results.</p>
+                    <p>We use only the latest professional-grade cameras, lenses, and lighting equipment for exceptional results.</p>
                 </div>
 
                 <div class="feature-card fade-in delay-2">
@@ -298,271 +461,121 @@
                     <h3>Quick Turnaround</h3>
                     <p>Receive your professionally edited photos within 7-10 days of your session.</p>
                 </div>
-
-                <div class="feature-card fade-in delay-1">
-                    <div class="feature-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>Natural Storytelling</h3>
-                    <p>We specialize in capturing authentic moments and emotions, not just posed shots.</p>
-                </div>
-
-                <div class="feature-card fade-in delay-2">
-                    <div class="feature-icon">
-                        <i class="fas fa-cloud-download-alt"></i>
-                    </div>
-                    <h3>Digital Archive</h3>
-                    <p>All clients receive online gallery access with high-resolution downloads for 2 years.</p>
-                </div>
-            </div>
-
-            <div class="stats-container fade-in">
-                <div class="stat-item">
-                    <div class="stat-number" data-count="500">0</div>
-                    <div class="stat-label">Happy Clients</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="1000">0</div>
-                    <div class="stat-label">Projects Completed</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="12">0</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="25">0</div>
-                    <div class="stat-label">Awards Won</div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
+    <!-- Testimonial Highlights -->
+    <section class="testimonial-highlights">
         <div class="container">
             <div class="section-title">
-                <h2>Client Testimonials</h2>
-                <p>What our clients say about our services</p>
+                <h2>What Our Clients Say</h2>
+                <p>Hear from our satisfied customers</p>
             </div>
-            <div class="testimonial-slider">
-                <div class="testimonial fade-in">
-                    <div class="testimonial-avatar">
-                        <img loading="lazy" decoding="async" src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client">
-                    </div>
-                    <p class="testimonial-text">"Star Studio captured our wedding day perfectly! The photos are stunning
-                        and truly reflect the emotions of the day. We couldn't be happier with their professional
-                        approach and the beautiful memories they've given us."</p>
+            
+            <div class="testimonial-highlights-grid">
+                <div class="testimonial-highlight-card fade-in">
+                    <p class="testimonial-text">"Star Studio captured our wedding day perfectly! The photos are stunning and truly reflect the emotions of the day. We couldn't be happier with their professional approach."</p>
                     <p class="testimonial-author">Priya Sharma</p>
                     <p class="testimonial-role">Wedding Client</p>
                 </div>
+                
+                <div class="testimonial-highlight-card fade-in delay-1">
+                    <p class="testimonial-text">"The pre-wedding shoot with Star Studio was an amazing experience. They made us feel comfortable and the results were breathtaking."</p>
+                    <p class="testimonial-author">Rahul Kapoor</p>
+                    <p class="testimonial-role">Pre-Wedding Client</p>
+                </div>
+                
+                <div class="testimonial-highlight-card fade-in delay-2">
+                    <p class="testimonial-text">"We hired Star Studio for our corporate event and were extremely impressed with their professionalism and exceptional quality."</p>
+                    <p class="testimonial-author">Neha Patel</p>
+                    <p class="testimonial-role">Corporate Client</p>
+                </div>
+            </div>
+            
+            <div class="section-cta fade-in delay-3">
+                <a href="testimonials.html" class="btn btn-ghost">Read More Testimonials</a>
             </div>
         </div>
     </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="blog">
+    <!-- Blog Preview -->
+    <section class="blog-preview">
         <div class="container">
             <div class="section-title">
-                <h2>Photography Blog</h2>
-                <p>Tips, tricks, and insights from our photography experts</p>
+                <h2>From Our Blog</h2>
+                <p>Photography tips, inspiration, and latest news</p>
             </div>
-            <div class="blog-grid">
-                <article class="blog-card fade-in">
-                    <div class="blog-image">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Wedding Photography Tips">
-                        <div class="blog-category">Wedding Photography</div>
+            
+            <div class="blog-preview-grid">
+                <article class="blog-preview-card fade-in">
+                    <div class="blog-preview-image">
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Wedding Photography Tips">
                     </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date"><i class="fas fa-calendar"></i> Dec 15, 2023</span>
-                            <span class="blog-author"><i class="fas fa-user"></i> By Star Studio</span>
+                    <div class="blog-preview-content">
+                        <div class="blog-preview-meta">
+                            <span><i class="fas fa-calendar"></i> Dec 15, 2023</span>
+                            <span><i class="fas fa-user"></i> By Star Studio</span>
                         </div>
-                        <h3 class="blog-title">10 Essential Tips for Perfect Wedding Photography</h3>
-                        <p class="blog-excerpt">Discover the secrets to capturing those magical moments that make every wedding special. From lighting techniques to candid shots...</p>
-                        <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        <h3 class="blog-preview-title">10 Essential Tips for Perfect Wedding Photography</h3>
+                        <a href="blog.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
-
-                <article class="blog-card fade-in delay-1">
-                    <div class="blog-image">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Portrait Photography">
-                        <div class="blog-category">Portrait Photography</div>
+                
+                <article class="blog-preview-card fade-in delay-1">
+                    <div class="blog-preview-image">
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Portrait Photography">
                     </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date"><i class="fas fa-calendar"></i> Dec 10, 2023</span>
-                            <span class="blog-author"><i class="fas fa-user"></i> By Star Studio</span>
+                    <div class="blog-preview-content">
+                        <div class="blog-preview-meta">
+                            <span><i class="fas fa-calendar"></i> Dec 10, 2023</span>
+                            <span><i class="fas fa-user"></i> By Star Studio</span>
                         </div>
-                        <h3 class="blog-title">Mastering Natural Light in Portrait Photography</h3>
-                        <p class="blog-excerpt">Learn how to use natural light to create stunning portraits that capture the true essence of your subjects...</p>
-                        <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        <h3 class="blog-preview-title">Mastering Natural Light in Portrait Photography</h3>
+                        <a href="blog.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
-
-                <article class="blog-card fade-in delay-2">
-                    <div class="blog-image">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1655&q=80" alt="Event Photography">
-                        <div class="blog-category">Event Photography</div>
+                
+                <article class="blog-preview-card fade-in delay-2">
+                    <div class="blog-preview-image">
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Event Photography">
                     </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date"><i class="fas fa-calendar"></i> Dec 5, 2023</span>
-                            <span class="blog-author"><i class="fas fa-user"></i> By Star Studio</span>
+                    <div class="blog-preview-content">
+                        <div class="blog-preview-meta">
+                            <span><i class="fas fa-calendar"></i> Dec 5, 2023</span>
+                            <span><i class="fas fa-user"></i> By Star Studio</span>
                         </div>
-                        <h3 class="blog-title">Event Photography: Capturing the Energy and Emotion</h3>
-                        <p class="blog-excerpt">From corporate events to birthday parties, learn how to document every moment with energy and style...</p>
-                        <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-
-                <article class="blog-card fade-in delay-3">
-                    <div class="blog-image">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Photography Equipment">
-                        <div class="blog-category">Equipment Guide</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date"><i class="fas fa-calendar"></i> Nov 30, 2023</span>
-                            <span class="blog-author"><i class="fas fa-user"></i> By Star Studio</span>
-                        </div>
-                        <h3 class="blog-title">Essential Photography Equipment for Beginners</h3>
-                        <p class="blog-excerpt">A comprehensive guide to the must-have photography equipment for those just starting their journey...</p>
-                        <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        <h3 class="blog-preview-title">Event Photography: Capturing the Energy and Emotion</h3>
+                        <a href="blog.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
             </div>
-            <div class="blog-cta fade-in delay-3">
-                <h3>Stay Updated with Photography Tips</h3>
-                <p>Subscribe to our newsletter for weekly photography tips, behind-the-scenes content, and exclusive offers.</p>
-                <a href="#contact" class="btn">Subscribe Now</a>
+            
+            <div class="section-cta fade-in delay-3">
+                <a href="blog.html" class="btn">View All Articles</a>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
         <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-                <p>Get in touch to discuss your photography needs</p>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-info-item slide-in-left">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Location</h4>
-                            <p>123 Photography Lane, Mumbai, India</p>
-                        </div>
-                    </div>
-                    <div class="contact-info-item slide-in-left delay-1">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Phone</h4>
-                            <p>+91 98765 43210</p>
-                        </div>
-                    </div>
-                    <div class="contact-info-item slide-in-left delay-2">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <p>info@starstudio.com</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer" class="fade-in delay-1" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer" class="fade-in delay-2" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer" class="fade-in delay-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.youtube.com/your-channel" target="_blank" rel="noopener noreferrer" class="fade-in delay-2" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                    <a href="https://wa.me/919876543210" class="whatsapp-btn fade-in delay-3">
-                        <i class="fab fa-whatsapp"></i> Message on WhatsApp
-                    </a>
-                </div>
-                <div class="contact-form slide-in-right">
-                    <h3>Book Your Session</h3>
-                    <div id="formMessage" class="form-message"></div> <!-- Added for form feedback -->
-                    <form id="bookingForm">
-                        <div class="form-group">
-                            <label for="contact-name" class="sr-only">Your Name</label>
-                            <input type="text" id="contact-name" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-email" class="sr-only">Your Email</label>
-                            <input type="email" id="contact-email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-phone" class="sr-only">Your Phone</label>
-                            <input type="tel" id="contact-phone" class="form-control" placeholder="Your Phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-service" class="sr-only">Select Service</label>
-                            <select id="contact-service" class="form-control" required>
-                                <option value="" disabled selected>Select Service</option>
-                                <option value="wedding">Wedding Photography</option>
-                                <option value="pre-wedding">Pre-Wedding Shoot</option>
-                                <option value="event">Event Coverage</option>
-                                <option value="drone">Drone Shoots</option>
-                                <option value="videography">Videography</option>
-                                <option value="portrait">Portrait Photography</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="booking-date" class="sr-only">Event Date</label>
-                            <input type="date" id="booking-date" class="form-control" placeholder="Event Date" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-message" class="sr-only">Event Details</label>
-                            <textarea id="contact-message" class="form-control" placeholder="Tell us about your event" required></textarea>
-                        </div>
-                        <div class="form-group honeypot-field">
-                            <label for="website-url" class="sr-only">Website URL</label>
-                            <input type="text" name="website-url" id="website-url" tabindex="-1" autocomplete="off">
-                        </div>
-                        <button type="submit" class="btn form-btn">Submit Booking</button>
-                    </form>
-                </div>
-            </div>
+            <h2>Stay Updated with Our Photography Tips</h2>
+            <p>Subscribe to our newsletter for exclusive content, offers, and photography insights</p>
+            
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Your Email Address" required>
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
         </div>
     </section>
 
-    <!-- Google Maps Section -->
-    <section id="location" class="location">
+    <!-- Final CTA Section -->
+    <section class="cta-section" style="padding: 80px 0; text-align: center;">
         <div class="container">
-            <div class="section-title">
-                <h2>Find Us</h2>
-                <p>Visit our studio or let us come to you</p>
-            </div>
-            <div class="map-container fade-in">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.5!2d72.8777!3d19.076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA0JzMxLjYiTiA3MsKwNTInNDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
-                    width="100%" 
-                    height="450" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Star Studio Location"
-                    aria-label="Map showing Star Studio location in Mumbai, India">
-                </iframe>
-                <div class="map-overlay">
-                    <div class="map-info">
-                        <h3><i class="fas fa-map-marker-alt"></i> Star Studio</h3>
-                        <p><i class="fas fa-location-dot"></i> 123 Photography Lane, Mumbai, India</p>
-                        <p><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 7:00 PM</p>
-                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
-                        <a href="https://maps.google.com/?q=19.076,72.8777" target="_blank" class="btn map-btn">
-                            <i class="fas fa-directions"></i> Get Directions
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <h2>Ready to Create Beautiful Memories?</h2>
+            <p>Let's discuss your photography needs and create something amazing together</p>
+            <a href="contact.html" class="btn">Book Your Session Now</a>
         </div>
     </section>
 
@@ -584,29 +597,29 @@
                 <div class="footer-links fade-in delay-1">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
-                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
-                        <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
-                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                        <li><a href="testimonials.html"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
                     </ul>
                 </div>
                 <div class="footer-links fade-in delay-1">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="/wedding-photography.html"><i class="fas fa-chevron-right"></i> Wedding Photography</a></li>
-                        <li><a href="/pre-weddingshoot.html"><i class="fas fa-chevron-right"></i> Pre-Wedding Shoots</a></li>
-                        <li><a href="/videography.html"><i class="fas fa-chevron-right"></i> Videography</a></li>
-                        <li><a href="/drone.html"><i class="fas fa-chevron-right"></i> Drone Shoots</a></li>
-                        <li><a href="baby-maternity.html"><i class="fas fa-chevron-right"></i> Baby & Maternity</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Wedding Photography</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Pre-Wedding Shoots</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Videography</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Drone Shoots</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Baby & Maternity</a></li>
                     </ul>
                 </div>
                 <div class="footer-links fade-in delay-1">
                     <h4>Support</h4>
                     <ul>
-                        <li><a href="/faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
-                        <li><a href=""><i class="fas fa-chevron-right"></i> Blogs</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
                         <li><a href="term-conditions.html"><i class="fas fa-chevron-right"></i>Terms & Conditions</a></li>
                         <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
                     </ul>

@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Star Studio's premium photography services including wedding photography, pre-wedding shoots, event coverage, drone photography, and more.">
+    <meta name="keywords" content="photography services, wedding photography, pre-wedding shoot, event photography, drone photography, videography, portrait photography, Mumbai">
+    <meta property="og:title" content="Our Services - Star Studio Photography">
+    <meta property="og:description" content="Professional photography services for weddings, events, portraits, and special occasions. Premium quality with creative excellence.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80">
+    <meta property="og:url" content="YOUR_WEBSITE_URL/services.html">
+    <meta property="og:type" content="website">
+    <title>Our Services - Star Studio Photography</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :focus-visible { outline: 3px solid #d6336c; outline-offset: 2px; }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation: none !important; transition: none !important; }
+            html { scroll-behavior: auto !important; }
+        }
+        
+        /* Additional styles specific to services page */
+        .services-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80') no-repeat center/cover;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .service-detail {
+            padding: 80px 0;
+        }
+        
+        .service-detail-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        
+        .service-detail-content:nth-child(even) .service-detail-img {
+            order: 2;
+        }
+        
+        .service-detail-content:nth-child(even) .service-detail-text {
+            order: 1;
+        }
+        
+        .service-detail-img {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .service-detail-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-detail-img:hover img {
+            transform: scale(1.05);
+        }
+        
+        .service-detail-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .service-features {
+            margin: 25px 0;
+        }
+        
+        .service-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .service-feature i {
+            color: #d6336c;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+        
+        .service-pricing {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        .price-tag {
+            font-size: 28px;
+            font-weight: 700;
+            color: #d6336c;
+            margin-bottom: 10px;
+        }
+        
+        .service-cta {
+            margin-top: 30px;
+        }
+        
+        .packages-section {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .package-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .package-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #d6336c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .package-header {
+            padding: 30px;
+            text-align: center;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+        }
+        
+        .package-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .package-price {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .package-duration {
+            opacity: 0.9;
+        }
+        
+        .package-features {
+            padding: 30px;
+        }
+        
+        .package-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .package-feature i {
+            color: #d6336c;
+            margin-right: 10px;
+        }
+        
+        .package-feature.disabled {
+            color: #999;
+        }
+        
+        .package-feature.disabled i {
+            color: #ccc;
+        }
+        
+        .package-cta {
+            padding: 0 30px 30px;
+            text-align: center;
+        }
+        
+        .process-section {
+            padding: 80px 0;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            counter-reset: process-counter;
+        }
+        
+        .process-step {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            position: relative;
+            counter-increment: process-counter;
+        }
+        
+        .process-step::before {
+            content: counter(process-counter);
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: #d6336c;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .process-icon {
+            font-size: 40px;
+            color: #d6336c;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .process-step h3 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .faq-section {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 50px auto 0;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 500px;
+        }
+        
+        @media (max-width: 768px) {
+            .service-detail-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-detail-content:nth-child(even) .service-detail-img {
+                order: 1;
+            }
+            
+            .service-detail-content:nth-child(even) .service-detail-text {
+                order: 2;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span>★</span> Star <span>Studio</span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Open menu" aria-controls="nav" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="nav" role="navigation" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="nav-btn">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Services Hero Section -->
+    <section class="services-hero">
+        <div class="container">
+            <div class="section-title">
+                <h1>Our Photography Services</h1>
+                <p>Premium photography experiences tailored to your unique needs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Comprehensive Photography Services</h2>
+                <p>From weddings to corporate events, we capture your special moments with artistry and precision</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-ring"></i>
+                    </div>
+                    <h3>Wedding Photography</h3>
+                    <p>Capture your special day with beautiful, timeless photographs that tell the story of your wedding.</p>
+                    <a href="#wedding" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card fade-in delay-1">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Pre-Wedding Shoots</h3>
+                    <p>Romantic engagement sessions that celebrate your love story before the big day.</p>
+                    <a href="#pre-wedding" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card fade-in delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3>Event Coverage</h3>
+                    <p>Birthdays, corporate events, anniversaries - we capture all your special occasions.</p>
+                    <a href="#events" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card fade-in delay-1">
+                    <div class="service-icon">
+                        <i class="fas fa-drone"></i>
+                    </div>
+                    <h3>Drone Shoots</h3>
+                    <p>Aerial photography that adds a breathtaking perspective to your special events.</p>
+                    <a href="#drone" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card fade-in delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Videography</h3>
+                    <p>Cinematic video services to complement your photography package.</p>
+                    <a href="#videography" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card fade-in delay-3">
+                    <div class="service-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Baby & Family Portraits</h3>
+                    <p>Beautifully captured family moments that you'll treasure as the years go by.</p>
+                    <a href="#portraits" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wedding Photography Service Detail -->
+    <section id="wedding" class="service-detail">
+        <div class="container">
+            <div class="service-detail-content">
+                <div class="service-detail-img zoom-in">
+                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Wedding Photography">
+                </div>
+                <div class="service-detail-text fade-in">
+                    <h3>Wedding Photography</h3>
+                    <p>Our wedding photography service is designed to capture the emotion, beauty, and unique story of your special day. We blend traditional posed photography with candid, documentary-style shots to create a comprehensive visual narrative.</p>
+                    
+                    <div class="service-features">
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Full-day coverage from preparation to reception</span>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Multiple photographers to capture every angle</span>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Professional editing and retouching</span>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Online gallery with high-resolution downloads</span>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Custom wedding albums and prints</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-pricing">
+                        <div class="price-tag">Starting at ₹75,000</div>
+                        <p>Custom packages available based on your specific needs and duration of coverage.</p>
+                    </div>
+                    
+                    <div class="service-cta">
+                        <a href="contact.html" class="btn">Book Wedding Photography</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre-Wedding Service Detail -->
+    <section id="pre-wedding" class="service-detail" style="background-color: #f9f9f9;">
+        <div class="container">
+            <div class="service-detail-content">
+                <div class="service-detail-text fade-in">
+                    <h3>Pre-Wedding Shoots</h3>
+                    <p>Celebrate your love story with a romantic pre-wedding photoshoot. These sessions are perfect for engagement announcements, wedding websites, or simply creating beautiful memories before your big day.</p>
+                    
+                    <div class="service-features">
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>2-3 hour photoshoot at location of your choice</span>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Multiple outfit changes</span>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Professional guidance on poses and expressions</span>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Location scouting assistance</span>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Online gallery with edited high-resolution images</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-pricing">
+                        <div class="price-tag">Starting at ₹25,000</div>
+                        <p>Additional charges may apply for travel to locations outside Mumbai.</p>
+                    </div>
+                    
+                    <div class="service-cta">
+                        <a href="contact.html" class="btn">Book Pre-Wedding Shoot</a>
+                    </div>
+                </div>
+                <div class="service-detail-img zoom-in">
+                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Pre-Wedding Photography">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="packages-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Photography Packages</h2>
+                <p>Choose from our carefully crafted packages or let us create a custom solution for you</p>
+            </div>
+            
+            <div class="packages-grid">
+                <div class="package-card fade-in">
+                    <div class="package-header">
+                        <h3 class="package-name">Essential</h3>
+                        <div class="package-price">₹25,000</div>
+                        <div class="package-duration">4 hours coverage</div>
+                    </div>
+                    <div class="package-features">
+                        <div class="package-feature">
+                            <i class="fas fa-check"></i>
+                            <span>1 Photographer</span>
+                        </div>
+                        <div class="package-feature">
+                            <i class="fas fa-check"></i>
+                            <span>50+ Edited Digital Images</span>
+                        </div>
+                        <div class="package-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Online Gallery</span>
+                        </div>
+                        <div class="package-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Basic Editing</span>
+                        </div>
+                        <div class="package-feature disabled">
+                            <i class="fas fa-times"></i>
+                            <span>Print Release</span>
+                        </div>
+                        <div class="package-feature disabled">
+                            <i class="fas fa-times"></i>
+                            <span>Custom Album</span>
+                        </div>
+                    </div>
+                    <div class="package-cta">
+                        <a href="contact.html" class="btn btn-ghost">Select Plan</a>
+                    </div>
+                </div>
+                
+                <div class="package-card fade-in delay-1">
+                    <div class="package-badge">Most Popular</div>
+                    <div class="package-header">
+                        <h3 class="package-name">Premium</h3>
+                        <div class="package-price">₹50,000</div>
+                        <div class="package-duration">8 hours coverage</div>
+                    </div>
+                    <div class="package-features">
+                        <div class="package-feature">
+                            <i class="fas fa-check"></i>
+                            <span>2 Photographers</span>
+                        </div>
+                        <div class="package-feature">
+                            <i class="fas fa-check"></i>
+                            <span>200+ Edited Digital Images</span>
+                        </div>
+                        <div class="package-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Online Gallery</span>
+                        </div>
+                        <div class="package-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Advanced Editing & Retouching</span>
+                        </div>
+                        <div class="package-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Print Release</span>
+                        </div>
+                        <div class="package-feature">
+                            <i class="fas fa-check"></i>
+                            <span>10x10 Custom Album</span>
+                        </div>
+                    </div>
+                    <div class="package-cta">
+                        <a href="contact.html" class="btn">Select Plan</a>
+                    </div>
+                </div>
+                
+                <div class="package-card fade-in delay-2">
+                    <div class="package-header">
+                        <h3 class="package-name">Elite</h3>
+                        <div class="package-price">₹85,000</div>
+                        <div class="package-duration">Full day coverage</div>
+                    </div>
+                    <div class="package-features">
+                        <div class="package-feature">
+                            <i class="fas fa-check"></i>
+                            <span>3 Photographers</span>
+                        </div>
+                        <div class="package-feature">
+                            <i class="fas fa-check"></i>
+                            <span>400+ Edited Digital Images</span>
+                        </div>
+                        <div class="package-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Online Gallery & Mobile App</span>
+                        </div>
+                        <div class="package-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Premium Editing & Retouching</span>
+                        </div>
+                        <div class="package-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Print Release</span>
+                        </div>
+                        <div class="package-feature">
+                            <i class="fas fa-check"></i>
+                            <span>12x12 Deluxe Album + 2 Parent Albums</span>
+                        </div>
+                    </div>
+                    <div class="package-cta">
+                        <a href="contact.html" class="btn btn-ghost">Select Plan</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-title" style="margin-top: 60px;">
+                <p>Need something different? <a href="contact.html" style="color: #d6336c; font-weight: 600;">Contact us</a> for custom packages tailored to your specific requirements.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Process</h2>
+                <p>How we work to deliver exceptional photography experiences</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step fade-in">
+                    <div class="process-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Consultation & Booking</h3>
+                    <p>We begin with a detailed consultation to understand your vision, preferences, and requirements before confirming the booking.</p>
+                </div>
+                
+                <div class="process-step fade-in delay-1">
+                    <div class="process-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Planning & Preparation</h3>
+                    <p>We scout locations, plan shots, and prepare all equipment to ensure everything is perfect for your session.</p>
+                </div>
+                
+                <div class="process-step fade-in delay-2">
+                    <div class="process-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Photoshoot Day</h3>
+                    <p>On the day of your shoot, we arrive early, set up, and capture beautiful moments with professional guidance.</p>
+                </div>
+                
+                <div class="process-step fade-in delay-3">
+                    <div class="process-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3>Editing & Retouching</h3>
+                    <p>We carefully select and professionally edit the best images to enhance their beauty while maintaining authenticity.</p>
+                </div>
+                
+                <div class="process-step fade-in delay-1">
+                    <div class="process-icon">
+                        <i class="fas fa-cloud-download-alt"></i>
+                    </div>
+                    <h3>Delivery</h3>
+                    <p>You receive your images through a private online gallery with options for prints and custom albums.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our photography services</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>How far in advance should we book your services?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We recommend booking at least 3-6 months in advance for weddings and 2-4 weeks for other sessions. Popular dates (especially wedding seasons) can book up a year in advance, so early booking is encouraged.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in delay-1">
+                    <div class="faq-question">
+                        <span>Do you travel for photoshoots?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we travel throughout India for photoshoots. Travel expenses beyond 50km from Mumbai are billed separately. International destination shoots are also available with custom pricing.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in delay-2">
+                    <div class="faq-question">
+                        <span>How long until we receive our photos?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our standard delivery time is 3-4 weeks for regular sessions and 6-8 weeks for weddings. We always provide a few preview images within 48 hours of your session for sharing on social media.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in delay-3">
+                    <div class="faq-question">
+                        <span>Can we request specific shots or poses?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We encourage clients to share inspiration images, shot lists, or specific requests before the session. During our pre-shoot consultation, we'll discuss all your ideas and incorporate them into our plan.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in delay-1">
+                    <div class="faq-question">
+                        <span>What happens if the weather is bad on our shoot day?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For outdoor shoots, we monitor the weather closely. If conditions are unfavorable, we'll work with you to reschedule at no additional cost. We also have studio options available as backup.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1554048612-b6a482bc67e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80') no-repeat center/cover; padding: 80px 0; text-align: center; color: white;">
+        <div class="container">
+            <h2>Ready to Capture Your Special Moments?</h2>
+            <p>Get in touch with us to discuss your photography needs and book your session</p>
+            <a href="contact.html" class="btn">Book Your Session Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about fade-in">
+                    <h3>Star Studio</h3>
+                    <p>Capturing life's most precious moments with creativity and passion. Professional photography
+                        services for all your special occasions.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/your-channel" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.pinterest.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links fade-in delay-1">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                        <li><a href="testimonials.html"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links fade-in delay-1">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#wedding"><i class="fas fa-chevron-right"></i> Wedding Photography</a></li>
+                        <li><a href="services.html#pre-wedding"><i class="fas fa-chevron-right"></i> Pre-Wedding Shoots</a></li>
+                        <li><a href="services.html#videography"><i class="fas fa-chevron-right"></i> Videography</a></li>
+                        <li><a href="services.html#drone"><i class="fas fa-chevron-right"></i> Drone Shoots</a></li>
+                        <li><a href="services.html#portraits"><i class="fas fa-chevron-right"></i> Baby & Maternity</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links fade-in delay-1">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blogs</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li><a href="term-conditions.html"><i class="fas fa-chevron-right"></i>Terms & Conditions</a></li>
+                        <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact fade-in delay-2">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Photography Lane, Mumbai, India</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@starstudio.com</p>
+                </div>
+                <div class="footer-newsletter fade-in delay-3">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for updates and offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your Email">
+                        <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Star Studio. All Rights Reserved. | Designed with <i class="fas fa-heart"
+                        style="color: #e67e22;"></i></p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Simple animation for elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.fade-in, .zoom-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0) scale(1)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animatedElements.forEach(el => {
+                el.style.opacity = 0;
+                if (el.classList.contains('fade-in')) {
+                    el.style.transform = 'translateY(20px)';
+                }
+                if (el.classList.contains('zoom-in')) {
+                    el.style.transform = 'scale(0.95)';
+                }
+                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>
