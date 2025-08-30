@@ -31,14 +31,14 @@
             display: flex;
             align-items: center;
             text-align: center;
-            color: white;
-            padding: 80px 0;
+            color: #fff;
+            padding: 80px 0 0 0;
         }
         
         .blog-container {
-            padding: 80px 0;
+            padding: 40px 0;
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns:  2fr;
             gap: 40px;
         }
         
@@ -54,12 +54,12 @@
         
         .blog-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-rows: 2fr;
             gap: 40px;
         }
         
         .blog-card {
-            background: white;
+            background: #fff;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -92,7 +92,7 @@
             top: 20px;
             left: 20px;
             background: #d6336c;
-            color: white;
+            color: #fff;
             padding: 5px 15px;
             border-radius: 20px;
             font-size: 12px;
@@ -109,7 +109,7 @@
             align-items: center;
             margin-bottom: 15px;
             font-size: 14px;
-            color: #666;
+            color: #999;
             flex-wrap: wrap;
         }
         
@@ -161,7 +161,8 @@
         
         /* Sidebar Styles */
         .sidebar-widget {
-            background: white;
+            margin-top: 30px;
+            background: #2d3a4b;
             padding: 25px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
@@ -173,7 +174,7 @@
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 2px solid #f0f0f0;
-            color: #333;
+            color: #fff;
         }
         
         .search-form {
@@ -190,7 +191,7 @@
         
         .search-btn {
             background: #d6336c;
-            color: white;
+            color: #fff;
             border: none;
             padding: 0 15px;
             border-radius: 0 5px 5px 0;
@@ -216,7 +217,8 @@
         .categories-list a {
             display: flex;
             justify-content: space-between;
-            color: #666;
+            text-decoration: none;
+            color: #999;
             transition: color 0.3s ease;
         }
         
@@ -281,6 +283,7 @@
         
         .tag {
             background: #f8f9fa;
+            text-decoration: none;
             color: #666;
             padding: 5px 12px;
             border-radius: 20px;
@@ -339,35 +342,6 @@
         .page-link:hover, .page-link.active {
             background: #d6336c;
             color: white;
-        }
-        
-        .newsletter-form {
-            margin-top: 20px;
-        }
-        
-        .newsletter-input {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #e0e0e0;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        .newsletter-btn {
-            width: 100%;
-            background: #d6336c;
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: background 0.3s ease;
-        }
-        
-        .newsletter-btn:hover {
-            background: #a51c55;
         }
         
         @media (max-width: 992px) {
@@ -444,8 +418,6 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="blog.html" class="active">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="contact.html" class="nav-btn">Book Now</a></li>
                 </ul>
@@ -677,15 +649,6 @@
                             <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Instagram Post">
                         </a>
                     </div>
-                </div>
-
-                <div class="sidebar-widget fade-in delay-2">
-                    <h3>Newsletter</h3>
-                    <p>Subscribe to our newsletter for photography tips and updates</p>
-                    <form class="newsletter-form">
-                        <input type="email" class="newsletter-input" placeholder="Your Email">
-                        <button type="submit" class="newsletter-btn">Subscribe</button>
-                    </form>
                 </div>
             </div>
         </div>
