@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Star Studio's portfolio of stunning photography work including weddings, pre-wedding shoots, events, portraits, and more.">
-    <meta name="keywords" content="photography portfolio, wedding photography, pre-wedding photography, event photography, portrait photography, Mumbai photographer">
+    <meta name="description"
+        content="Explore Star Studio's portfolio of stunning photography work including weddings, pre-wedding shoots, events, portraits, and more.">
+    <meta name="keywords"
+        content="photography portfolio, wedding photography, pre-wedding photography, event photography, portrait photography, Mumbai photographer">
     <meta property="og:title" content="Portfolio - Star Studio Photography">
-    <meta property="og:description" content="Browse our collection of beautiful photography work across various categories and styles.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80">
+    <meta property="og:description"
+        content="Browse our collection of beautiful photography work across various categories and styles.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80">
     <meta property="og:url" content="YOUR_WEBSITE_URL/portfolio.html">
     <meta property="og:type" content="website">
     <title>Portfolio - Star Studio Photography</title>
@@ -18,15 +22,28 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        :focus-visible { outline: 3px solid #d6336c; outline-offset: 2px; }
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { animation: none !important; transition: none !important; }
-            html { scroll-behavior: auto !important; }
+        :focus-visible {
+            outline: 3px solid #d6336c;
+            outline-offset: 2px;
         }
-        
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+
+            html {
+                scroll-behavior: auto !important;
+            }
+        }
+
         /* Additional styles specific to portfolio page */
         .portfolio-hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80') no-repeat center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80') no-repeat center/cover;
             min-height: 60vh;
             display: flex;
             align-items: center;
@@ -34,66 +51,66 @@
             color: white;
             padding: 80px 0 0 0;
         }
-        
+
         .portfolio-categories {
             padding: 60px 0;
             background-color: #1e293b;
         }
-        
+
         .categories-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
             margin-top: 40px;
         }
-        
+
         .category-card {
             background: #2d3a4b;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
             position: relative;
         }
-        
+
         .category-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
-        
+
         .category-img {
             height: 200px;
             overflow: hidden;
         }
-        
+
         .category-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-        
+
         .category-card:hover .category-img img {
             transform: scale(1.1);
         }
-        
+
         .category-content {
             padding: 20px;
         }
-        
+
         .category-content h3 {
             font-family: 'Playfair Display', serif;
             margin-bottom: 10px;
             color: #fff;
         }
-        
+
         .category-content p {
             color: #999;
             margin-bottom: 15px;
             font-size: 14px;
         }
-        
+
         .category-count {
             display: inline-block;
             background: #d6336c;
@@ -103,11 +120,11 @@
             font-size: 12px;
             font-weight: 600;
         }
-        
+
         .portfolio-section {
             padding: 20px 0;
         }
-        
+
         .portfolio-filters {
             display: flex;
             justify-content: center;
@@ -115,7 +132,7 @@
             gap: 10px;
             margin-bottom: 40px;
         }
-        
+
         .filter-btn {
             background: #2d3a4b;
             border: 2px solid #e9ecef;
@@ -125,51 +142,52 @@
             font-weight: 500;
             transition: all 0.3s ease;
         }
-        
-        .filter-btn:hover, .filter-btn.active {
+
+        .filter-btn:hover,
+        .filter-btn.active {
             background: #d6336c;
             color: white;
             border-color: #d6336c;
         }
-        
+
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 25px;
         }
-        
+
         .portfolio-item {
             border-radius: 10px;
             overflow: hidden;
             position: relative;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             cursor: pointer;
         }
-        
+
         .portfolio-img {
             width: 100%;
             height: 250px;
             overflow: hidden;
         }
-        
+
         .portfolio-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-        
+
         .portfolio-item:hover .portfolio-img img {
             transform: scale(1.1);
         }
-        
+
         .portfolio-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -178,11 +196,11 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-        
+
         .portfolio-item:hover .portfolio-overlay {
             opacity: 1;
         }
-        
+
         .portfolio-category {
             background: #d6336c;
             color: white;
@@ -193,38 +211,38 @@
             display: inline-block;
             margin-bottom: 10px;
         }
-        
+
         .portfolio-title {
             font-family: 'Playfair Display', serif;
             font-size: 18px;
             margin-bottom: 5px;
         }
-        
+
         .portfolio-desc {
             font-size: 14px;
             opacity: 0.9;
         }
-        
+
         .testimonials-section {
             padding: 20px 0;
-            background: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05));
+            background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
         }
-        
+
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
-        
+
         .testimonial-card {
             background: #2d3a4b;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             position: relative;
         }
-        
+
         .testimonial-card::before {
             content: '"';
             position: absolute;
@@ -235,19 +253,19 @@
             font-family: 'Playfair Display', serif;
             line-height: 1;
         }
-        
+
         .testimonial-text {
             position: relative;
             z-index: 2;
             margin-bottom: 20px;
             font-style: italic;
         }
-        
+
         .testimonial-client {
             display: flex;
             align-items: center;
         }
-        
+
         .testimonial-avatar {
             width: 50px;
             height: 50px;
@@ -255,30 +273,30 @@
             overflow: hidden;
             margin-right: 15px;
         }
-        
+
         .testimonial-avatar img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         .client-info h4 {
             margin-bottom: 5px;
             font-size: 16px;
         }
-        
+
         .client-info p {
             color: #666;
             font-size: 14px;
         }
-        
+
         .cta-section {
             padding: 20px 0;
             text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1554048612-b6a482bc67e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80') no-repeat center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1554048612-b6a482bc67e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80') no-repeat center/cover;
             color: white;
         }
-        
+
         /* Lightbox Modal */
         .lightbox-modal {
             display: none;
@@ -288,31 +306,31 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.9);
+            background-color: rgba(0, 0, 0, 0.9);
             overflow: hidden;
             justify-content: center;
             align-items: center;
         }
-        
+
         .lightbox-content {
             position: relative;
             max-width: 90%;
             max-height: 90%;
         }
-        
+
         .lightbox-img {
             max-width: 100%;
             max-height: 80vh;
             border-radius: 8px;
         }
-        
+
         .lightbox-caption {
             color: white;
             text-align: center;
             padding: 10px;
             font-family: 'Playfair Display', serif;
         }
-        
+
         .close-lightbox {
             position: absolute;
             top: 20px;
@@ -323,11 +341,11 @@
             cursor: pointer;
             transition: color 0.3s ease;
         }
-        
+
         .close-lightbox:hover {
             color: #d6336c;
         }
-        
+
         .lightbox-nav {
             position: absolute;
             top: 50%;
@@ -337,12 +355,12 @@
             padding: 0 20px;
             transform: translateY(-50%);
         }
-        
+
         .lightbox-nav-btn {
             color: white;
             font-size: 30px;
             cursor: pointer;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -351,16 +369,20 @@
             justify-content: center;
             transition: background 0.3s ease;
         }
-        
+
         .lightbox-nav-btn:hover {
             background: #d6336c;
         }
-        
+
         @media (max-width: 768px) {
+            .container {
+                width: 100%;
+            }
+
             .portfolio-grid {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             }
-            
+
             .categories-grid {
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             }
@@ -418,11 +440,13 @@
                 <h2>Our Specializations</h2>
                 <p>Browse our work by category</p>
             </div>
-            
+
             <div class="categories-grid">
                 <div class="category-card fade-in">
                     <div class="category-img">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Wedding Photography">
+                        <img loading="lazy" decoding="async"
+                            src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                            alt="Wedding Photography">
                     </div>
                     <div class="category-content">
                         <h3>Wedding Photography</h3>
@@ -430,10 +454,12 @@
                         <span class="category-count">42 Projects</span>
                     </div>
                 </div>
-                
+
                 <div class="category-card fade-in delay-1">
                     <div class="category-img">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Pre-Wedding Photography">
+                        <img loading="lazy" decoding="async"
+                            src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80"
+                            alt="Pre-Wedding Photography">
                     </div>
                     <div class="category-content">
                         <h3>Pre-Wedding Shoots</h3>
@@ -441,10 +467,12 @@
                         <span class="category-count">28 Projects</span>
                     </div>
                 </div>
-                
+
                 <div class="category-card fade-in delay-2">
                     <div class="category-img">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1655&q=80" alt="Event Photography">
+                        <img loading="lazy" decoding="async"
+                            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1655&q=80"
+                            alt="Event Photography">
                     </div>
                     <div class="category-content">
                         <h3>Event Coverage</h3>
@@ -452,10 +480,12 @@
                         <span class="category-count">35 Projects</span>
                     </div>
                 </div>
-                
+
                 <div class="category-card fade-in delay-3">
                     <div class="category-img">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Portrait Photography">
+                        <img loading="lazy" decoding="async"
+                            src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80"
+                            alt="Portrait Photography">
                     </div>
                     <div class="category-content">
                         <h3>Portrait Photography</h3>
@@ -474,7 +504,7 @@
                 <h2>Our Latest Work</h2>
                 <p>Browse through our recent photography projects</p>
             </div>
-            
+
             <div class="portfolio-filters">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="wedding">Wedding</button>
@@ -483,11 +513,13 @@
                 <button class="filter-btn" data-filter="portrait">Portrait</button>
                 <button class="filter-btn" data-filter="baby">Baby & Family</button>
             </div>
-            
+
             <div class="portfolio-grid">
                 <div class="portfolio-item zoom-in" data-category="wedding">
                     <div class="portfolio-img">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Wedding Photo">
+                        <img loading="lazy" decoding="async"
+                            src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                            alt="Wedding Photo">
                     </div>
                     <div class="portfolio-overlay">
                         <div class="portfolio-category">Wedding</div>
@@ -495,10 +527,12 @@
                         <p class="portfolio-desc">Grand wedding at The Palace Hotel</p>
                     </div>
                 </div>
-                
+
                 <div class="portfolio-item zoom-in delay-1" data-category="pre-wedding">
                     <div class="portfolio-img">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Pre-Wedding">
+                        <img loading="lazy" decoding="async"
+                            src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80"
+                            alt="Pre-Wedding">
                     </div>
                     <div class="portfolio-overlay">
                         <div class="portfolio-category">Pre-Wedding</div>
@@ -506,10 +540,12 @@
                         <p class="portfolio-desc">Sunset shoot at Malibu Beach</p>
                     </div>
                 </div>
-                
+
                 <div class="portfolio-item zoom-in delay-2" data-category="event">
                     <div class="portfolio-img">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1655&q=80" alt="Corporate Event">
+                        <img loading="lazy" decoding="async"
+                            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1655&q=80"
+                            alt="Corporate Event">
                     </div>
                     <div class="portfolio-overlay">
                         <div class="portfolio-category">Corporate Event</div>
@@ -517,10 +553,12 @@
                         <p class="portfolio-desc">Annual conference for TechSolutions Inc.</p>
                     </div>
                 </div>
-                
+
                 <div class="portfolio-item zoom-in delay-1" data-category="portrait">
                     <div class="portfolio-img">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Portrait">
+                        <img loading="lazy" decoding="async"
+                            src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80"
+                            alt="Portrait">
                     </div>
                     <div class="portfolio-overlay">
                         <div class="portfolio-category">Portrait</div>
@@ -528,10 +566,12 @@
                         <p class="portfolio-desc">Professional portfolio shoot</p>
                     </div>
                 </div>
-                
+
                 <div class="portfolio-item zoom-in delay-2" data-category="wedding">
                     <div class="portfolio-img">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Wedding Ceremony">
+                        <img loading="lazy" decoding="async"
+                            src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                            alt="Wedding Ceremony">
                     </div>
                     <div class="portfolio-overlay">
                         <div class="portfolio-category">Wedding</div>
@@ -539,10 +579,12 @@
                         <p class="portfolio-desc">Cultural ceremony photography</p>
                     </div>
                 </div>
-                
+
                 <div class="portfolio-item zoom-in delay-3" data-category="event">
                     <div class="portfolio-img">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Birthday Party">
+                        <img loading="lazy" decoding="async"
+                            src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80"
+                            alt="Birthday Party">
                     </div>
                     <div class="portfolio-overlay">
                         <div class="portfolio-category">Event</div>
@@ -550,10 +592,12 @@
                         <p class="portfolio-desc">Sweet sixteen party coverage</p>
                     </div>
                 </div>
-                
+
                 <div class="portfolio-item zoom-in delay-1" data-category="baby">
                     <div class="portfolio-img">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1776&q=80" alt="Newborn Photography">
+                        <img loading="lazy" decoding="async"
+                            src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1776&q=80"
+                            alt="Newborn Photography">
                     </div>
                     <div class="portfolio-overlay">
                         <div class="portfolio-category">Baby & Family</div>
@@ -561,10 +605,12 @@
                         <p class="portfolio-desc">Baby photography with family</p>
                     </div>
                 </div>
-                
+
                 <div class="portfolio-item zoom-in delay-2" data-category="portrait">
                     <div class="portfolio-img">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1776&q=80" alt="Portrait Photography">
+                        <img loading="lazy" decoding="async"
+                            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1776&q=80"
+                            alt="Portrait Photography">
                     </div>
                     <div class="portfolio-overlay">
                         <div class="portfolio-category">Portrait</div>
@@ -572,10 +618,12 @@
                         <p class="portfolio-desc">Corporate headshot session</p>
                     </div>
                 </div>
-                
+
                 <div class="portfolio-item zoom-in delay-3" data-category="wedding">
                     <div class="portfolio-img">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Wedding Details">
+                        <img loading="lazy" decoding="async"
+                            src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                            alt="Wedding Details">
                     </div>
                     <div class="portfolio-overlay">
                         <div class="portfolio-category">Wedding</div>
@@ -594,13 +642,16 @@
                 <h2>Client Testimonials</h2>
                 <p>What our clients say about working with us</p>
             </div>
-            
+
             <div class="testimonial-grid">
                 <div class="testimonial-card fade-in">
-                    <p class="testimonial-text">Star Studio captured our wedding day perfectly! The photos are stunning and truly reflect the emotions of the day. We couldn't be happier with their professional approach and the beautiful memories they've given us.</p>
+                    <p class="testimonial-text">Star Studio captured our wedding day perfectly! The photos are stunning
+                        and truly reflect the emotions of the day. We couldn't be happier with their professional
+                        approach and the beautiful memories they've given us.</p>
                     <div class="testimonial-client">
                         <div class="testimonial-avatar">
-                            <img loading="lazy" decoding="async" src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client">
+                            <img loading="lazy" decoding="async" src="https://randomuser.me/api/portraits/women/65.jpg"
+                                alt="Client">
                         </div>
                         <div class="client-info">
                             <h4>Priya Sharma</h4>
@@ -608,12 +659,15 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="testimonial-card fade-in delay-1">
-                    <p class="testimonial-text">The pre-wedding shoot with Star Studio was an amazing experience. They made us feel comfortable in front of the camera and the results were breathtaking. We're so glad we chose them for our special moments.</p>
+                    <p class="testimonial-text">The pre-wedding shoot with Star Studio was an amazing experience. They
+                        made us feel comfortable in front of the camera and the results were breathtaking. We're so glad
+                        we chose them for our special moments.</p>
                     <div class="testimonial-client">
                         <div class="testimonial-avatar">
-                            <img loading="lazy" decoding="async" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
+                            <img loading="lazy" decoding="async" src="https://randomuser.me/api/portraits/men/32.jpg"
+                                alt="Client">
                         </div>
                         <div class="client-info">
                             <h4>Rahul Kapoor</h4>
@@ -621,12 +675,15 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="testimonial-card fade-in delay-2">
-                    <p class="testimonial-text">We hired Star Studio for our corporate event and were extremely impressed with their professionalism. They captured all the important moments without being intrusive. The photos were delivered quickly and were of exceptional quality.</p>
+                    <p class="testimonial-text">We hired Star Studio for our corporate event and were extremely
+                        impressed with their professionalism. They captured all the important moments without being
+                        intrusive. The photos were delivered quickly and were of exceptional quality.</p>
                     <div class="testimonial-client">
                         <div class="testimonial-avatar">
-                            <img loading="lazy" decoding="async" src="https://randomuser.me/api/portraits/women/45.jpg" alt="Client">
+                            <img loading="lazy" decoding="async" src="https://randomuser.me/api/portraits/women/45.jpg"
+                                alt="Client">
                         </div>
                         <div class="client-info">
                             <h4>Neha Patel</h4>
@@ -642,7 +699,8 @@
     <section class="cta-section">
         <div class="container">
             <h2>Ready to Create Beautiful Memories?</h2>
-            <p style="margin-bottom: 20px;">Let's discuss your photography needs and create something amazing together</p>
+            <p style="margin-bottom: 20px;">Let's discuss your photography needs and create something amazing together
+            </p>
             <a href="contact.html" class="btn">Book Your Session</a>
         </div>
     </section>
@@ -669,10 +727,14 @@
                     <p>Capturing life's most precious moments with creativity and passion. Professional photography
                         services for all your special occasions.</p>
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/your-channel" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.pinterest.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/your-channel" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.pinterest.com/your-profile" target="_blank" rel="noopener noreferrer"
+                            aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </div>
                 <div class="footer-links fade-in delay-1">
@@ -688,11 +750,15 @@
                 <div class="footer-links fade-in delay-1">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="services.html#wedding"><i class="fas fa-chevron-right"></i> Wedding Photography</a></li>
-                        <li><a href="services.html#pre-wedding"><i class="fas fa-chevron-right"></i> Pre-Wedding Shoots</a></li>
-                        <li><a href="services.html#videography"><i class="fas fa-chevron-right"></i> Videography</a></li>
+                        <li><a href="services.html#wedding"><i class="fas fa-chevron-right"></i> Wedding Photography</a>
+                        </li>
+                        <li><a href="services.html#pre-wedding"><i class="fas fa-chevron-right"></i> Pre-Wedding
+                                Shoots</a></li>
+                        <li><a href="services.html#videography"><i class="fas fa-chevron-right"></i> Videography</a>
+                        </li>
                         <li><a href="services.html#drone"><i class="fas fa-chevron-right"></i> Drone Shoots</a></li>
-                        <li><a href="services.html#portraits"><i class="fas fa-chevron-right"></i> Baby & Maternity</a></li>
+                        <li><a href="services.html#portraits"><i class="fas fa-chevron-right"></i> Baby & Maternity</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer-links fade-in delay-1">
@@ -701,7 +767,8 @@
                         <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
                         <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blogs</a></li>
                         <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                        <li><a href="term-conditions.html"><i class="fas fa-chevron-right"></i>Terms & Conditions</a></li>
+                        <li><a href="term-conditions.html"><i class="fas fa-chevron-right"></i>Terms & Conditions</a>
+                        </li>
                         <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
                     </ul>
                 </div>
@@ -729,21 +796,21 @@
     <script src="script.js"></script>
     <script>
         // Portfolio filtering functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const filterButtons = document.querySelectorAll('.filter-btn');
             const portfolioItems = document.querySelectorAll('.portfolio-item');
-            
+
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
                     // Remove active class from all buttons
                     filterButtons.forEach(btn => btn.classList.remove('active'));
-                    
+
                     // Add active class to clicked button
                     button.classList.add('active');
-                    
+
                     // Get filter value
                     const filterValue = button.getAttribute('data-filter');
-                    
+
                     // Filter portfolio items
                     portfolioItems.forEach(item => {
                         if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
@@ -754,7 +821,7 @@
                     });
                 });
             });
-            
+
             // Lightbox functionality
             const lightboxModal = document.getElementById('lightbox-modal');
             const lightboxImg = document.querySelector('.lightbox-img');
@@ -762,10 +829,10 @@
             const closeLightbox = document.querySelector('.close-lightbox');
             const prevBtn = document.querySelector('.prev-btn');
             const nextBtn = document.querySelector('.next-btn');
-            
+
             let currentImageIndex = 0;
             const portfolioImages = Array.from(portfolioItems);
-            
+
             // Open lightbox when portfolio item is clicked
             portfolioItems.forEach((item, index) => {
                 item.addEventListener('click', () => {
@@ -775,13 +842,13 @@
                     document.body.style.overflow = 'hidden'; // Prevent scrolling
                 });
             });
-            
+
             // Close lightbox
             closeLightbox.addEventListener('click', () => {
                 lightboxModal.style.display = 'none';
                 document.body.style.overflow = 'auto'; // Enable scrolling
             });
-            
+
             // Close lightbox when clicking outside the image
             lightboxModal.addEventListener('click', (e) => {
                 if (e.target === lightboxModal) {
@@ -789,20 +856,20 @@
                     document.body.style.overflow = 'auto'; // Enable scrolling
                 }
             });
-            
+
             // Navigation between images
             prevBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 currentImageIndex = (currentImageIndex - 1 + portfolioImages.length) % portfolioImages.length;
                 updateLightbox();
             });
-            
+
             nextBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 currentImageIndex = (currentImageIndex + 1) % portfolioImages.length;
                 updateLightbox();
             });
-            
+
             // Keyboard navigation
             document.addEventListener('keydown', (e) => {
                 if (lightboxModal.style.display === 'flex') {
@@ -818,22 +885,22 @@
                     }
                 }
             });
-            
+
             function updateLightbox() {
                 const imageSrc = portfolioImages[currentImageIndex].querySelector('img').src;
                 const imageAlt = portfolioImages[currentImageIndex].querySelector('img').alt;
                 const category = portfolioImages[currentImageIndex].querySelector('.portfolio-category').textContent;
                 const title = portfolioImages[currentImageIndex].querySelector('.portfolio-title').textContent;
                 const desc = portfolioImages[currentImageIndex].querySelector('.portfolio-desc').textContent;
-                
+
                 lightboxImg.src = imageSrc;
                 lightboxImg.alt = imageAlt;
                 lightboxCaption.innerHTML = `<strong>${category}</strong> - ${title}: ${desc}`;
             }
-            
+
             // Simple animation for elements
             const animatedElements = document.querySelectorAll('.fade-in, .zoom-in');
-            
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -842,7 +909,7 @@
                     }
                 });
             }, { threshold: 0.1 });
-            
+
             animatedElements.forEach(el => {
                 el.style.opacity = 0;
                 if (el.classList.contains('fade-in')) {

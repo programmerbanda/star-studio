@@ -4,16 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Star Studio offers premium drone shoot services for weddings, events, and real estate. Capture breathtaking aerial perspectives with our expert team.">
-    <meta name="keywords" content="drone shoots, aerial photography, aerial videography, wedding drone shots, event drone coverage, Mumbai, Star Studio">
+    <meta name="description"
+        content="Star Studio offers premium drone shoot services for weddings, events, and real estate. Capture breathtaking aerial perspectives with our expert team.">
+    <meta name="keywords"
+        content="drone shoots, aerial photography, aerial videography, wedding drone shots, event drone coverage, Mumbai, Star Studio">
     <meta property="og:title" content="Star Studio - Premium Drone Shoot Services">
-    <meta property="og:description" content="Elevate your moments with stunning aerial photography and videography. Our drone shoot services deliver breathtaking perspectives for any occasion.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1506947411487-9fdce98c7e2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80">
+    <meta property="og:description"
+        content="Elevate your moments with stunning aerial photography and videography. Our drone shoot services deliver breathtaking perspectives for any occasion.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1506947411487-9fdce98c7e2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80">
     <meta property="og:url" content="YOUR_WEBSITE_URL">
     <meta property="og:type" content="website">
     <title>Star Studio - Premium Drone Shoot Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
         /* ===== Base a11y improvements ===== */
@@ -23,12 +29,16 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
+
+            *,
+            *::before,
+            *::after {
                 animation: none !important;
                 transition: none !important;
                 scroll-behavior: auto !important;
             }
         }
+
         /* ===== Drone Shoot Section ===== */
         .drone-section {
             padding: 100px 0px;
@@ -275,22 +285,22 @@
                 text-align: center;
                 gap: 40px;
             }
-            
+
             .drone-section .title::after {
                 left: 50%;
                 transform: translateX(-50%);
             }
-            
+
             .image-slider-container {
                 margin-top: 30px;
                 transform: none;
                 height: 400px;
             }
-            
+
             .image-slider-container:hover {
                 transform: none;
             }
-            
+
             .slider-nav {
                 width: 40px;
                 height: 40px;
@@ -298,43 +308,47 @@
             }
         }
 
-        @media (max-width: 768px) {                        
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+            }
+
             .drone-section {
                 padding: 90px px;
             }
-            
+
             .drone-section .title {
                 font-size: 2rem;
             }
-            
+
             .drone-section .description {
                 font-size: 1rem;
             }
-            
+
             .image-slider-container {
                 height: 350px;
             }
         }
 
-        @media (max-width: 576px) {            
+        @media (max-width: 576px) {
             .drone-section .title {
                 font-size: 1.8rem;
             }
-            
+
             .image-slider-container {
                 height: 300px;
             }
-            
+
             .slider-nav {
                 width: 35px;
                 height: 35px;
                 font-size: 14px;
             }
-            
+
             .slider-nav.prev {
                 left: 10px;
             }
-            
+
             .slider-nav.next {
                 right: 10px;
             }
@@ -368,9 +382,14 @@
 
         /* Reduced motion: soften slider movement */
         @media (prefers-reduced-motion: reduce) {
-            .slides { transition: none; }
+            .slides {
+                transition: none;
+            }
+
             .drone-section .btn,
-            .slider-nav { transition: none; }
+            .slider-nav {
+                transition: none;
+            }
         }
     </style>
 </head>
@@ -407,7 +426,7 @@
             </nav>
         </div>
     </header>
-    
+
     <main>
         <!-- ===== Drone Shoot Section ===== -->
         <section class="drone-section">
@@ -416,7 +435,9 @@
                 <div class="content">
                     <h2 class="title fade-in">Drone Shoot Services</h2>
                     <p class="description fade-in delay-1">
-                        Elevate your moments with breathtaking aerial perspectives. Our professional drone shoot services capture stunning visuals for weddings, events, and real estate, delivering unmatched cinematic quality.
+                        Elevate your moments with breathtaking aerial perspectives. Our professional drone shoot
+                        services capture stunning visuals for weddings, events, and real estate, delivering unmatched
+                        cinematic quality.
                     </p>
                     <ul class="features fade-in delay-2">
                         <li>Aerial Wedding Photography & Videography</li>
@@ -426,7 +447,7 @@
                     </ul>
                     <a href="#contact" class="btn fade-in delay-3">Book Your Drone Shoot</a>
                 </div>
-      
+
                 <!-- Right Side Slider -->
                 <div class="image-slider-container fade-in delay-2" role="region" aria-label="Drone media slider">
                     <div class="image-slider">
@@ -434,21 +455,20 @@
                             <div class="slide">
                                 <video autoplay muted loop playsinline preload="metadata"
                                     src="https://videos.pexels.com/video-files/8435724/8435724-uhd_2560_1440_24fps.mp4"
-                                    poster="https://images.unsplash.com/photo-1506947411487-9fdce98c7e2d?auto=format&fit=crop&w=1200&q=60"
-                                ></video>
+                                    poster="https://images.unsplash.com/photo-1506947411487-9fdce98c7e2d?auto=format&fit=crop&w=1200&q=60"></video>
                             </div>
                             <div class="slide">
                                 <img loading="lazy" decoding="async"
-                                     src="https://images.unsplash.com/photo-1517331156700-3c241d2b4d83?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
-                                     alt="Event drone coverage from above">
+                                    src="https://images.unsplash.com/photo-1517331156700-3c241d2b4d83?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Event drone coverage from above">
                             </div>
                             <div class="slide">
                                 <img loading="lazy" decoding="async"
-                                     src="https://images.unsplash.com/photo-1502136969935-8d8eef26dd2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
-                                     alt="Real estate property captured by drone">
+                                    src="https://images.unsplash.com/photo-1502136969935-8d8eef26dd2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Real estate property captured by drone">
                             </div>
                         </div>
-                        
+
                         <!-- Navigation Arrows -->
                         <button class="slider-nav prev" type="button" aria-label="Previous slide">
                             <i class="fas fa-chevron-left" aria-hidden="true"></i>
@@ -456,19 +476,22 @@
                         <button class="slider-nav next" type="button" aria-label="Next slide">
                             <i class="fas fa-chevron-right" aria-hidden="true"></i>
                         </button>
-                        
+
                         <!-- Dots Indicator -->
                         <div class="slider-controls" role="tablist" aria-label="Slide selector">
-                            <button class="slider-dot active" role="tab" aria-selected="true" aria-label="Go to slide 1" tabindex="0"></button>
-                            <button class="slider-dot" role="tab" aria-selected="false" aria-label="Go to slide 2" tabindex="-1"></button>
-                            <button class="slider-dot" role="tab" aria-selected="false" aria-label="Go to slide 3" tabindex="-1"></button>
+                            <button class="slider-dot active" role="tab" aria-selected="true" aria-label="Go to slide 1"
+                                tabindex="0"></button>
+                            <button class="slider-dot" role="tab" aria-selected="false" aria-label="Go to slide 2"
+                                tabindex="-1"></button>
+                            <button class="slider-dot" role="tab" aria-selected="false" aria-label="Go to slide 3"
+                                tabindex="-1"></button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    </main>    
-      
+    </main>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -478,10 +501,14 @@
                     <p>Capturing life's most precious moments with creativity and passion. Professional photography
                         services for all your special occasions.</p>
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/your-channel" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.pinterest.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/your-channel" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.pinterest.com/your-profile" target="_blank" rel="noopener noreferrer"
+                            aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </div>
                 <div class="footer-links fade-in delay-1">
@@ -497,8 +524,10 @@
                 <div class="footer-links fade-in delay-1">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="/wedding-photography.html"><i class="fas fa-chevron-right"></i> Wedding Photography</a></li>
-                        <li><a href="pre-weddingshoot.html"><i class="fas fa-chevron-right"></i> Pre-Wedding Shoots</a></li>
+                        <li><a href="/wedding-photography.html"><i class="fas fa-chevron-right"></i> Wedding
+                                Photography</a></li>
+                        <li><a href="pre-weddingshoot.html"><i class="fas fa-chevron-right"></i> Pre-Wedding Shoots</a>
+                        </li>
                         <li><a href="videography.html"><i class="fas fa-chevron-right"></i> Videography</a></li>
                         <li><a href="drone.html"><i class="fas fa-chevron-right"></i> Drone Shoots</a></li>
                         <li><a href="baby-maternity.html"><i class="fas fa-chevron-right"></i> Baby & Maternity</a></li>
@@ -510,7 +539,8 @@
                         <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
                         <li><a href="#about"><i class="fas fa-chevron-right"></i> Blogs</a></li>
                         <li><a href="#services"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                        <li><a href="term-conditions.html"><i class="fas fa-chevron-right"></i>Terms & Conditions</a></li>
+                        <li><a href="term-conditions.html"><i class="fas fa-chevron-right"></i>Terms & Conditions</a>
+                        </li>
                         <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
                     </ul>
                 </div>
@@ -539,7 +569,7 @@
     <script src="script.js"></script>
     <script>
         // Image slider functionality with a11y and reduced motion support
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const sliderRoot = document.querySelector('.drone-section .image-slider');
             if (!sliderRoot) return;
 

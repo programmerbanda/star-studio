@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Star Studio's photography blog featuring tips, inspiration, and behind-the-scenes stories from our photography sessions.">
-    <meta name="keywords" content="photography blog, photography tips, wedding photography guide, portrait photography, Mumbai photographer blog">
+    <meta name="description"
+        content="Star Studio's photography blog featuring tips, inspiration, and behind-the-scenes stories from our photography sessions.">
+    <meta name="keywords"
+        content="photography blog, photography tips, wedding photography guide, portrait photography, Mumbai photographer blog">
     <meta property="og:title" content="Blog - Star Studio Photography">
-    <meta property="og:description" content="Photography tips, inspiration, and behind-the-scenes stories from Star Studio.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80">
+    <meta property="og:description"
+        content="Photography tips, inspiration, and behind-the-scenes stories from Star Studio.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80">
     <meta property="og:url" content="YOUR_WEBSITE_URL/blog.html">
     <meta property="og:type" content="website">
     <title>Blog - Star Studio Photography</title>
@@ -18,15 +22,28 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        :focus-visible { outline: 3px solid #d6336c; outline-offset: 2px; }
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { animation: none !important; transition: none !important; }
-            html { scroll-behavior: auto !important; }
+        :focus-visible {
+            outline: 3px solid #d6336c;
+            outline-offset: 2px;
         }
-        
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+
+            html {
+                scroll-behavior: auto !important;
+            }
+        }
+
         /* Additional styles specific to blog page */
         .blog-hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80') no-repeat center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80') no-repeat center/cover;
             min-height: 60vh;
             display: flex;
             align-items: center;
@@ -34,59 +51,59 @@
             color: #fff;
             padding: 80px 0 0 0;
         }
-        
+
         .blog-container {
             padding: 40px 0;
             display: grid;
-            grid-template-columns:  2fr;
+            grid-template-columns: 2fr;
             gap: 40px;
         }
-        
+
         .blog-main {
             padding-right: 20px;
         }
-        
+
         .blog-sidebar {
             position: sticky;
             top: 100px;
             align-self: start;
         }
-        
+
         .blog-grid {
             display: grid;
             grid-template-rows: 2fr;
             gap: 40px;
         }
-        
+
         .blog-card {
             background: #fff;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
-        
+
         .blog-card:hover {
             transform: translateY(-5px);
         }
-        
+
         .blog-image {
             height: 300px;
             overflow: hidden;
             position: relative;
         }
-        
+
         .blog-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-        
+
         .blog-card:hover .blog-image img {
             transform: scale(1.05);
         }
-        
+
         .blog-category {
             position: absolute;
             top: 20px;
@@ -99,11 +116,11 @@
             font-weight: 600;
             z-index: 2;
         }
-        
+
         .blog-content {
             padding: 30px;
         }
-        
+
         .blog-meta {
             display: flex;
             align-items: center;
@@ -112,18 +129,18 @@
             color: #999;
             flex-wrap: wrap;
         }
-        
+
         .blog-meta span {
             display: flex;
             align-items: center;
             margin-right: 20px;
         }
-        
+
         .blog-meta i {
             margin-right: 5px;
             color: #d6336c;
         }
-        
+
         .blog-title {
             font-family: 'Playfair Display', serif;
             font-size: 24px;
@@ -131,13 +148,13 @@
             color: #333;
             line-height: 1.3;
         }
-        
+
         .blog-excerpt {
             color: #666;
             margin-bottom: 20px;
             line-height: 1.6;
         }
-        
+
         .blog-read-more {
             display: inline-flex;
             align-items: center;
@@ -145,30 +162,30 @@
             font-weight: 600;
             transition: color 0.3s ease;
         }
-        
+
         .blog-read-more:hover {
             color: #a51c55;
         }
-        
+
         .blog-read-more i {
             margin-left: 5px;
             transition: transform 0.3s ease;
         }
-        
+
         .blog-read-more:hover i {
             transform: translateX(3px);
         }
-        
+
         /* Sidebar Styles */
         .sidebar-widget {
             margin-top: 30px;
             background: #2d3a4b;
             padding: 25px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             margin-bottom: 30px;
         }
-        
+
         .sidebar-widget h3 {
             font-family: 'Playfair Display', serif;
             margin-bottom: 20px;
@@ -176,11 +193,11 @@
             border-bottom: 2px solid #f0f0f0;
             color: #fff;
         }
-        
+
         .search-form {
             display: flex;
         }
-        
+
         .search-input {
             flex: 1;
             padding: 12px 15px;
@@ -188,7 +205,7 @@
             border-radius: 5px 0 0 5px;
             font-family: 'Poppins', sans-serif;
         }
-        
+
         .search-btn {
             background: #d6336c;
             color: #fff;
@@ -197,23 +214,23 @@
             border-radius: 0 5px 5px 0;
             cursor: pointer;
         }
-        
+
         .categories-list {
             list-style: none;
         }
-        
+
         .categories-list li {
             margin-bottom: 10px;
             padding-bottom: 10px;
             border-bottom: 1px solid #f0f0f0;
         }
-        
+
         .categories-list li:last-child {
             margin-bottom: 0;
             padding-bottom: 0;
             border-bottom: none;
         }
-        
+
         .categories-list a {
             display: flex;
             justify-content: space-between;
@@ -221,35 +238,35 @@
             color: #999;
             transition: color 0.3s ease;
         }
-        
+
         .categories-list a:hover {
             color: #d6336c;
         }
-        
+
         .categories-list span {
             background: #f8f9fa;
             padding: 2px 8px;
             border-radius: 10px;
             font-size: 12px;
         }
-        
+
         .recent-posts-list {
             list-style: none;
         }
-        
+
         .recent-post {
             display: flex;
             margin-bottom: 15px;
             padding-bottom: 15px;
             border-bottom: 1px solid #f0f0f0;
         }
-        
+
         .recent-post:last-child {
             margin-bottom: 0;
             padding-bottom: 0;
             border-bottom: none;
         }
-        
+
         .recent-post-img {
             width: 80px;
             height: 80px;
@@ -257,30 +274,30 @@
             overflow: hidden;
             margin-right: 15px;
         }
-        
+
         .recent-post-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         .recent-post-content h4 {
             font-size: 14px;
             margin-bottom: 5px;
             line-height: 1.4;
         }
-        
+
         .recent-post-content .blog-meta {
             margin-bottom: 0;
             font-size: 12px;
         }
-        
+
         .tags-cloud {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
-        
+
         .tag {
             background: #f8f9fa;
             text-decoration: none;
@@ -290,41 +307,41 @@
             font-size: 12px;
             transition: all 0.3s ease;
         }
-        
+
         .tag:hover {
             background: #d6336c;
             color: white;
         }
-        
+
         .instagram-feed {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 5px;
         }
-        
+
         .insta-item {
             aspect-ratio: 1/1;
             overflow: hidden;
             border-radius: 5px;
         }
-        
+
         .insta-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s ease;
         }
-        
+
         .insta-item:hover img {
             transform: scale(1.1);
         }
-        
+
         .pagination {
             display: flex;
             justify-content: center;
             margin-top: 50px;
         }
-        
+
         .page-link {
             display: flex;
             align-items: center;
@@ -335,53 +352,58 @@
             border-radius: 5px;
             background: white;
             color: #333;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
-        
-        .page-link:hover, .page-link.active {
+
+        .page-link:hover,
+        .page-link.active {
             background: #d6336c;
             color: white;
         }
-        
+
         @media (max-width: 992px) {
             .blog-container {
                 grid-template-columns: 1fr;
             }
-            
+
             .blog-main {
                 padding-right: 0;
             }
-            
+
             .blog-sidebar {
                 position: static;
             }
         }
-        
+
         @media (max-width: 768px) {
+            .container {
+                width: 100%;
+            }
+
             .blog-image {
                 height: 250px;
             }
-            
+
             .blog-meta span {
                 margin-right: 15px;
                 margin-bottom: 5px;
             }
         }
-        
+
         @media (max-width: 576px) {
             .blog-image {
                 height: 200px;
             }
-            
+
             .blog-title {
                 font-size: 20px;
             }
-            
+
             .recent-post {
                 flex-direction: column;
             }
-            
+
             .recent-post-img {
                 width: 100%;
                 height: 150px;
@@ -442,7 +464,9 @@
                 <div class="blog-grid">
                     <article class="blog-card fade-in">
                         <div class="blog-image">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Wedding Photography Tips">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+                                alt="Wedding Photography Tips">
                             <div class="blog-category">Wedding Photography</div>
                         </div>
                         <div class="blog-content">
@@ -452,14 +476,19 @@
                                 <span><i class="fas fa-clock"></i> 5 min read</span>
                             </div>
                             <h2 class="blog-title">10 Essential Tips for Perfect Wedding Photography</h2>
-                            <p class="blog-excerpt">Discover the secrets to capturing those magical moments that make every wedding special. From lighting techniques to candid shots, learn how to create timeless memories that couples will cherish forever.</p>
-                            <a href="blog-single.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <p class="blog-excerpt">Discover the secrets to capturing those magical moments that make
+                                every wedding special. From lighting techniques to candid shots, learn how to create
+                                timeless memories that couples will cherish forever.</p>
+                            <a href="blog-single.html" class="blog-read-more">Read More <i
+                                    class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
                     <article class="blog-card fade-in delay-1">
                         <div class="blog-image">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Portrait Photography">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80"
+                                alt="Portrait Photography">
                             <div class="blog-category">Portrait Photography</div>
                         </div>
                         <div class="blog-content">
@@ -469,14 +498,19 @@
                                 <span><i class="fas fa-clock"></i> 7 min read</span>
                             </div>
                             <h2 class="blog-title">Mastering Natural Light in Portrait Photography</h2>
-                            <p class="blog-excerpt">Learn how to use natural light to create stunning portraits that capture the true essence of your subjects. This guide covers golden hour techniques, diffusing harsh sunlight, and creating beautiful catchlights in the eyes.</p>
-                            <a href="blog-single.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <p class="blog-excerpt">Learn how to use natural light to create stunning portraits that
+                                capture the true essence of your subjects. This guide covers golden hour techniques,
+                                diffusing harsh sunlight, and creating beautiful catchlights in the eyes.</p>
+                            <a href="blog-single.html" class="blog-read-more">Read More <i
+                                    class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
                     <article class="blog-card fade-in delay-2">
                         <div class="blog-image">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1655&q=80" alt="Event Photography">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1655&q=80"
+                                alt="Event Photography">
                             <div class="blog-category">Event Photography</div>
                         </div>
                         <div class="blog-content">
@@ -486,14 +520,19 @@
                                 <span><i class="fas fa-clock"></i> 6 min read</span>
                             </div>
                             <h2 class="blog-title">Event Photography: Capturing the Energy and Emotion</h2>
-                            <p class="blog-excerpt">From corporate events to birthday parties, learn how to document every moment with energy and style. This comprehensive guide covers preparation, equipment choices, and techniques for capturing authentic moments.</p>
-                            <a href="blog-single.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <p class="blog-excerpt">From corporate events to birthday parties, learn how to document
+                                every moment with energy and style. This comprehensive guide covers preparation,
+                                equipment choices, and techniques for capturing authentic moments.</p>
+                            <a href="blog-single.html" class="blog-read-more">Read More <i
+                                    class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
                     <article class="blog-card fade-in delay-3">
                         <div class="blog-image">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Photography Equipment">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80"
+                                alt="Photography Equipment">
                             <div class="blog-category">Equipment Guide</div>
                         </div>
                         <div class="blog-content">
@@ -503,14 +542,19 @@
                                 <span><i class="fas fa-clock"></i> 8 min read</span>
                             </div>
                             <h2 class="blog-title">Essential Photography Equipment for Beginners</h2>
-                            <p class="blog-excerpt">A comprehensive guide to the must-have photography equipment for those just starting their journey. Learn what to prioritize in your budget and which accessories will make the biggest difference in your photography.</p>
-                            <a href="blog-single.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <p class="blog-excerpt">A comprehensive guide to the must-have photography equipment for
+                                those just starting their journey. Learn what to prioritize in your budget and which
+                                accessories will make the biggest difference in your photography.</p>
+                            <a href="blog-single.html" class="blog-read-more">Read More <i
+                                    class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
                     <article class="blog-card fade-in delay-1">
                         <div class="blog-image">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Posing Tips">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                                alt="Posing Tips">
                             <div class="blog-category">Posing Guide</div>
                         </div>
                         <div class="blog-content">
@@ -520,14 +564,19 @@
                                 <span><i class="fas fa-clock"></i> 5 min read</span>
                             </div>
                             <h2 class="blog-title">10 Flattering Poses for Couples Photography</h2>
-                            <p class="blog-excerpt">Discover the most flattering and natural-looking poses for couples. Whether you're shooting engagements, anniversaries, or just because, these poses will help your subjects look their best while expressing their connection.</p>
-                            <a href="blog-single.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <p class="blog-excerpt">Discover the most flattering and natural-looking poses for couples.
+                                Whether you're shooting engagements, anniversaries, or just because, these poses will
+                                help your subjects look their best while expressing their connection.</p>
+                            <a href="blog-single.html" class="blog-read-more">Read More <i
+                                    class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
 
                     <article class="blog-card fade-in delay-2">
                         <div class="blog-image">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Photo Editing">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                                alt="Photo Editing">
                             <div class="blog-category">Post-Processing</div>
                         </div>
                         <div class="blog-content">
@@ -537,8 +586,11 @@
                                 <span><i class="fas fa-clock"></i> 10 min read</span>
                             </div>
                             <h2 class="blog-title">Lightroom Editing Workflow for Professional Results</h2>
-                            <p class="blog-excerpt">Streamline your photo editing process with this efficient Lightroom workflow. From import to export, learn the steps professionals use to achieve consistent, beautiful results while saving time on post-processing.</p>
-                            <a href="blog-single.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <p class="blog-excerpt">Streamline your photo editing process with this efficient Lightroom
+                                workflow. From import to export, learn the steps professionals use to achieve
+                                consistent, beautiful results while saving time on post-processing.</p>
+                            <a href="blog-single.html" class="blog-read-more">Read More <i
+                                    class="fas fa-arrow-right"></i></a>
                         </div>
                     </article>
                 </div>
@@ -578,7 +630,9 @@
                     <ul class="recent-posts-list">
                         <li class="recent-post">
                             <div class="recent-post-img">
-                                <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Recent Post">
+                                <img loading="lazy" decoding="async"
+                                    src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+                                    alt="Recent Post">
                             </div>
                             <div class="recent-post-content">
                                 <h4>10 Essential Tips for Perfect Wedding Photography</h4>
@@ -589,7 +643,9 @@
                         </li>
                         <li class="recent-post">
                             <div class="recent-post-img">
-                                <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Recent Post">
+                                <img loading="lazy" decoding="async"
+                                    src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+                                    alt="Recent Post">
                             </div>
                             <div class="recent-post-content">
                                 <h4>Mastering Natural Light in Portrait Photography</h4>
@@ -600,7 +656,9 @@
                         </li>
                         <li class="recent-post">
                             <div class="recent-post-img">
-                                <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Recent Post">
+                                <img loading="lazy" decoding="async"
+                                    src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+                                    alt="Recent Post">
                             </div>
                             <div class="recent-post-content">
                                 <h4>Event Photography: Capturing the Energy and Emotion</h4>
@@ -631,22 +689,34 @@
                     <h3>Instagram Feed</h3>
                     <div class="instagram-feed">
                         <a href="#" class="insta-item">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Instagram Post">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+                                alt="Instagram Post">
                         </a>
                         <a href="#" class="insta-item">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Instagram Post">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+                                alt="Instagram Post">
                         </a>
                         <a href="#" class="insta-item">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Instagram Post">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+                                alt="Instagram Post">
                         </a>
                         <a href="#" class="insta-item">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Instagram Post">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+                                alt="Instagram Post">
                         </a>
                         <a href="#" class="insta-item">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Instagram Post">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+                                alt="Instagram Post">
                         </a>
                         <a href="#" class="insta-item">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Instagram Post">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
+                                alt="Instagram Post">
                         </a>
                     </div>
                 </div>
@@ -663,10 +733,14 @@
                     <p>Capturing life's most precious moments with creativity and passion. Professional photography
                         services for all your special occasions.</p>
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/your-channel" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.pinterest.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/your-channel" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.pinterest.com/your-profile" target="_blank" rel="noopener noreferrer"
+                            aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </div>
                 <div class="footer-links fade-in delay-1">
@@ -682,11 +756,15 @@
                 <div class="footer-links fade-in delay-1">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="services.html#wedding"><i class="fas fa-chevron-right"></i> Wedding Photography</a></li>
-                        <li><a href="services.html#pre-wedding"><i class="fas fa-chevron-right"></i> Pre-Wedding Shoots</a></li>
-                        <li><a href="services.html#videography"><i class="fas fa-chevron-right"></i> Videography</a></li>
+                        <li><a href="services.html#wedding"><i class="fas fa-chevron-right"></i> Wedding Photography</a>
+                        </li>
+                        <li><a href="services.html#pre-wedding"><i class="fas fa-chevron-right"></i> Pre-Wedding
+                                Shoots</a></li>
+                        <li><a href="services.html#videography"><i class="fas fa-chevron-right"></i> Videography</a>
+                        </li>
                         <li><a href="services.html#drone"><i class="fas fa-chevron-right"></i> Drone Shoots</a></li>
-                        <li><a href="services.html#portraits"><i class="fas fa-chevron-right"></i> Baby & Maternity</a></li>
+                        <li><a href="services.html#portraits"><i class="fas fa-chevron-right"></i> Baby & Maternity</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer-links fade-in delay-1">
@@ -695,7 +773,8 @@
                         <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
                         <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
                         <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                        <li><a href="term-conditions.html"><i class="fas fa-chevron-right"></i>Terms & Conditions</a></li>
+                        <li><a href="term-conditions.html"><i class="fas fa-chevron-right"></i>Terms & Conditions</a>
+                        </li>
                         <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
                     </ul>
                 </div>
@@ -723,9 +802,9 @@
     <script src="script.js"></script>
     <script>
         // Simple animation for elements
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const animatedElements = document.querySelectorAll('.fade-in');
-            
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -734,7 +813,7 @@
                     }
                 });
             }, { threshold: 0.1 });
-            
+
             animatedElements.forEach(el => {
                 el.style.opacity = 0;
                 el.style.transform = 'translateY(20px)';

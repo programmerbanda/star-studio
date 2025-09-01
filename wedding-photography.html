@@ -4,11 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Star Studio offers premium photography services for weddings, events, portraits, and more. Capturing moments, creating memories.">
-    <meta name="keywords" content="photography, wedding photography, event photography, portrait photography, pre-wedding shoot, drone shoots, videography, Mumbai, Star Studio">
+    <meta name="description"
+        content="Star Studio offers premium photography services for weddings, events, portraits, and more. Capturing moments, creating memories.">
+    <meta name="keywords"
+        content="photography, wedding photography, event photography, portrait photography, pre-wedding shoot, drone shoots, videography, Mumbai, Star Studio">
     <meta property="og:title" content="Star Studio - Premium Photography Services">
-    <meta property="og:description" content="Professional photography services for weddings, events, and special occasions. Let us tell your story through our lens.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"> <!-- Replace with your actual image URL -->
+    <meta property="og:description"
+        content="Professional photography services for weddings, events, and special occasions. Let us tell your story through our lens.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80">
+    <!-- Replace with your actual image URL -->
     <meta property="og:url" content="YOUR_WEBSITE_URL"> <!-- Replace with your actual website URL -->
     <meta property="og:type" content="website">
     <title>Star Studio - Premium Photography Services</title>
@@ -16,20 +21,34 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <style>
-        :focus-visible { outline: 3px solid #d6336c; outline-offset: 2px; }
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { animation: none !important; transition: none !important; }
-            html { scroll-behavior: auto !important; }
+        :focus-visible {
+            outline: 3px solid #d6336c;
+            outline-offset: 2px;
         }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+
+            html {
+                scroll-behavior: auto !important;
+            }
+        }
+
         /* Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
@@ -37,18 +56,21 @@
             background-color: #1e293b;
             overflow-x: hidden;
         }
-        
-        h1, h2, h3, h4 {
+
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: 'Playfair Display', serif;
             font-weight: 700;
             margin-bottom: 20px;
             color: #F43F5E;
         }
-        
+
         p {
             margin-bottom: 15px;
         }
-        
+
         .btn {
             display: inline-block;
             padding: 12px 30px;
@@ -61,13 +83,13 @@
             border: none;
             cursor: pointer;
         }
-        
+
         .btn:hover {
             background-color: #d35400;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
         }
-        
+
         /* Wedding Hero Section */
         .wedding-hero {
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80') no-repeat center center/cover;
@@ -76,45 +98,45 @@
             padding: 150px 0;
             position: relative;
         }
-        
+
         .wedding-hero-content {
             max-width: 800px;
             margin: 0 auto;
             animation: fadeIn 0.3s ease-out;
         }
-        
+
         .wedding-hero h1 {
             font-size: 48px;
             margin-bottom: 20px;
             color: white;
             animation: slideDown 1s ease-out;
         }
-        
+
         .wedding-hero p {
             font-size: 18px;
             margin-bottom: 30px;
             animation: fadeIn 0.3s ease-out;
         }
-        
+
         /* Animated Gallery */
         .animated-gallery {
             background-color: #1e293b;
             overflow: hidden;
             padding: 80px 0;
         }
-        
+
         .gallery-container {
             width: 100%;
             overflow: hidden;
             position: relative;
         }
-        
+
         .gallery-track {
             display: flex;
             animation: scroll 30s linear infinite;
             /* width: calc(250px * 12); */
         }
-        
+
         .gallery-item {
             height: 300px;
             width: 250px;
@@ -125,53 +147,64 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
-        
+
         .gallery-item:hover {
             transform: scale(1.05);
         }
-        
+
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         /* Animations */
         @keyframes scroll {
             0% {
                 transform: translateX(0);
             }
+
             100% {
                 transform: translateX(calc(-265px * 6));
             }
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
-        
+
         @keyframes slideDown {
-            from { 
+            from {
                 opacity: 0;
                 transform: translateY(-50px);
             }
-            to { 
+
+            to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         /* Responsive Design */
         @media (max-width: 768px) {
+            .container {
+                width: 100%;
+            }
+
             .wedding-hero {
                 padding: 100px 0;
             }
-            
+
             .wedding-hero h1 {
                 font-size: 36px;
             }
-            
+
             .gallery-track {
                 animation: scroll 20s linear infinite;
             }
@@ -207,7 +240,7 @@
             </nav>
         </div>
     </header>
-    
+
     <main>
         <!-- Wedding Hero Section -->
         <section class="wedding-hero">
@@ -228,41 +261,65 @@
                 <div class="gallery-container" role="region" aria-label="Wedding gallery carousel">
                     <div class="gallery-track" aria-live="polite">
                         <div class="gallery-item">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wedding Photo 1">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="Wedding Photo 1">
                         </div>
                         <div class="gallery-item">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Wedding Photo 2">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                                alt="Wedding Photo 2">
                         </div>
                         <div class="gallery-item">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wedding Photo 3">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="Wedding Photo 3">
                         </div>
                         <div class="gallery-item">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wedding Photo 4">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="Wedding Photo 4">
                         </div>
                         <div class="gallery-item">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wedding Photo 5">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="Wedding Photo 5">
                         </div>
                         <div class="gallery-item">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wedding Photo 6">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="Wedding Photo 6">
                         </div>
                         <!-- Duplicate -->
                         <div class="gallery-item">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wedding Photo 1">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="Wedding Photo 1">
                         </div>
                         <div class="gallery-item">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Wedding Photo 2">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                                alt="Wedding Photo 2">
                         </div>
                         <div class="gallery-item">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wedding Photo 3">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="Wedding Photo 3">
                         </div>
                         <div class="gallery-item">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wedding Photo 4">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="Wedding Photo 4">
                         </div>
                         <div class="gallery-item">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wedding Photo 5">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="Wedding Photo 5">
                         </div>
                         <div class="gallery-item">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wedding Photo 6">
+                            <img loading="lazy" decoding="async"
+                                src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="Wedding Photo 6">
                         </div>
                     </div>
                 </div>
@@ -270,8 +327,8 @@
         </section>
     </main>
 
-     <!-- Footer -->
-     <footer>
+    <!-- Footer -->
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about fade-in">
@@ -279,10 +336,14 @@
                     <p>Capturing life's most precious moments with creativity and passion. Professional photography
                         services for all your special occasions.</p>
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/your-channel" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.pinterest.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/your-channel" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.pinterest.com/your-profile" target="_blank" rel="noopener noreferrer"
+                            aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </div>
                 <div class="footer-links fade-in delay-1">
@@ -298,8 +359,10 @@
                 <div class="footer-links fade-in delay-1">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="wedding-photography.html"><i class="fas fa-chevron-right"></i> Wedding Photography</a></li>
-                        <li><a href="pre-weddingshoot.html"><i class="fas fa-chevron-right"></i> Pre-Wedding Shoots</a></li>
+                        <li><a href="wedding-photography.html"><i class="fas fa-chevron-right"></i> Wedding
+                                Photography</a></li>
+                        <li><a href="pre-weddingshoot.html"><i class="fas fa-chevron-right"></i> Pre-Wedding Shoots</a>
+                        </li>
                         <li><a href="videography.html"><i class="fas fa-chevron-right"></i> Videography</a></li>
                         <li><a href="drone.html"><i class="fas fa-chevron-right"></i> Drone Shoots</a></li>
                         <li><a href="baby-maternity.html"><i class="fas fa-chevron-right"></i> Baby & Maternity</a></li>
@@ -311,7 +374,8 @@
                         <li><a href="#home"><i class="fas fa-chevron-right"></i> FAQ</a></li>
                         <li><a href="#about"><i class="fas fa-chevron-right"></i> Blogs</a></li>
                         <li><a href="#services"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                        <li><a href="term-conditions.html"><i class="fas fa-chevron-right"></i>Terms & Conditions</a></li>
+                        <li><a href="term-conditions.html"><i class="fas fa-chevron-right"></i>Terms & Conditions</a>
+                        </li>
                         <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
                     </ul>
                 </div>
@@ -338,22 +402,22 @@
     </footer>
     <script>
         // Pause animation on hover
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const galleryTrack = document.querySelector('.gallery-track');
-            
-            galleryTrack.addEventListener('mouseenter', function() {
+
+            galleryTrack.addEventListener('mouseenter', function () {
                 this.style.animationPlayState = 'paused';
             });
-            
-            galleryTrack.addEventListener('mouseleave', function() {
+
+            galleryTrack.addEventListener('mouseleave', function () {
                 this.style.animationPlayState = 'running';
             });
 
-            galleryTrack.addEventListener('touchstart', function() {
+            galleryTrack.addEventListener('touchstart', function () {
                 this.style.animationPlayState = 'paused';
             });
-            
-            galleryTrack.addEventListener('touchend', function() {
+
+            galleryTrack.addEventListener('touchend', function () {
                 this.style.animationPlayState = 'running';
             });
 

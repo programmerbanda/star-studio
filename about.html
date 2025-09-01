@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Star Studio's journey, our passion for photography, and our dedicated team of professionals.">
-    <meta name="keywords" content="about Star Studio, photography team, professional photographers, Mumbai photography studio">
+    <meta name="description"
+        content="Learn about Star Studio's journey, our passion for photography, and our dedicated team of professionals.">
+    <meta name="keywords"
+        content="about Star Studio, photography team, professional photographers, Mumbai photography studio">
     <meta property="og:title" content="About Star Studio - Our Photography Journey">
-    <meta property="og:description" content="Discover the story behind Star Studio and our passion for capturing life's precious moments.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1300&q=80">
+    <meta property="og:description"
+        content="Discover the story behind Star Studio and our passion for capturing life's precious moments.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1300&q=80">
     <meta property="og:url" content="YOUR_WEBSITE_URL/about.html">
     <meta property="og:type" content="website">
     <title>About Us - Star Studio Photography</title>
@@ -18,152 +22,167 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        :focus-visible { outline: 3px solid #d6336c; outline-offset: 2px; }
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { animation: none !important; transition: none !important; }
-            html { scroll-behavior: auto !important; }
+        :focus-visible {
+            outline: 3px solid #d6336c;
+            outline-offset: 2px;
         }
-        
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+
+            html {
+                scroll-behavior: auto !important;
+            }
+        }
+
         /* Additional styles specific to about page */
         .team-section {
             padding: 20px 0;
             background-color: #1e293b;
         }
-        
+
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
-        
+
         .team-member {
             background: #2d3a4b;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
-        
+
         .team-member:hover {
             transform: translateY(-5px);
         }
-        
+
         .team-member-img {
             height: 300px;
             overflow: hidden;
         }
-        
+
         .team-member-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-        
+
         .team-member:hover .team-member-img img {
             transform: scale(1.05);
         }
-        
+
         .team-member-info {
             padding: 20px;
             text-align: center;
         }
-        
+
         .team-member-name {
             font-family: 'Playfair Display', serif;
             font-size: 22px;
             margin-bottom: 5px;
             color: #fff;
         }
-        
+
         .team-member-role {
             color: #d6336c;
             font-weight: 500;
             margin-bottom: 10px;
         }
-        
+
         .team-member-desc {
             color: #fff;
             margin-bottom: 15px;
         }
-        
+
         .team-social {
             display: flex;
             justify-content: center;
             gap: 15px;
         }
-        
+
         .team-social a {
             color: #fff;
             transition: color 0.3s ease;
         }
-        
+
         .team-social a:hover {
             color: #d6336c;
         }
-        
+
         .mission-vision {
             padding: 20px 0;
         }
-        
+
         .mission-vision-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
             margin-top: 50px;
         }
-        
-        .mission-card, .vision-card {
+
+        .mission-card,
+        .vision-card {
             background: #2d3a4b;
             padding: 40px 30px;
             border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             text-align: center;
         }
-        
-        .mission-icon, .vision-icon {
+
+        .mission-icon,
+        .vision-icon {
             font-size: 40px;
             color: #d6336c;
             margin-bottom: 20px;
         }
-        
+
         .values-section {
             padding: 20px 0;
             background-color: #1e293b;
         }
-        
+
         .values-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
-        
+
         .value-card {
             background: #2d3a4b;
             padding: 30px;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
-        
+
         .value-icon {
             font-size: 36px;
             color: #d6336c;
             margin-bottom: 20px;
         }
-        
+
         .timeline-section {
             padding: 20px 0;
         }
-        
+
         .timeline {
             position: relative;
             max-width: 1200px;
             margin: 50px auto;
         }
-        
+
         .timeline::after {
             content: '';
             position: absolute;
@@ -174,36 +193,36 @@
             left: 50%;
             margin-left: -3px;
         }
-        
+
         .timeline-item {
             padding: 10px 40px;
             position: relative;
             width: 50%;
             box-sizing: border-box;
         }
-        
+
         .timeline-item:nth-child(odd) {
             left: 0;
         }
-        
+
         .timeline-item:nth-child(even) {
             left: 50%;
         }
-        
+
         .timeline-content {
             padding: 20px;
             background-color: #2d3a4b;
             position: relative;
             border-radius: 6px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         .timeline-date {
             font-weight: bold;
             color: #d6336c;
             margin-bottom: 10px;
         }
-        
+
         .timeline-item::after {
             content: '';
             position: absolute;
@@ -215,34 +234,38 @@
             top: 20px;
             z-index: 1;
         }
-        
+
         .timeline-item:nth-child(odd)::after {
             right: -13px;
         }
-        
+
         .timeline-item:nth-child(even)::after {
             left: -13px;
         }
-        
+
         @media screen and (max-width: 768px) {
+            .container {
+                width: 100%;
+            }
+
             .timeline::after {
                 left: 31px;
             }
-            
+
             .timeline-item {
                 width: 100%;
                 padding-left: 70px;
                 padding-right: 25px;
             }
-            
+
             .timeline-item:nth-child(even) {
                 left: 0;
             }
-            
+
             .timeline-item::after {
                 left: 18px;
             }
-            
+
             .timeline-item:nth-child(odd)::after {
                 right: auto;
             }
@@ -284,7 +307,8 @@
     </header>
 
     <!-- About Hero Section -->
-    <section class="about-hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1300&q=80') no-repeat center/cover; min-height: 60vh; display: flex; align-items: center; padding: 80px 0 0 0;">
+    <section class="about-hero"
+        style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1300&q=80') no-repeat center/cover; min-height: 60vh; display: flex; align-items: center; padding: 80px 0 0 0;">
         <div class="container">
             <div class="section-title" style="color: white;">
                 <h1>About Star Studio</h1>
@@ -298,7 +322,8 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-img zoom-in">
-                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1300&q=80"
+                    <img loading="lazy" decoding="async"
+                        src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1300&q=80"
                         alt="Our Studio">
                 </div>
                 <div class="about-text fade-in">
@@ -336,22 +361,26 @@
                 <h2>Our Mission & Vision</h2>
                 <p>What drives us to capture your precious moments</p>
             </div>
-            
+
             <div class="mission-vision-grid">
                 <div class="mission-card fade-in">
                     <div class="mission-icon">
                         <i class="fas fa-bullseye"></i>
                     </div>
                     <h3>Our Mission</h3>
-                    <p>To capture authentic moments and emotions through our lens, creating timeless visual stories that our clients will cherish for generations. We strive to exceed expectations with creativity, technical excellence, and personalized service.</p>
+                    <p>To capture authentic moments and emotions through our lens, creating timeless visual stories that
+                        our clients will cherish for generations. We strive to exceed expectations with creativity,
+                        technical excellence, and personalized service.</p>
                 </div>
-                
+
                 <div class="vision-card fade-in delay-1">
                     <div class="vision-icon">
                         <i class="fas fa-eye"></i>
                     </div>
                     <h3>Our Vision</h3>
-                    <p>To be the most trusted photography studio known for artistic excellence, innovation, and creating meaningful connections through photography. We envision a world where every special moment is preserved with beauty and authenticity.</p>
+                    <p>To be the most trusted photography studio known for artistic excellence, innovation, and creating
+                        meaningful connections through photography. We envision a world where every special moment is
+                        preserved with beauty and authenticity.</p>
                 </div>
             </div>
         </div>
@@ -364,32 +393,35 @@
                 <h2>Our Values</h2>
                 <p>The principles that guide everything we do</p>
             </div>
-            
+
             <div class="values-grid">
                 <div class="value-card fade-in">
                     <div class="value-icon">
                         <i class="fas fa-heart"></i>
                     </div>
                     <h3>Passion</h3>
-                    <p>We're driven by our love for photography and the joy of capturing special moments that matter.</p>
+                    <p>We're driven by our love for photography and the joy of capturing special moments that matter.
+                    </p>
                 </div>
-                
+
                 <div class="value-card fade-in delay-1">
                     <div class="value-icon">
                         <i class="fas fa-lightbulb"></i>
                     </div>
                     <h3>Creativity</h3>
-                    <p>We approach each project with fresh eyes, seeking unique perspectives and artistic expression.</p>
+                    <p>We approach each project with fresh eyes, seeking unique perspectives and artistic expression.
+                    </p>
                 </div>
-                
+
                 <div class="value-card fade-in delay-2">
                     <div class="value-icon">
                         <i class="fas fa-handshake"></i>
                     </div>
                     <h3>Trust</h3>
-                    <p>We build lasting relationships based on reliability, integrity, and understanding our clients' vision.</p>
+                    <p>We build lasting relationships based on reliability, integrity, and understanding our clients'
+                        vision.</p>
                 </div>
-                
+
                 <div class="value-card fade-in delay-3">
                     <div class="value-icon">
                         <i class="fas fa-medal"></i>
@@ -408,53 +440,59 @@
                 <h2>Our Journey Through Time</h2>
                 <p>Key milestones in our photography adventure</p>
             </div>
-            
+
             <div class="timeline">
                 <div class="timeline-item fade-in">
                     <div class="timeline-content">
                         <div class="timeline-date">2010</div>
                         <h3>Foundation</h3>
-                        <p>Star Studio was founded with a passion for capturing beautiful moments and a single camera.</p>
+                        <p>Star Studio was founded with a passion for capturing beautiful moments and a single camera.
+                        </p>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item fade-in delay-1">
                     <div class="timeline-content">
                         <div class="timeline-date">2013</div>
                         <h3>First Studio</h3>
-                        <p>Opened our first physical studio space, allowing us to serve more clients with professional setups.</p>
+                        <p>Opened our first physical studio space, allowing us to serve more clients with professional
+                            setups.</p>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item fade-in delay-2">
                     <div class="timeline-content">
                         <div class="timeline-date">2015</div>
                         <h3>Team Expansion</h3>
-                        <p>Welcomed two additional photographers to our team, expanding our capacity and creative vision.</p>
+                        <p>Welcomed two additional photographers to our team, expanding our capacity and creative
+                            vision.</p>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item fade-in delay-3">
                     <div class="timeline-content">
                         <div class="timeline-date">2018</div>
                         <h3>Award Recognition</h3>
-                        <p>Received the "Best Wedding Photography Studio" award from the National Photography Association.</p>
+                        <p>Received the "Best Wedding Photography Studio" award from the National Photography
+                            Association.</p>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item fade-in delay-1">
                     <div class="timeline-content">
                         <div class="timeline-date">2021</div>
                         <h3>Drone Division</h3>
-                        <p>Launched our aerial photography division with certified drone operators and state-of-the-art equipment.</p>
+                        <p>Launched our aerial photography division with certified drone operators and state-of-the-art
+                            equipment.</p>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item fade-in delay-2">
                     <div class="timeline-content">
                         <div class="timeline-date">2023</div>
                         <h3>New Studio</h3>
-                        <p>Moved to our current larger studio space with advanced equipment and dedicated areas for different photography styles.</p>
+                        <p>Moved to our current larger studio space with advanced equipment and dedicated areas for
+                            different photography styles.</p>
                     </div>
                 </div>
             </div>
@@ -468,16 +506,19 @@
                 <h2>Meet Our Team</h2>
                 <p>The talented photographers behind Star Studio</p>
             </div>
-            
+
             <div class="team-grid">
                 <div class="team-member fade-in">
                     <div class="team-member-img">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Raj Kapoor - Founder">
+                        <img loading="lazy" decoding="async"
+                            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                            alt="Raj Kapoor - Founder">
                     </div>
                     <div class="team-member-info">
                         <h3 class="team-member-name">Raj Kapoor</h3>
                         <p class="team-member-role">Founder & Lead Photographer</p>
-                        <p class="team-member-desc">With over 15 years of experience, Raj specializes in wedding and portrait photography with an artistic eye for detail.</p>
+                        <p class="team-member-desc">With over 15 years of experience, Raj specializes in wedding and
+                            portrait photography with an artistic eye for detail.</p>
                         <div class="team-social">
                             <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                             <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -485,15 +526,18 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="team-member fade-in delay-1">
                     <div class="team-member-img">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80" alt="Priya Singh - Photographer">
+                        <img loading="lazy" decoding="async"
+                            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80"
+                            alt="Priya Singh - Photographer">
                     </div>
                     <div class="team-member-info">
                         <h3 class="team-member-name">Priya Singh</h3>
                         <p class="team-member-role">Senior Photographer</p>
-                        <p class="team-member-desc">Priya brings a unique perspective to event photography with her background in fine arts and photojournalism.</p>
+                        <p class="team-member-desc">Priya brings a unique perspective to event photography with her
+                            background in fine arts and photojournalism.</p>
                         <div class="team-social">
                             <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                             <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -501,15 +545,18 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="team-member fade-in delay-2">
                     <div class="team-member-img">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Arjun Mehta - Videographer">
+                        <img loading="lazy" decoding="async"
+                            src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                            alt="Arjun Mehta - Videographer">
                     </div>
                     <div class="team-member-info">
                         <h3 class="team-member-name">Arjun Mehta</h3>
                         <p class="team-member-role">Videographer & Drone Operator</p>
-                        <p class="team-member-desc">Arjun specializes in cinematic videography and aerial photography, adding dynamic perspectives to our projects.</p>
+                        <p class="team-member-desc">Arjun specializes in cinematic videography and aerial photography,
+                            adding dynamic perspectives to our projects.</p>
                         <div class="team-social">
                             <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                             <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -517,15 +564,18 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="team-member fade-in delay-3">
                     <div class="team-member-img">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Neha Patel - Editor">
+                        <img loading="lazy" decoding="async"
+                            src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                            alt="Neha Patel - Editor">
                     </div>
                     <div class="team-member-info">
                         <h3 class="team-member-name">Neha Patel</h3>
                         <p class="team-member-role">Photo Editor & Retoucher</p>
-                        <p class="team-member-desc">Neha works her magic behind the scenes, ensuring every image meets our high standards of quality and artistry.</p>
+                        <p class="team-member-desc">Neha works her magic behind the scenes, ensuring every image meets
+                            our high standards of quality and artistry.</p>
                         <div class="team-social">
                             <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                             <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -538,10 +588,12 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section" style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80') no-repeat center/cover; padding: 80px 0; text-align: center; color: white;">
+    <section class="cta-section"
+        style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80') no-repeat center/cover; padding: 80px 0; text-align: center; color: white;">
         <div class="container">
             <h2>Ready to Create Memories Together?</h2>
-            <p style="margin-bottom: 20px;">Let's discuss how we can capture your special moments with the artistry and passion we're known for.</p>
+            <p style="margin-bottom: 20px;">Let's discuss how we can capture your special moments with the artistry and
+                passion we're known for.</p>
             <a href="contact.html" class="btn">Get In Touch</a>
         </div>
     </section>
@@ -555,10 +607,14 @@
                     <p>Capturing life's most precious moments with creativity and passion. Professional photography
                         services for all your special occasions.</p>
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/your-channel" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.pinterest.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/your-channel" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.pinterest.com/your-profile" target="_blank" rel="noopener noreferrer"
+                            aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </div>
                 <div class="footer-links fade-in delay-1">
@@ -574,8 +630,10 @@
                 <div class="footer-links fade-in delay-1">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="wedding-photography.html"><i class="fas fa-chevron-right"></i> Wedding Photography</a></li>
-                        <li><a href="pre-weddingshoot.html"><i class="fas fa-chevron-right"></i> Pre-Wedding Shoots</a></li>
+                        <li><a href="wedding-photography.html"><i class="fas fa-chevron-right"></i> Wedding
+                                Photography</a></li>
+                        <li><a href="pre-weddingshoot.html"><i class="fas fa-chevron-right"></i> Pre-Wedding Shoots</a>
+                        </li>
                         <li><a href="videography.html"><i class="fas fa-chevron-right"></i> Videography</a></li>
                         <li><a href="drone.html"><i class="fas fa-chevron-right"></i> Drone Shoots</a></li>
                         <li><a href="baby-maternity.html"><i class="fas fa-chevron-right"></i> Baby & Maternity</a></li>
@@ -587,7 +645,8 @@
                         <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
                         <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blogs</a></li>
                         <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                        <li><a href="term-conditions.html"><i class="fas fa-chevron-right"></i>Terms & Conditions</a></li>
+                        <li><a href="term-conditions.html"><i class="fas fa-chevron-right"></i>Terms & Conditions</a>
+                        </li>
                         <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
                     </ul>
                 </div>
