@@ -1,4 +1,3 @@
-// Mobile Menu Toggle with accessibility
 const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
 const nav = document.getElementById("nav");
 const body = document.body;
@@ -6,7 +5,7 @@ const body = document.body;
 function openMenu() {
   nav.classList.add("active");
   body.classList.add("no-scroll");
-  mobileMenuBtn.classList.add("active"); // icon change via CSS
+  mobileMenuBtn.classList.add("active");
   mobileMenuBtn.setAttribute("aria-expanded", "true");
 
   const links = nav.querySelectorAll("a, button");
