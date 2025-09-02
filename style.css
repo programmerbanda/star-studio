@@ -202,9 +202,7 @@ nav ul li a:hover:after {
   font-size: 24px;
   background: none;
   border: none;
-  color: var(
-    --text-light
-  ); /* Changed from white for better contrast on dark header */
+  color: var(--text-light);
   cursor: pointer;
   z-index: 1001;
   width: 40px;

@@ -2,24 +2,21 @@
 const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
 const nav = document.getElementById("nav");
 const body = document.body;
-let firstNavLink = null;
-let lastNavLink = null;
 
 function openMenu() {
   nav.classList.add("active");
   body.classList.add("no-scroll");
-  mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>';
+  mobileMenuBtn.classList.add("active"); // icon change via CSS
   mobileMenuBtn.setAttribute("aria-expanded", "true");
+
   const links = nav.querySelectorAll("a, button");
-  firstNavLink = links[0];
-  lastNavLink = links[links.length - 1];
-  if (firstNavLink) firstNavLink.focus();
+  if (links.length > 0) links[0].focus();
 }
 
 function closeMenu() {
   nav.classList.remove("active");
   body.classList.remove("no-scroll");
-  mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+  mobileMenuBtn.classList.remove("active"); // back to bars
   mobileMenuBtn.setAttribute("aria-expanded", "false");
   mobileMenuBtn.focus();
 }
@@ -66,6 +63,7 @@ document.querySelectorAll("nav a").forEach((link) => {
     closeMenu();
   });
 });
+
 
 // Header scroll effect
 window.addEventListener("scroll", () => {
